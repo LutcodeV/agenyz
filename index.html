@@ -1,0 +1,975 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+    <title>Agenyz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+  </head>
+  <body>
+    <div id="svg-sprite"></div>
+    <div class="global-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__left"><a class="logo header__logo" href="/"><img src="/assets/img/logo.svg" alt="Agenyz"/></a>
+            <button class="button button--outline header__cart">
+              <svg>
+                <use href="#icon-cart"></use>
+              </svg>В магазин
+            </button>
+          </div>
+          <nav class="header-nav js-header-nav" aria-label="Главное меню">
+            <div class="container">
+              <div class="header-lang__wrapper header-lang__wrapper--mobile js-header-lang">
+                <div class="header-lang header__controller">
+                  <button class="header-lang__button">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-russia"></use>
+                    </svg>RU
+                    <svg class="header-lang__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <div class="header-lang__list"><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-russia"></use>
+                      </svg>RU</a><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-england"></use>
+                      </svg>EN</a><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-germany"></use>
+                      </svg>GE</a></div>
+                </div>
+              </div>
+            </div>
+            <ul class="header-nav__list">
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item js-nav-expandable-link header-nav__list-item--expandable header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/">Каталог</a>
+                  <button class="header-nav__list-item-button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-4" aria-label="Показать подменю «Каталог»">
+                    <svg>
+                      <use href="#icon-accordion"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <ul class="header-nav__list" id="submenu-4">
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a></div>
+                </li>
+              </ul>
+              <li class="header-nav__list-item js-nav-expandable-link header-nav__list-item--expandable header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a>
+                  <button class="header-nav__list-item-button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-5" aria-label="Показать подменю «О компании»">
+                    <svg>
+                      <use href="#icon-accordion"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <ul class="header-nav__list" id="submenu-5">
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a></div>
+                </li>
+              </ul>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/pickup">Пункты выдачи</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/news">Новости</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/privacy">Политика конфиденциальности</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/contacts">Контакты</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/details">Реквизиты</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/shipping">Условия оплаты и доставки</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/offer">Оферта</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__right">
+            <button class="header-burger js-header-burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+            <div class="header-lang__wrapper js-header-lang">
+              <div class="header-lang header__controller">
+                <button class="header-lang__button">
+                  <svg class="header-lang__flag">
+                    <use href="#flag-russia"></use>
+                  </svg>RU
+                  <svg class="header-lang__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <div class="header-lang__list"><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-russia"></use>
+                    </svg>RU</a><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-england"></use>
+                    </svg>EN</a><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-germany"></use>
+                    </svg>GE</a></div>
+              </div>
+            </div><a class="header__controller" href="#">
+              <svg>
+                <use href="#icon-user"></use>
+              </svg>Войти</a>
+          </div>
+        </div>
+      </header>
+      <section class="section section--dark hero">
+        <div class="container">
+          <div class="hero__column">
+            <h1 class="hero__title">Созидай вместе<br> с Agenyz!</h1>
+            <p class="hero__subtitle">Agenyz — премиальный бренд, путь к здоровью и благополучию. Мы строим будущее, в котором каждый может добиться успеха и раскрыть свой потенциал.</p>
+            <button class="button hero__button">Присоединиться</button>
+          </div>
+                <picture><img class="hero__img" src="/assets/img/hero-image-01.jpg" alt="Фото выступления" loading="lazy"/>
+                </picture>
+          <div class="hero__cards">
+            <div class="hero-swiper swiper js-hero-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide hero-slide hero-slide--pink">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">11+</p>
+                    <p class="hero-slide__text">центров Agenyz</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">14+</p>
+                    <p class="hero-slide__text">клинических испытаний подтверждают эффективность наших продуктов</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide--blue">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">65 000+</p>
+                    <p class="hero-slide__text">промоутеров уже получили свои вознаграждения</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide--blue">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">50+</p>
+                    <p class="hero-slide__text">пунктов выдачи Agenyz</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide--graph">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">100 000+</p>
+                    <p class="hero-slide__text">продуктов продаётся каждый месяц</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide--sky">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">200 000+</p>
+                    <p class="hero-slide__text">клиентов доверяют нашей продукции</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide--green">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">400+</p>
+                    <p class="hero-slide__text">человек побывали с нами в незабываемых путешествиях по всему земному шару</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination js-hero-swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section direction">
+        <div class="container">
+          <h2 class="section__title direction__title">Направления работы компании</h2>
+          <div class="direction__row">
+            <div class="direction-card">
+              <h3 class="direction-card__title">Эко-Сообщество</h3>
+              <p class="direction-card__text">Мы создаем сообщество людей и формируем качественно новый стиль жизни, наполненный пониманием важности уважения, благодарности и любви к себе, своим близким и окружающим нас людям.</p>
+            </div>
+            <div class="direction-card">
+              <h3 class="direction-card__title">Биохакинг</h3>
+              <p class="direction-card__text">Будущее уже сегодня! Мы создаём уникальные инновационные продукты, чтобы вы могли улучшить физическую форму, повысить уровень энергии и замедлить процессы старения.</p>
+            </div>
+            <div class="direction-card">
+              <h3 class="direction-card__title">Личный доход</h3>
+              <p class="direction-card__text">Для тех, кто хочет больше финансовой уверенности и ищет своё дело. Вы сможете  создать новый источник дохода и научиться эффективно управлять личными финансами. Вам откроется возможность изменить свою жизнь к лучшему, вы сможете путешествовать по всему миру вместе с нами!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section important-about">
+        <div class="container">
+          <h2 class="section__title">Важное об AGENYZ</h2>
+          <div class="important-about__column">
+                  <div class="important-about-card important-about-card--green">
+                    <div class="important-about-card__header">
+                      <svg class="important-about-card__icon">
+                        <use href="#icon-addUser"></use>
+                      </svg>
+                      <p class="important-about-card__title">Объединение</p>
+                    </div>
+                    <p class="important-about-card__text">Наша компания объединяет уже более 200 тысяч клиентов и 65 тысяч партнёров по всему земному шару</p>
+                  </div>
+                  <div class="important-about-card important-about-card--pink">
+                    <div class="important-about-card__header">
+                      <svg class="important-about-card__icon">
+                        <use href="#icon-shield"></use>
+                      </svg>
+                      <p class="important-about-card__title">Биохакинг</p>
+                    </div>
+                    <p class="important-about-card__text">Мы стали одной из первых компаний, которая внедрила концепцию биохакинга в России и использует комплексный подход к улучшению качества жизни</p><a class="important-about-card__link" href="/">
+                      <svg>
+                        <use href="#icon-arrow-top-right"></use>
+                      </svg></a>
+                  </div>
+                  <div class="important-about-card important-about-card--grey">
+                    <div class="important-about-card__header">
+                      <svg class="important-about-card__icon">
+                        <use href="#icon-settings"></use>
+                      </svg>
+                      <p class="important-about-card__title">Технологии</p>
+                    </div>
+                    <p class="important-about-card__text">Используем более 100 природных ингредиентов, новейшие технологии липосомирования, микрокапсулирования и многие другие для достижения максимальной эффективности</p>
+                  </div>
+                  <div class="important-about-card important-about-card--grey">
+                    <div class="important-about-card__header">
+                      <svg class="important-about-card__icon">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                      <p class="important-about-card__title">Социальные проекты</p>
+                    </div>
+                    <p class="important-about-card__text">Благотворительность: помощь людям попавшим в трудную жизненную ситуацию. Защита экологии: высадка деревьев, очистка прибрежных территорий водоемов и рек, переработка упаковки.</p>
+                  </div>
+                  <div class="important-about-card important-about-card--green">
+                    <div class="important-about-card__header">
+                      <svg class="important-about-card__icon">
+                        <use href="#icon-star"></use>
+                      </svg>
+                      <p class="important-about-card__title">Стиль жизни</p>
+                    </div>
+                    <p class="important-about-card__text">В Agenyz вы окунетесь в красивый мир ярких событий, торжественных мероприятий, признания и необыкновенных путешествий</p>
+                  </div>
+                  <div class="important-about-card important-about-card--pink">
+                    <div class="important-about-card__header">
+                      <svg class="important-about-card__icon">
+                        <use href="#icon-box"></use>
+                      </svg>
+                      <p class="important-about-card__title">Продукция</p>
+                    </div>
+                    <p class="important-about-card__text">Основные направления продукции Agenyz: БАДы, функциональное питание, косметика, инновационные товары, обучающие курсы</p><a class="important-about-card__link" href="/">
+                      <svg>
+                        <use href="#icon-arrow-top-right"></use>
+                      </svg></a>
+                  </div>
+                  <div class="important-about-card important-about-card--green">
+                    <div class="important-about-card__header">
+                      <svg class="important-about-card__icon">
+                        <use href="#icon-coins"></use>
+                      </svg>
+                      <p class="important-about-card__title">Доход</p>
+                    </div>
+                    <p class="important-about-card__text">Разработали премиальную программу лояльности и поддержки, с которой наши партнёры могут вести успешный бизнес и улучшать качество жизни, помогая себе и другим</p><a class="important-about-card__link" href="/">
+                      <svg>
+                        <use href="#icon-arrow-top-right"></use>
+                      </svg></a>
+                  </div>
+                  <div class="important-about-card important-about-card--grey">
+                    <div class="important-about-card__header">
+                      <svg class="important-about-card__icon">
+                        <use href="#icon-fire"></use>
+                      </svg>
+                      <p class="important-about-card__title">Качество</p>
+                    </div>
+                    <p class="important-about-card__text">На каждом этапе производства осуществляется строгий контроль качества, продукция соответствует мировым стандартам GMP и ISO 22000</p><a class="important-about-card__link" href="/">
+                      <svg>
+                        <use href="#icon-arrow-top-right"></use>
+                      </svg></a>
+                  </div>
+                  <div class="important-about-card important-about-card--pink">
+                    <div class="important-about-card__header">
+                      <svg class="important-about-card__icon">
+                        <use href="#icon-folder"></use>
+                      </svg>
+                      <p class="important-about-card__title">Возможности</p>
+                    </div>
+                    <p class="important-about-card__text">Открываем доступ не только к передовым продуктам, но и к возможности получить дополнительный заработок, занимаясь интересным делом и принося людям пользу</p><a class="important-about-card__link" href="/">
+                      <svg>
+                        <use href="#icon-arrow-top-right"></use>
+                      </svg></a>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="section mission">
+        <div class="container">
+          <h2 class="section__title mission-title">
+            Миссия Agenyz – улучшение качества жизни<span>
+                  <picture><img class="mission-title__img" src="/assets/img/mission-image-03.jpg" alt="Фото девушки 3" loading="lazy"/>
+                  </picture>
+                  <picture><img class="mission-title__img" src="/assets/img/mission-image-02.jpg" alt="Фото девушки 2" loading="lazy"/>
+                  </picture>
+                  <picture><img class="mission-title__img" src="/assets/img/mission-image-01.jpg" alt="Фото девушки 1" loading="lazy"/>
+                  </picture></span>каждого человека
+          </h2>
+          <div class="mission__row">
+            <div class="mission__column">
+              <div class="mission-card">
+                <div class="mission-card__header">
+                  <p class="mission-card__number">01</p>
+                  <p class="mission-card__title">Мы создаем</p>
+                </div>
+                <p class="mission-card__text">Экосистему для людей, разделяющих стратегию H2H, предоставляя качественные ресурсы для улучшения здоровья и финансового положения</p>
+              </div>
+              <div class="mission-card">
+                <div class="mission-card__header">
+                  <p class="mission-card__number">02</p>
+                  <p class="mission-card__title">Наши ценности</p>
+                </div>
+                <p class="mission-card__text">Нашей главной ценностью является человек! Всё, что делается компанией, делается для того, чтобы он реализовал свои цели и мечты. </p>
+              </div>
+              <div class="mission-card">
+                <div class="mission-card__header">
+                  <p class="mission-card__number">03</p>
+                  <p class="mission-card__title">Наши цели</p>
+                </div>
+                <p class="mission-card__text">Стать одной из лучших компаний мира в своей индустрии. И достижение этой цели мы видим только через реализацию личных целей наших партнеров</p>
+              </div>
+            </div>
+                  <picture><img class="mission__img" src="/assets/img/mission-image-04.jpg" alt="Фото людей" loading="lazy"/>
+                  </picture>
+          </div>
+        </div>
+      </section>
+      <section class="section section--dark concept">
+        <div class="container">
+          <h2 class="section__title">Концепция развития Agenyz</h2>
+          <div class="concept__texts-wrapper">
+            <p class="section__subtitle section__subtitle--center">Наша компания использует в своей ежедневной практике Концепцию Устойчивого развития.</p>
+            <div class="concept__texts">
+              <p class="concept__text">Каждое управленческое решение, которое принимается в Agenyz, учитывает три параметра: интересы бизнеса, интересы общества и заботу об окружающей среде.</p>
+              <p class="concept__text">Выбираются только такие решения, которые ведут к позитивному и созидательному будущему для всех – это одна из главных задач, которую ставит перед собой компания.</p>
+            </div>
+          </div>
+          <div class="concept-infograph">
+                  <picture><img class="concept-infograph__img" src="/assets/img/concept-infograph.png" alt="Инфографика" loading="lazy"/>
+                  </picture>
+                  <picture><img class="concept-infograph__img concept-infograph__img--pc" src="/assets/img/concept-infograph-pc.png" alt="Инфографика" loading="lazy"/>
+                  </picture>
+            <div class="concept-infograph-step">
+              <p class="concept-infograph-step__title">Устойчивое <br> развитие</p>
+            </div>
+            <div class="concept-infograph-step">
+              <p class="concept-infograph-step__title">Социальная <br> ответственность</p>
+              <button class="concept-infograph-step__button" aria-label="Открыть модальное окно 'Социальная ответственность'" aria-expanded="false" data-concept-modal="economy"><span></span></button>
+            </div>
+            <div class="concept-infograph-step">
+              <p class="concept-infograph-step__title">Экономический <br> рост</p>
+              <button class="concept-infograph-step__button" aria-label="Открыть модальное окно 'Экономический рост'" aria-expanded="false" data-concept-modal="social"><span></span></button>
+            </div>
+            <div class="concept-infograph-step">
+              <p class="concept-infograph-step__title">Сохранение <br> экологии</p>
+              <button class="concept-infograph-step__button" aria-label="Открыть модальное окно 'Сохранение экологии'" aria-expanded="false" data-concept-modal="ecology"><span></span></button>
+            </div>
+            <div class="concept-modals">
+              <div class="concept-modal" aria-hidden="true" data-concept="economy">
+                <button class="concept-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="concept-modal__img-wrapper">
+                        <picture><img class="concept-modal__img" src="/assets/img/concept-infograph-01.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="concept-modal__title">Экономический рост</p>
+                <div class="concept-modal__list">
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Качество</p>
+                    <p class="concept-modal-item__text">Обеспечение качества и эффективности продукции</p>
+                  </div>
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Большие цели</p>
+                    <p class="concept-modal-item__text">Стать одной из ведущих компаний в своей отрасли</p>
+                  </div>
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Партнерство</p>
+                    <p class="concept-modal-item__text">Партнерские и клиентские бонусные программы</p>
+                  </div>
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Инновации</p>
+                    <p class="concept-modal-item__text">Внедрение новых технологий и научных достижений для улучшения продуктов и создания новых решений</p>
+                  </div>
+                </div>
+              </div>
+              <div class="concept-modal" aria-hidden="true" data-concept="social">
+                <button class="concept-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="concept-modal__img-wrapper">
+                        <picture><img class="concept-modal__img" src="/assets/img/concept-infograph-02.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="concept-modal__title">Социальная ответственность</p>
+                <div class="concept-modal__list">
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Благотворительность</p>
+                    <p class="concept-modal-item__text">Помощь людям попавшим в трудную жизненную ситуацию</p>
+                  </div>
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Просвещение</p>
+                    <p class="concept-modal-item__text">Информирование потребителей о важности комплексного подхода к здоровью</p>
+                  </div>
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Финансовое благополучие</p>
+                    <p class="concept-modal-item__text">Экспертное обучение управлению доходами и возможность зарабатывать больше</p>
+                  </div>
+                </div>
+              </div>
+              <div class="concept-modal" aria-hidden="true" data-concept="ecology">
+                <button class="concept-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="concept-modal__img-wrapper">
+                        <picture><img class="concept-modal__img" src="/assets/img/concept-infograph-03.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="concept-modal__title">Сохранение экологии</p>
+                <div class="concept-modal__list">
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Чистые технологии</p>
+                    <p class="concept-modal-item__text">Методы производства с минимальным воздействием на окружающую среду</p>
+                  </div>
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Биоразлагаемая упаковка</p>
+                    <p class="concept-modal-item__text">Перерабатываемая упаковка продукции Agenyz и выдача заказов в биоразлагаемых пакетах</p>
+                  </div>
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Переработка пластика</p>
+                    <p class="concept-modal-item__text">Сбор использованных пластиковых флаконов от продукции для вторичной переработки</p>
+                  </div>
+                  <div class="concept-modal-item">
+                    <p class="concept-modal-item__title">Сохранение природы</p>
+                    <p class="concept-modal-item__text">Уборка мусора и высадка деревьев в регионах присутствия компании</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--dark history">
+        <div class="container">
+          <h2 class="section__title" id="history-title">История компании</h2>
+          <div class="history__row">
+            <div class="history-ages" role="radiogroup" aria-labelledby="history-title">
+              <button class="history-ages__button" role="radio" aria-checked="true" aria-label="Посмотреть историю за 2019" data-history-switcher="2019">2019</button>
+              <button class="history-ages__button" role="radio" aria-checked="false" aria-label="Посмотреть историю за 2020" data-history-switcher="2020">2020</button>
+              <button class="history-ages__button" role="radio" aria-checked="false" aria-label="Посмотреть историю за 2021" data-history-switcher="2021">2021</button>
+              <button class="history-ages__button" role="radio" aria-checked="false" aria-label="Посмотреть историю за 2022" data-history-switcher="2022">2022</button>
+              <button class="history-ages__button" role="radio" aria-checked="false" aria-label="Посмотреть историю за 2023" data-history-switcher="2023">2023</button>
+              <button class="history-ages__button" role="radio" aria-checked="false" aria-label="Посмотреть историю за 2024" data-history-switcher="2024">2024</button>
+            </div>
+            <div class="history-page__wrapper">
+              <div class="history-page__scroller">
+                <div class="history-page" aria-hidden="false" data-history-year="2019">
+                  <p class="history-page__text">В течение года: Открыто 38 пунктов выдачи продукции, выпущено 18 новых продуктов</p>
+                  <div class="history-page__legend">
+                    <div class="history-page__line"></div>
+                    <div class="history-page__steps">
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Август:</p>
+                                  <p class="history-page-step__text">Открыт AGENYZ центр <br> в Новосибирске</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-01.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Ноябрь:</p>
+                                  <p class="history-page-step__text">Благотворительная <br> помощь фонду <br> «Подарок Ангелу»</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Декабрь:</p>
+                                  <p class="history-page-step__text">Открыт AGENYZ центр <br> в Москве</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-02.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Июль:</p>
+                                  <p class="history-page-step__text">Официальное <br> открытие компании</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Декабрь:</p>
+                                  <p class="history-page-step__text">Благотворительная <br> помощь детям с ДЦП</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-03.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Октябрь:</p>
+                                  <p class="history-page-step__text">Путешествие <br> в Лас-Вегас</p>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="history-page" aria-hidden="true" data-history-year="2020">
+                  <p class="history-page__text">В течение года: Выпущено 15 новых продуктов</p>
+                  <div class="history-page__legend">
+                    <div class="history-page__line"></div>
+                    <div class="history-page__steps">
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Март:</p>
+                                  <p class="history-page-step__text">Открыт AGENYZ центр в Хабаровске</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-04.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Август:</p>
+                                  <p class="history-page-step__text">Открыт AGENYZ центр в Краснодаре</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-05.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="history-page" aria-hidden="true" data-history-year="2021">
+                  <p class="history-page__text">В течение года: Выпущено 16 новых продуктов</p>
+                  <div class="history-page__legend">
+                    <div class="history-page__line"></div>
+                    <div class="history-page__steps">
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Сентябрь:</p>
+                                  <p class="history-page-step__text">Открыты AGENYZ центры в Иркутске и Уфе</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-06.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Октябрь:</p>
+                                  <p class="history-page-step__text">Путешествие команды партнёров в Доминикану</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-07.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="history-page" aria-hidden="true" data-history-year="2022">
+                  <p class="history-page__text">В течение года: Выпущено 14 новых продуктов</p>
+                  <div class="history-page__legend">
+                    <div class="history-page__line"></div>
+                    <div class="history-page__steps">
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Апрель:</p>
+                                  <p class="history-page-step__text">Открыт AGENYZ центр в Санкт-Петербурге</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-08.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Декабрь:</p>
+                                  <p class="history-page-step__text">Благотворительная акция «Благо» и помощь Темниковскому дому-интернату</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Март:</p>
+                                  <p class="history-page-step__text">Открыт AGENYZ центр в Екатеринбурге</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-09.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Ноябрь:</p>
+                                  <p class="history-page-step__text">Путешествие команды партнёров в ОАЭ</p>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="history-page" aria-hidden="true" data-history-year="2023">
+                  <p class="history-page__text">В течение года: Выпущено 12 новых продуктов</p>
+                  <div class="history-page__legend">
+                    <div class="history-page__line"></div>
+                    <div class="history-page__steps">
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Июль:</p>
+                                  <p class="history-page-step__text">Открыт AGENYZ-центр во Владивостоке</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-10.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Ноябрь:</p>
+                                  <p class="history-page-step__text">Благотворительная помощь детям-сиротам с фондом. Фонд «Большая перемена»</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Май:</p>
+                                  <p class="history-page-step__text">Благотворительная помощь приходу Троицкой церкви</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-11.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Ноябрь:</p>
+                                  <p class="history-page-step__text">Путешествие команды партнёров в Египет</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-12.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="history-page" aria-hidden="true" data-history-year="2024">
+                  <p class="history-page__text">В течение года: Выпуск 20 новых продуктов</p>
+                  <div class="history-page__legend">
+                    <div class="history-page__line"></div>
+                    <div class="history-page__steps">
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Ноябрь:</p>
+                                  <p class="history-page-step__text">Green awards</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-13.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Август:</p>
+                                  <p class="history-page-step__text">«MBM» 5-летие AGENYZ</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-14.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                            <div class="history-page-step">
+                              <div class="history-page-step__marker"><span></span></div>
+                              <div class="history-page-step__content">
+                                <div class="history-page-step__header">
+                                  <p class="history-page-step__title">Сентябрь - октябрь:</p>
+                                  <p class="history-page-step__text">Участие в экологических акциях</p>
+                                </div>
+                                      <picture><img class="history-page-step__img" src="/assets/img/history-img-15.jpg" alt="Фото выступления" loading="lazy"/>
+                                      </picture>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section principles">
+        <div class="container">
+          <div class="principles__column principles__column--pc">
+            <h2 class="section__title">Принципы производства продуктов Agenyz</h2>
+            <p class="section__subtitle">При производстве применяются сотни уникальных ингредиентов, компонентов и технологий: ультрализаты, CO2-экстракция, 3D-технологии</p>
+            <div class="principles__logos">
+                    <picture><img class="principles__logo" src="/assets/img/principles-logo-01.png" alt="Логотип ISO" loading="lazy"/>
+                    </picture>
+                    <picture><img class="principles__logo" src="/assets/img/principles-logo-02.png" alt="Логотип GMP" loading="lazy"/>
+                    </picture>
+                    <picture><img class="principles__logo" src="/assets/img/principles-logo-03.png" alt="Логотип 14" loading="lazy"/>
+                    </picture>
+            </div>
+          </div>
+          <div class="principles__column">
+            <div class="principles-card">
+              <p class="principles-card__title">Контроль производства</p>
+              <p class="principles-card__text">Продукция Agenyz создаётся на современных производственных линиях, где применяются новейшие технологии и ведется строгий контроль качества по стандартам GMP и ISO 22000. Благодаря им организован контроль на всех этапах: от исследований и тестирования образцов до финального продукта.</p>
+            </div>
+            <div class="principles-card">
+              <p class="principles-card__title">Надёжность сырья</p>
+              <p class="principles-card__text">Используем природные компоненты, которые получены из растений экологически чистых зон, тщательно отобранные для создания биологически активных добавок высокой эффективности. Чтобы обеспечить такую безопасность и строгие требования, мы работаем только с надёжными поставщиками, которые на протяжении многих лет официально гарантируют стабильное качество сырья.</p>
+            </div>
+            <div class="principles-card">
+              <p class="principles-card__title">Подбор партнёров</p>
+              <p class="principles-card__text">Каждый наш потенциальный партнёр-производитель сначала проходит всестороннюю тщательную проверку: оцениваются десятки параметров, в том числе качество сырья, применяемое оборудование и технологии. И лишь при успешном прохождении проверки, претендент становится нашим полноценным партнёром в производстве.</p>
+            </div>
+          </div>
+                <picture>
+                  <source type="image/jpg" srcset="/assets/img/principles-image-01-mobile.jpg" media="(max-width: 1320px)"/><img class="principles__img" src="/assets/img/principles-image-01.jpg" alt="Изображение ученого" loading="lazy"/>
+                </picture>
+        </div>
+      </section>
+      <section class="section section--dark technologies">
+        <div class="container">
+          <div class="technologies__column">
+            <h2 class="section__title">Технологии производства</h2>
+            <p class="section__subtitle">Сотни ценных ингредиентов в составе продуктов</p>
+            <p class="section__text">Компания AGenYZ разрабатывает продукцию для восполнения ресурсов организма и помогает раскрыть его потенциал, чтобы долгие годы оставаться ментально и физически здоровыми</p><a class="button technologies__link" href="/">Узнать больше</a>
+          </div>
+          <div class="technologies__cards">
+            <div class="technologies-swiper swiper js-technologies-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide technologies-slide technologies-slide--color-sky">
+                  <div class="technologies-slide__wrapper">
+                    <svg class="technologies-slide__icon">
+                      <use href="#icon-innovation"></use>
+                    </svg>
+                    <p class="technologies-slide__text">Инновационные технологии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide technologies-slide">
+                  <div class="technologies-slide__wrapper">
+                    <svg class="technologies-slide__icon">
+                      <use href="#icon-microcapsulation"></use>
+                    </svg>
+                    <p class="technologies-slide__text">Микрокапсули-<br>рование</p>
+                  </div>
+                </div>
+                <div class="swiper-slide technologies-slide technologies-slide--color-blue">
+                  <div class="technologies-slide__wrapper">
+                    <svg class="technologies-slide__icon">
+                      <use href="#icon-3d"></use>
+                    </svg>
+                    <p class="technologies-slide__text">3D технология</p>
+                  </div>
+                </div>
+                <div class="swiper-slide technologies-slide technologies-slide--color-green">
+                  <div class="technologies-slide__wrapper">
+                    <svg class="technologies-slide__icon">
+                      <use href="#icon-peptides"></use>
+                    </svg>
+                    <p class="technologies-slide__text">Пептидные ультрализаты</p>
+                  </div>
+                </div>
+                <div class="swiper-slide technologies-slide technologies-slide--color-pink">
+                  <div class="technologies-slide__wrapper">
+                    <svg class="technologies-slide__icon">
+                      <use href="#icon-synergistic"></use>
+                    </svg>
+                    <p class="technologies-slide__text">Синергетический эффект</p>
+                  </div>
+                </div>
+                <div class="swiper-slide technologies-slide technologies-slide--color-green">
+                  <div class="technologies-slide__wrapper">
+                    <svg class="technologies-slide__icon">
+                      <use href="#icon-liposomal"></use>
+                    </svg>
+                    <p class="technologies-slide__text">Липосомированные формы</p>
+                  </div>
+                </div>
+                <div class="swiper-slide technologies-slide">
+                  <div class="technologies-slide__wrapper">
+                    <svg class="technologies-slide__icon">
+                      <use href="#icon-co2"></use>
+                    </svg>
+                    <p class="technologies-slide__text">CO2-экстракция</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination js-technologies-swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--dark team">
+        <div class="container">
+          <h2 class="section__title">Становитесь частью <br> команды Agenyz</h2>
+          <p class="section__subtitle">Присоединяйтесь к команде AGENYZ сегодня и станьте частью глобального движения за здоровье и успех!</p>
+          <div class="team__column">
+            <div class="team-card">
+              <p class="team-card__title">Программа лояльности</p>
+              <p class="team-card__subtitle">Для Премиум клиентов Agenyz</p>
+              <p class="team-card__text">Для выгодных покупок продукции высочайшего качества — кэшбек и подарки при участии в программе Get Plus</p>
+              <div class="team-card__list">
+                <p class="team-card-list-item">
+                  <svg class="team-card-list-item__icon">
+                    <use href="#icon-check"></use>
+                  </svg>До 50% подарков к каждому заказу
+                </p>
+                <p class="team-card-list-item">
+                  <svg class="team-card-list-item__icon">
+                    <use href="#icon-check"></use>
+                  </svg>До 10% кэшбэк
+                </p>
+              </div><a class="button button--white team-card__link" href="/">Подробнее</a>
+            </div>
+            <div class="team-card team-card--dark">
+              <p class="team-card__title">Премиальная программа</p>
+              <p class="team-card__subtitle">Для промоутеров Agenyz</p>
+              <p class="team-card__text">Выгодная реферальная программа позволит вам получать не только до 20% вознаграждений с заказов по вашим личным рекомендациям, но и проценты с заказов, совершенных по рекомендации ваших Промоутеров.</p>
+              <div class="team-card__list">
+                <p class="team-card-list-item">
+                  <svg class="team-card-list-item__icon">
+                    <use href="#icon-check"></use>
+                  </svg>50 000 ₽ средний доход за месяц
+                </p>
+              </div><a class="button button--green team-card__link" href="/">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__column"><a class="logo footer__logo" href="/"><img src="/assets/img/logo.svg" alt="Agenyz"/></a>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">О компании</p><a class="footer-nav__link" href="/">О компании</a><a class="footer-nav__link" href="/">Биохакинг</a><a class="footer-nav__link" href="/">Производство</a><a class="footer-nav__link" href="/">О продукции</a>
+            </nav>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">Магазин</p><a class="footer-nav__link" href="/">Каталог</a><a class="footer-nav__link" href="/">Питание</a><a class="footer-nav__link" href="/">Здоровье</a><a class="footer-nav__link" href="/">Косметика</a><a class="footer-nav__link" href="/">Аксессуары</a>
+            </nav>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">Контактная информация</p><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-telegram"></use>
+                </svg>agenyz/t.me</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-vk"></use>
+                </svg>agenyz/vk.com</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-youtube"></use>
+                </svg>agenyz</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-ok"></use>
+                </svg>agenyz/ok.ru</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-looky"></use>
+                </svg>agenyz</a>
+            </nav>
+          </div>
+          <div class="footer__bottom"><a class="footer__text" href="/">Политика конфиденциальности</a><a class="footer__text" href="/">Оферта</a>
+            <p class="footer__text">117105, г. Москва, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ ДОНСКОЙ, Ш ВАРШАВСКОЕ, Д. 1А</p>
+            <p class="footer__text">ООО "АЛЬФАДЖЕНИС"</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal-container">
+      <div class="modal-container__wrapper">
+      </div>
+    </div>
+  </body><script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/scripts/inputmask.min.js"></script>
+  <script src="assets/scripts/script.js"></script><script>
+</script>
+</html>

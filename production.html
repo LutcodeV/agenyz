@@ -1,0 +1,516 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+    <title>Agenyz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+  </head>
+  <body>
+    <div id="svg-sprite"></div>
+    <div class="global-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__left"><a class="logo header__logo" href="/"><img src="/assets/img/logo.svg" alt="Agenyz"/></a>
+            <button class="button button--outline header__cart">
+              <svg>
+                <use href="#icon-cart"></use>
+              </svg>В магазин
+            </button>
+          </div>
+          <nav class="header-nav js-header-nav" aria-label="Главное меню">
+            <div class="container">
+              <div class="header-lang__wrapper header-lang__wrapper--mobile js-header-lang">
+                <div class="header-lang header__controller">
+                  <button class="header-lang__button">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-russia"></use>
+                    </svg>RU
+                    <svg class="header-lang__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <div class="header-lang__list"><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-russia"></use>
+                      </svg>RU</a><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-england"></use>
+                      </svg>EN</a><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-germany"></use>
+                      </svg>GE</a></div>
+                </div>
+              </div>
+            </div>
+            <ul class="header-nav__list">
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item js-nav-expandable-link header-nav__list-item--expandable header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/">Каталог</a>
+                  <button class="header-nav__list-item-button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-4" aria-label="Показать подменю «Каталог»">
+                    <svg>
+                      <use href="#icon-accordion"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <ul class="header-nav__list" id="submenu-4">
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a></div>
+                </li>
+              </ul>
+              <li class="header-nav__list-item js-nav-expandable-link header-nav__list-item--expandable header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a>
+                  <button class="header-nav__list-item-button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-5" aria-label="Показать подменю «О компании»">
+                    <svg>
+                      <use href="#icon-accordion"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <ul class="header-nav__list" id="submenu-5">
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a></div>
+                </li>
+              </ul>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/pickup">Пункты выдачи</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/news">Новости</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/privacy">Политика конфиденциальности</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/contacts">Контакты</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/details">Реквизиты</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/shipping">Условия оплаты и доставки</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/offer">Оферта</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__right">
+            <button class="header-burger js-header-burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+            <div class="header-lang__wrapper js-header-lang">
+              <div class="header-lang header__controller">
+                <button class="header-lang__button">
+                  <svg class="header-lang__flag">
+                    <use href="#flag-russia"></use>
+                  </svg>RU
+                  <svg class="header-lang__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <div class="header-lang__list"><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-russia"></use>
+                    </svg>RU</a><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-england"></use>
+                    </svg>EN</a><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-germany"></use>
+                    </svg>GE</a></div>
+              </div>
+            </div><a class="header__controller" href="#">
+              <svg>
+                <use href="#icon-user"></use>
+              </svg>Войти</a>
+          </div>
+        </div>
+      </header>
+      <section class="section section--dark hero">
+        <div class="container">
+          <div class="hero__column">
+            <h1 class="hero__title hero__title--small">Производство продукции Agenyz</h1>
+          </div>
+          <div class="hero__texts">
+            <p class="hero__text">Мы активно сотрудничаем с командами экспертов, которые посвятили себя созданию уникальных продуктов для здоровья, используя самые последние научные открытия и клинические исследования.</p>
+            <p class="hero__text">Гордимся тем, что наши продукты созданы из природных компонентов высшего качества с использованием технологий последнего поколения. Продукты, работающие на практике, – проверено тысячами наших клиентов.</p>
+          </div>
+                <picture><img class="hero__img" src="/assets/img/hero-production-image-01.jpg" alt="Таблетки" loading="lazy"/>
+                </picture>
+        </div>
+              <picture><img class="hero__bg-img" src="/assets/img/hero-production-bg-img.png" alt="Фон первого блок" loading="lazy"/>
+              </picture>
+      </section>
+      <section class="section section--dark unique">
+        <div class="container">
+          <h2 class="section__title unique__title">Благодаря опыту ученых, нам удалось объединить</h2>
+          <div class="unique__column">
+            <div class="unique-card unique-card--blue">
+              <p class="unique-card__title">Современные <br> технологии</p>
+            </div>
+            <div class="unique-card unique-card--green">
+              <p class="unique-card__title">Природные <br> ингредиенты</p>
+            </div>
+            <div class="unique-card unique-card--pink">
+              <p class="unique-card__title">Стандарты <br> качества</p>
+            </div>
+          </div>
+          <div class="unique-product">
+            <div class="unique-product__column">
+              <p class="unique-product__title">Уникальные линейки продуктов Agenyz:</p>
+              <ul class="unique-product__list">
+                <li class="unique-product__list-item">линии биологически активных добавок</li>
+                <li class="unique-product__list-item">функциональное питание</li>
+                <li class="unique-product__list-item">коктейли и напитки</li>
+                <li class="unique-product__list-item">косметические средства</li>
+                <li class="unique-product__list-item">инновационные продукты</li>
+              </ul>
+            </div>
+                  <picture><img class="unique-product__img" src="/assets/img/unique-product-01.png" alt="Таблетки" loading="lazy"/>
+                  </picture>
+          </div>
+          <div class="unique-rewards">
+            <div class="unique-rewards__column">
+              <p class="unique-rewards__title">Лучшие производственные практики GMP и ISO 22000</p>
+              <div class="unique-rewards__logos">
+                      <picture><img class="principles__logo" src="/assets/img/principles-logo-01.png" alt="Логотип ISO" loading="lazy"/>
+                      </picture>
+                      <picture><img class="principles__logo" src="/assets/img/principles-logo-02.png" alt="Логотип GMP" loading="lazy"/>
+                      </picture>
+              </div>
+            </div>
+            <div class="unique-rewards__info">
+              <div class="unique-rewards-item">
+                <p class="unique-rewards-item__title">100+</p>
+                <p class="unique-rewards-item__text">ценных ингредиентов <br> в составе продуктов</p>
+              </div>
+              <div class="unique-rewards-item">
+                <p class="unique-rewards-item__title">30+</p>
+                <p class="unique-rewards-item__text">отобранных лучших <br> производств по всему миру</p>
+              </div>
+              <div class="unique-rewards-item">
+                <p class="unique-rewards-item__title">80+</p>
+                <p class="unique-rewards-item__text">эффективных продуктов <br> высокого качества</p>
+              </div>
+              <div class="unique-rewards-item">
+                <p class="unique-rewards-item__title">14+</p>
+                <p class="unique-rewards-item__text">клинических исследований, <br> которые постоянно продолжаются</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section production-technologies">
+        <div class="container">
+          <h2 class="section__title">Технологии здоровья и красоты</h2>
+          <p class="section__subtitle section__subtitle--center">Сотни ценных ингредиентов в составе продуктов</p>
+          <div class="production-technologies-infograph">
+            <div class="production-technologies-infograph-step">
+              <button class="production-technologies-infograph-step__button" aria-label="Открыть модальное окно 'Микрокапсули-рование'" aria-expanded="false" data-production-technologies-modal="pt1"><span></span></button>
+              <p class="production-technologies-infograph-step__title">Микрокапсули-рование</p>
+            </div>
+            <div class="production-technologies-infograph-step">
+              <button class="production-technologies-infograph-step__button" aria-label="Открыть модальное окно 'Пептидные ультрализаты'" aria-expanded="false" data-production-technologies-modal="pt2"><span></span></button>
+              <p class="production-technologies-infograph-step__title">Пептидные <br> ультрализаты</p>
+            </div>
+            <div class="production-technologies-infograph-step">
+              <button class="production-technologies-infograph-step__button" aria-label="Открыть модальное окно 'Адъюванты'" aria-expanded="false" data-production-technologies-modal="pt3"><span></span></button>
+              <p class="production-technologies-infograph-step__title">Адъюванты</p>
+            </div>
+            <div class="production-technologies-infograph-step">
+              <button class="production-technologies-infograph-step__button" aria-label="Открыть модальное окно 'Липосомированные формы'" aria-expanded="false" data-production-technologies-modal="pt4"><span></span></button>
+              <p class="production-technologies-infograph-step__title">Липосомированные <br> формы</p>
+            </div>
+            <div class="production-technologies-infograph-step">
+              <button class="production-technologies-infograph-step__button" aria-label="Открыть модальное окно 'Синергетический подход'" aria-expanded="false" data-production-technologies-modal="pt5"><span></span></button>
+              <p class="production-technologies-infograph-step__title">Синергетический <br> подход</p>
+            </div>
+            <div class="production-technologies-infograph-step">
+              <button class="production-technologies-infograph-step__button" aria-label="Открыть модальное окно 'CO2-экстракция'" aria-expanded="false" data-production-technologies-modal="pt6"><span></span></button>
+              <p class="production-technologies-infograph-step__title">CO2-экстракция</p>
+            </div>
+            <div class="production-technologies-infograph-step">
+              <button class="production-technologies-infograph-step__button" aria-label="Открыть модальное окно '3D-технология'" aria-expanded="false" data-production-technologies-modal="pt7"><span></span></button>
+              <p class="production-technologies-infograph-step__title">3D-технология</p>
+            </div>
+                  <picture><img class="production-technologies-infograph__img" src="/assets/img/technologies-infograph.png" alt="Инфографика" loading="lazy"/>
+                  </picture>
+                  <picture><img class="production-technologies-infograph__img production-technologies-infograph__img--pc" src="/assets/img/technologies-infograph-pc.png" alt="Инфографика" loading="lazy"/>
+                  </picture>
+            <div class="production-technologies-modals">
+              <div class="production-technologies-modal" aria-hidden="true" data-production-technologies="pt1">
+                <button class="production-technologies-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="production-technologies-modal__img-wrapper">
+                        <picture><img class="production-technologies-modal__img" src="/assets/img/technologies-infograph-01.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="production-technologies-modal__title">Микрокапсулирование</p>
+                <p class="production-technologies-modal__text">Этот метод помогает надёжно защитить пробиотики и другие активные вещества от агрессивных факторов вплоть до момента усвоения организмом человека. Микрокапсулы образуют защитный слой, который сохраняет стабильность и активность компонентов</p>
+              </div>
+              <div class="production-technologies-modal" aria-hidden="true" data-production-technologies="pt2">
+                <button class="production-technologies-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="production-technologies-modal__img-wrapper">
+                        <picture><img class="production-technologies-modal__img" src="/assets/img/technologies-infograph-02.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="production-technologies-modal__title">Пептидные ультрализаты</p>
+                <p class="production-technologies-modal__text">«Тренажеры» для иммунитета – способствуют росту полезной микрофлоры здорового человека, оказывают заметное и быстрое позитивное влияние на организм</p>
+              </div>
+              <div class="production-technologies-modal" aria-hidden="true" data-production-technologies="pt3">
+                <button class="production-technologies-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="production-technologies-modal__img-wrapper">
+                        <picture><img class="production-technologies-modal__img" src="/assets/img/technologies-infograph-03.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="production-technologies-modal__title">Адъюванты</p>
+                <p class="production-technologies-modal__text">Применяются как необходимое дополнение к основным компонентам, но играют важную роль в работе продуктов и позволяют получить от них более выраженный эффект: улучшают усвоение организмом, транспортировку и взаимодействие активных веществ с клетками организма, при этом уменьшая дозировку основных компонентов</p>
+              </div>
+              <div class="production-technologies-modal" aria-hidden="true" data-production-technologies="pt4">
+                <button class="production-technologies-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="production-technologies-modal__img-wrapper">
+                        <picture><img class="production-technologies-modal__img" src="/assets/img/technologies-infograph-04.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="production-technologies-modal__title">Липосомированные формы</p>
+                <p class="production-technologies-modal__text">Повышают биодоступность активных веществ в продуктах Agenyz. Липосомы – крошечные пузырьки, которые оборачивают активные ингредиенты, чтобы защитить их до момента попадания в организм. Поэтому усвоение полезных компонентов происходит более эффективно, даёт возможность оказать максимальное позитивное воздействие на организм</p>
+              </div>
+              <div class="production-technologies-modal" aria-hidden="true" data-production-technologies="pt5">
+                <button class="production-technologies-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="production-technologies-modal__img-wrapper">
+                        <picture><img class="production-technologies-modal__img" src="/assets/img/technologies-infograph-05.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="production-technologies-modal__title">Синергетический подход</p>
+                <p class="production-technologies-modal__text">Позволяет создавать продукты, дающие более выраженные и долгосрочные результаты: все компоненты работают в тандеме, усиливая друг друга, обеспечивая синергетический эффект и комплексное влияние на организм</p>
+              </div>
+              <div class="production-technologies-modal" aria-hidden="true" data-production-technologies="pt6">
+                <button class="production-technologies-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="production-technologies-modal__img-wrapper">
+                        <picture><img class="production-technologies-modal__img" src="/assets/img/technologies-infograph-06.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="production-technologies-modal__title">CO2-экстракция</p>
+                <p class="production-technologies-modal__text">Применяется для бережной экстракции полезных компонентов из растительных источников: для этого применяется Это помогает не растрачивать пользу растений впустую, а использовать её по максимуму на благо человека</p>
+              </div>
+              <div class="production-technologies-modal" aria-hidden="true" data-production-technologies="pt7">
+                <button class="production-technologies-modal__close" aria-label="Закрыть модальное окно"></button>
+                <div class="production-technologies-modal__img-wrapper">
+                        <picture><img class="production-technologies-modal__img" src="/assets/img/technologies-infograph-07.png" alt="Инфографика" loading="lazy"/>
+                        </picture>
+                </div>
+                <p class="production-technologies-modal__title">3D-технология</p>
+                <p class="production-technologies-modal__text">Даёт возможность контролировать процесс поступенчатого высвобождения активных веществ в нужном отделе ЖКТ и тем самым повышает эффективность их воздействия</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section production">
+        <div class="container">
+          <div class="production__column">
+            <h2 class="section__title production__title">Выбор производства для Agenyz</h2>
+            <p class="section__subtitle production__subtitle">Мы ищем производителей, которые влюблены в свое дело, для которых высокое качество их продукции является главной ценностью – так же, как и для нас</p>
+            <div class="production__texts">
+              <div class="production__texts-column">
+                <p class="production__text">Компания Agenyz предъявляет самые высокие требования к уровню производителей своей продукции – это приоритет нашей деятельности!</p>
+                <p class="production__text">Проводится всесторонний и тщательный анализ каждого потенциального партнера и контрагента.</p>
+              </div>
+              <p class="production__text">Проверяются десятки параметров, основные из которых: проверка качества сырья,с которым работает производство, оснащение оборудованием и современными технологиями производства, сертификаты и патенты предприятия.</p>
+            </div>
+          </div>
+                <picture><img class="production__img" src="/assets/img/production-img-01.jpg" alt="ISO" loading="lazy"/>
+                </picture>
+        </div>
+      </section>
+      <section class="section partners">
+        <div class="container">
+          <h2 class="partners__title section__title">Работаем только с теми, кто разделяет нашу приверженность качеству и инновациям.</h2>
+          <p class="partners__subtitle section__subtitle">Для этого мы разработали ряд принципов, которых неукоснительно придерживаемся при выборе партнёров.</p>
+          <div class="partners__swiper-wrapper">
+            <div class="partners__swiper swiper js-partners-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide partner-principles partner-principles--green">
+                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-01.jpg" alt="Прицнип 1" loading="lazy"/>
+                        </picture>
+                  <div class="partner-principles__info">
+                    <div class="partner-principles__header">
+                      <p class="partner-principles__title">Качество и надёжность</p>
+                      <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Качество и надёжность'"></button>
+                    </div>
+                    <div class="partner-principles__wrapper-content" aria-hidden="true">
+                      <div class="partner-principles__content">
+                        <p class="partner-principles__text">Мы сотрудничаем лишь с теми поставщиками и производствами, у кого разработаны стандарты качества и они неукоснительно соблюдаются. Также наши партнёры обязаны иметь международные сертификаты качества GMP и ISO 22 000, которые подтверждают возможности производств обеспечивать надёжность и безопасность продуктов.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide partner-principles partner-principles--pink">
+                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-02.jpg" alt="Прицнип 2" loading="lazy"/>
+                        </picture>
+                  <div class="partner-principles__info">
+                    <div class="partner-principles__header">
+                      <p class="partner-principles__title">Инновационные технологии</p>
+                      <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Научные исследования и разработки'"></button>
+                    </div>
+                    <div class="partner-principles__wrapper-content" aria-hidden="true">
+                      <div class="partner-principles__content">
+                        <p class="partner-principles__text">Наши партнёры-производители должны применять новые технологии, регулярно их совершенствовать. Это даёт возможность работать на одном уровне, чтобы вся продукция была высочайшего качества.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide partner-principles partner-principles--blue">
+                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-03.jpg" alt="Прицнип 3" loading="lazy"/>
+                        </picture>
+                  <div class="partner-principles__info">
+                    <div class="partner-principles__header">
+                      <p class="partner-principles__title">Научные исследования <br> и разработки</p>
+                      <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Компетентность и опыт'"></button>
+                    </div>
+                    <div class="partner-principles__wrapper-content" aria-hidden="true">
+                      <div class="partner-principles__content">
+                        <p class="partner-principles__text">Важно, чтобы наши партнёры не только использовали новые технологии, но и самостоятельно вели научные исследования. Поэтому мы сотрудничаем с теми, кто проводит клинические испытания, получает патенты и  совершенствует продукты.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide partner-principles partner-principles--green">
+                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-04.jpg" alt="Прицнип 4" loading="lazy"/>
+                        </picture>
+                  <div class="partner-principles__info">
+                    <div class="partner-principles__header">
+                      <p class="partner-principles__title">Экологическая ответственность</p>
+                      <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Инновационные технологии'"></button>
+                    </div>
+                    <div class="partner-principles__wrapper-content" aria-hidden="true">
+                      <div class="partner-principles__content">
+                        <p class="partner-principles__text">Наши поставщики должны следовать принципам сохранности окружающей среды, экологической безопасности и бережно использовать возобновляемые ресурсы, минимизировать негативное воздействие на природу.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide partner-principles partner-principles--pink">
+                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-05.jpg" alt="Прицнип 5" loading="lazy"/>
+                        </picture>
+                  <div class="partner-principles__info">
+                    <div class="partner-principles__header">
+                      <p class="partner-principles__title">Компетентность и опыт</p>
+                      <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Экологическая ответственность'"></button>
+                    </div>
+                    <div class="partner-principles__wrapper-content" aria-hidden="true">
+                      <div class="partner-principles__content">
+                        <p class="partner-principles__text">Чтобы работать с нами, поставщикам и производствам необходимо иметь хорошую репутацию, опыт и высокую квалификацию в профильной сфере. Так мы сможем уверенно работать с партнёрами Agenyz и создавать лучшие продукты для здоровья наших покупателей.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide partner-principles partner-principles--blue">
+                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-06.jpg" alt="Прицнип 6" loading="lazy"/>
+                        </picture>
+                  <div class="partner-principles__info">
+                    <div class="partner-principles__header">
+                      <p class="partner-principles__title">Прозрачность и честность</p>
+                      <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Прозрачность и честность'"></button>
+                    </div>
+                    <div class="partner-principles__wrapper-content" aria-hidden="true">
+                      <div class="partner-principles__content">
+                        <p class="partner-principles__text">Все процессы в Agenyz – от поставок до производства – должны быть прозрачными и проверяемыми. Мы также честны и открыты перед своими партнёрами, потому что уверены в своей продукции.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination js-partners-swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="partners__buttons"><a class="partners__button button" href="/">Посмотреть каталог</a><a class="partners__button button button--outline" href="/">Подробнее о продукции</a></div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__column"><a class="logo footer__logo" href="/"><img src="/assets/img/logo.svg" alt="Agenyz"/></a>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">О компании</p><a class="footer-nav__link" href="/">О компании</a><a class="footer-nav__link" href="/">Биохакинг</a><a class="footer-nav__link" href="/">Производство</a><a class="footer-nav__link" href="/">О продукции</a>
+            </nav>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">Магазин</p><a class="footer-nav__link" href="/">Каталог</a><a class="footer-nav__link" href="/">Питание</a><a class="footer-nav__link" href="/">Здоровье</a><a class="footer-nav__link" href="/">Косметика</a><a class="footer-nav__link" href="/">Аксессуары</a>
+            </nav>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">Контактная информация</p><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-telegram"></use>
+                </svg>agenyz/t.me</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-vk"></use>
+                </svg>agenyz/vk.com</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-youtube"></use>
+                </svg>agenyz</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-ok"></use>
+                </svg>agenyz/ok.ru</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-looky"></use>
+                </svg>agenyz</a>
+            </nav>
+          </div>
+          <div class="footer__bottom"><a class="footer__text" href="/">Политика конфиденциальности</a><a class="footer__text" href="/">Оферта</a>
+            <p class="footer__text">117105, г. Москва, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ ДОНСКОЙ, Ш ВАРШАВСКОЕ, Д. 1А</p>
+            <p class="footer__text">ООО "АЛЬФАДЖЕНИС"</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal-container">
+      <div class="modal-container__wrapper">
+      </div>
+    </div>
+  </body><script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/scripts/inputmask.min.js"></script>
+  <script src="assets/scripts/script.js"></script><script>
+</script>
+</html>
