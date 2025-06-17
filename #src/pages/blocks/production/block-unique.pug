@@ -1,0 +1,41 @@
+include ../../_mixins
+
+section.section.section--dark.unique
+	.container
+		h2.section__title.unique__title Благодаря опыту ученых, нам удалось объединить
+		.unique__column
+			.unique-card.unique-card--blue
+				p.unique-card__title Современные <br> технологии
+			.unique-card.unique-card--green
+				p.unique-card__title Природные <br> ингредиенты
+			.unique-card.unique-card--pink
+				p.unique-card__title Стандарты <br> качества
+		.unique-product
+			.unique-product__column
+				p.unique-product__title Уникальные линейки продуктов Agenyz:
+				ul.unique-product__list
+					li.unique-product__list-item линии биологически активных добавок
+					li.unique-product__list-item функциональное питание
+					li.unique-product__list-item коктейли и напитки
+					li.unique-product__list-item косметические средства
+					li.unique-product__list-item инновационные продукты
+			+responsivePicture("/assets/img/unique-product-01", 'Таблетки', 'unique-product__img', ['png'])
+		.unique-rewards
+			.unique-rewards__column
+				p.unique-rewards__title Лучшие производственные практики GMP и ISO 22000
+				.unique-rewards__logos
+					+responsivePicture("/assets/img/principles-logo-01", 'Логотип ISO', 'principles__logo', ['png'])
+					+responsivePicture("/assets/img/principles-logo-02", 'Логотип GMP', 'principles__logo', ['png'])
+			.unique-rewards__info
+				.unique-rewards-item
+					p.unique-rewards-item__title 100+
+					p.unique-rewards-item__text ценных ингредиентов <br> в составе продуктов
+				.unique-rewards-item
+					p.unique-rewards-item__title 30+
+					p.unique-rewards-item__text отобранных лучших <br> производств по всему миру
+				.unique-rewards-item
+					p.unique-rewards-item__title 80+
+					p.unique-rewards-item__text эффективных продуктов <br> высокого качества
+				.unique-rewards-item
+					p.unique-rewards-item__title 14+
+					p.unique-rewards-item__text клинических исследований, <br> которые постоянно продолжаются

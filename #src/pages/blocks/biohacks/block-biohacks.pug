@@ -1,0 +1,30 @@
+include ../../_mixins
+
+section.section.biohack
+	.container
+		h2.section__title.biohack__title Биохакинг с Адженис
+		p.section__subtitle.biohack__subtitle Биохакинг - это эффективность, актуализация своих внутренних резервов.
+		p.section__text.biohack__text Компания информирует своих клиентов о важности и возможности управления своим состоянием, комплексного подхода к здоровью, а также о том, как продукты Agenyz помогают достичь баланса и вывести ресурсы организма на максимум.
+		.biohack-person
+			.biohack-person-card
+				p.biohack-person-card__title Правильное питание и важные нутриенты
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-vegetables")
+			.biohack-person-card
+				p.biohack-person-card__title Гармонизация энергетических центров
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-lamp")
+			.biohack-person-card
+				p.biohack-person-card__title Активизация мозговой деятельности
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-gear-brain")
+			.biohack-person-card
+				p.biohack-person-card__title Физическая активность и спорт
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-dumbbells")
+			.biohack-person-card
+				p.biohack-person-card__title Нормализация сна и АнтиСтресс
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-sleep")
+			+responsivePicture("/assets/img/biohack-person-01", 'Силуэт', 'biohack-person__img', ['png'])
+			.biohack-person__circles

@@ -1,0 +1,67 @@
+include ../../_mixins
+
+section.section.partners
+	.container
+		h2.partners__title.section__title Работаем только с теми, кто разделяет нашу приверженность качеству и инновациям.
+		p.partners__subtitle.section__subtitle Для этого мы разработали ряд принципов, которых неукоснительно придерживаемся при выборе партнёров.
+		.partners__swiper-wrapper
+			.partners__swiper.swiper.js-partners-swiper
+				.swiper-wrapper
+					.swiper-slide.partner-principles.partner-principles--green
+						+responsivePicture("/assets/img/partner-principles-01", 'Прицнип 1', 'partner-principles__img')
+						.partner-principles__info
+							.partner-principles__header
+								p.partner-principles__title Качество и надёжность
+								button.partner-principles__button(aria-expanded="false" aria-label="Открыть описание 'Качество и надёжность'")
+							.partner-principles__wrapper-content(aria-hidden="true")
+								.partner-principles__content
+									p.partner-principles__text Мы сотрудничаем лишь с теми поставщиками и производствами, у кого разработаны стандарты качества и они неукоснительно соблюдаются. Также наши партнёры обязаны иметь международные сертификаты качества GMP и ISO 22 000, которые подтверждают возможности производств обеспечивать надёжность и безопасность продуктов.
+					.swiper-slide.partner-principles.partner-principles--pink
+						+responsivePicture("/assets/img/partner-principles-02", 'Прицнип 2', 'partner-principles__img')
+						.partner-principles__info
+							.partner-principles__header
+								p.partner-principles__title Инновационные технологии
+								button.partner-principles__button(aria-expanded="false" aria-label="Открыть описание 'Научные исследования и разработки'")
+							.partner-principles__wrapper-content(aria-hidden="true")
+								.partner-principles__content
+									p.partner-principles__text Наши партнёры-производители должны применять новые технологии, регулярно их совершенствовать. Это даёт возможность работать на одном уровне, чтобы вся продукция была высочайшего качества.
+					.swiper-slide.partner-principles.partner-principles--blue
+						+responsivePicture("/assets/img/partner-principles-03", 'Прицнип 3', 'partner-principles__img')
+						.partner-principles__info
+							.partner-principles__header
+								p.partner-principles__title Научные исследования <br> и разработки
+								button.partner-principles__button(aria-expanded="false" aria-label="Открыть описание 'Компетентность и опыт'")
+							.partner-principles__wrapper-content(aria-hidden="true")
+								.partner-principles__content
+									p.partner-principles__text Важно, чтобы наши партнёры не только использовали новые технологии, но и самостоятельно вели научные исследования. Поэтому мы сотрудничаем с теми, кто проводит клинические испытания, получает патенты и  совершенствует продукты.
+					.swiper-slide.partner-principles.partner-principles--green
+						+responsivePicture("/assets/img/partner-principles-04", 'Прицнип 4', 'partner-principles__img')
+						.partner-principles__info
+							.partner-principles__header
+								p.partner-principles__title Экологическая ответственность
+								button.partner-principles__button(aria-expanded="false" aria-label="Открыть описание 'Инновационные технологии'")
+							.partner-principles__wrapper-content(aria-hidden="true")
+								.partner-principles__content
+									p.partner-principles__text Наши поставщики должны следовать принципам сохранности окружающей среды, экологической безопасности и бережно использовать возобновляемые ресурсы, минимизировать негативное воздействие на природу.
+					.swiper-slide.partner-principles.partner-principles--pink
+						+responsivePicture("/assets/img/partner-principles-05", 'Прицнип 5', 'partner-principles__img')
+						.partner-principles__info
+							.partner-principles__header
+								p.partner-principles__title Компетентность и опыт
+								button.partner-principles__button(aria-expanded="false" aria-label="Открыть описание 'Экологическая ответственность'")
+							.partner-principles__wrapper-content(aria-hidden="true")
+								.partner-principles__content
+									p.partner-principles__text Чтобы работать с нами, поставщикам и производствам необходимо иметь хорошую репутацию, опыт и высокую квалификацию в профильной сфере. Так мы сможем уверенно работать с партнёрами Agenyz и создавать лучшие продукты для здоровья наших покупателей.
+					.swiper-slide.partner-principles.partner-principles--blue
+						+responsivePicture("/assets/img/partner-principles-06", 'Прицнип 6', 'partner-principles__img')
+						.partner-principles__info
+							.partner-principles__header
+								p.partner-principles__title Прозрачность и честность
+								button.partner-principles__button(aria-expanded="false" aria-label="Открыть описание 'Прозрачность и честность'")
+							.partner-principles__wrapper-content(aria-hidden="true")
+								.partner-principles__content
+									p.partner-principles__text Все процессы в Agenyz – от поставок до производства – должны быть прозрачными и проверяемыми. Мы также честны и открыты перед своими партнёрами, потому что уверены в своей продукции.
+				.swiper-pagination.js-partners-swiper-pagination
+		.partners__buttons
+			a(href="/").partners__button.button Посмотреть каталог
+			a(href="/").partners__button.button.button--outline Подробнее о продукции

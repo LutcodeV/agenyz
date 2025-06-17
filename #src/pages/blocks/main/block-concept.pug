@@ -1,0 +1,79 @@
+include ../../_mixins
+
+section.section.section--dark.concept
+	.container
+		h2.section__title Концепция развития Agenyz
+		.concept__texts-wrapper
+			p.section__subtitle.section__subtitle--center Наша компания использует в своей ежедневной практике Концепцию Устойчивого развития.
+			.concept__texts
+				p.concept__text Каждое управленческое решение, которое принимается в Agenyz, учитывает три параметра: интересы бизнеса, интересы общества и заботу об окружающей среде.
+				p.concept__text Выбираются только такие решения, которые ведут к позитивному и созидательному будущему для всех – это одна из главных задач, которую ставит перед собой компания.
+		.concept-infograph
+			+responsivePicture("/assets/img/concept-infograph", 'Инфографика', 'concept-infograph__img', ['png'])
+			+responsivePicture("/assets/img/concept-infograph-pc", 'Инфографика', 'concept-infograph__img concept-infograph__img--pc', ['png'])
+			.concept-infograph-step
+				p.concept-infograph-step__title Устойчивое <br> развитие
+			.concept-infograph-step
+				p.concept-infograph-step__title Социальная <br> ответственность
+				button.concept-infograph-step__button(aria-label="Открыть модальное окно 'Социальная ответственность'" aria-expanded="false" data-concept-modal="economy")
+					span
+			.concept-infograph-step
+				p.concept-infograph-step__title Экономический <br> рост
+				button.concept-infograph-step__button(aria-label="Открыть модальное окно 'Экономический рост'" aria-expanded="false" data-concept-modal="social")
+					span
+			.concept-infograph-step
+				p.concept-infograph-step__title Сохранение <br> экологии
+				button.concept-infograph-step__button(aria-label="Открыть модальное окно 'Сохранение экологии'" aria-expanded="false" data-concept-modal="ecology")
+					span
+			.concept-modals
+				.concept-modal(aria-hidden="true" data-concept="economy")
+					button.concept-modal__close(aria-label="Закрыть модальное окно")
+					.concept-modal__img-wrapper
+						+responsivePicture("/assets/img/concept-infograph-01", 'Инфографика', 'concept-modal__img', ['png'])
+					p.concept-modal__title Экономический рост
+					.concept-modal__list
+						.concept-modal-item
+							p.concept-modal-item__title Качество
+							p.concept-modal-item__text Обеспечение качества и эффективности продукции
+						.concept-modal-item
+							p.concept-modal-item__title Большие цели
+							p.concept-modal-item__text Стать одной из ведущих компаний в своей отрасли
+						.concept-modal-item
+							p.concept-modal-item__title Партнерство
+							p.concept-modal-item__text Партнерские и клиентские бонусные программы
+						.concept-modal-item
+							p.concept-modal-item__title Инновации
+							p.concept-modal-item__text Внедрение новых технологий и научных достижений для улучшения продуктов и создания новых решений
+				.concept-modal(aria-hidden="true" data-concept="social")
+					button.concept-modal__close(aria-label="Закрыть модальное окно")
+					.concept-modal__img-wrapper
+						+responsivePicture("/assets/img/concept-infograph-02", 'Инфографика', 'concept-modal__img', ['png'])
+					p.concept-modal__title Социальная ответственность
+					.concept-modal__list
+						.concept-modal-item
+							p.concept-modal-item__title Благотворительность
+							p.concept-modal-item__text Помощь людям попавшим в трудную жизненную ситуацию
+						.concept-modal-item
+							p.concept-modal-item__title Просвещение
+							p.concept-modal-item__text Информирование потребителей о важности комплексного подхода к здоровью
+						.concept-modal-item
+							p.concept-modal-item__title Финансовое благополучие
+							p.concept-modal-item__text Экспертное обучение управлению доходами и возможность зарабатывать больше
+				.concept-modal(aria-hidden="true" data-concept="ecology")
+					button.concept-modal__close(aria-label="Закрыть модальное окно")
+					.concept-modal__img-wrapper
+						+responsivePicture("/assets/img/concept-infograph-03", 'Инфографика', 'concept-modal__img', ['png'])
+					p.concept-modal__title Сохранение экологии
+					.concept-modal__list
+						.concept-modal-item
+							p.concept-modal-item__title Чистые технологии
+							p.concept-modal-item__text Методы производства с минимальным воздействием на окружающую среду
+						.concept-modal-item
+							p.concept-modal-item__title Биоразлагаемая упаковка
+							p.concept-modal-item__text Перерабатываемая упаковка продукции Agenyz и выдача заказов в биоразлагаемых пакетах
+						.concept-modal-item
+							p.concept-modal-item__title Переработка пластика
+							p.concept-modal-item__text Сбор использованных пластиковых флаконов от продукции для вторичной переработки
+						.concept-modal-item
+							p.concept-modal-item__title Сохранение природы
+							p.concept-modal-item__text Уборка мусора и высадка деревьев в регионах присутствия компании

@@ -1,0 +1,566 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+    <title>Agenyz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+  </head>
+  <body>
+    <div id="svg-sprite"></div>
+    <div class="global-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__left"><a class="logo header__logo" href="/"><img src="/assets/img/logo.svg" alt="Agenyz"/></a>
+            <button class="button button--outline header__cart">
+              <svg>
+                <use href="#icon-cart"></use>
+              </svg>В магазин
+            </button>
+          </div>
+          <nav class="header-nav js-header-nav" aria-label="Главное меню">
+            <div class="container">
+              <div class="header-lang__wrapper header-lang__wrapper--mobile js-header-lang">
+                <div class="header-lang header__controller">
+                  <button class="header-lang__button">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-russia"></use>
+                    </svg>RU
+                    <svg class="header-lang__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <div class="header-lang__list"><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-russia"></use>
+                      </svg>RU</a><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-england"></use>
+                      </svg>EN</a><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-germany"></use>
+                      </svg>GE</a></div>
+                </div>
+              </div>
+            </div>
+            <ul class="header-nav__list">
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item js-nav-expandable-link header-nav__list-item--expandable header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/">Каталог</a>
+                  <button class="header-nav__list-item-button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-4" aria-label="Показать подменю «Каталог»">
+                    <svg>
+                      <use href="#icon-accordion"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <ul class="header-nav__list" id="submenu-4">
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a></div>
+                </li>
+              </ul>
+              <li class="header-nav__list-item js-nav-expandable-link header-nav__list-item--expandable header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a>
+                  <button class="header-nav__list-item-button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-5" aria-label="Показать подменю «О компании»">
+                    <svg>
+                      <use href="#icon-accordion"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <ul class="header-nav__list" id="submenu-5">
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a></div>
+                </li>
+              </ul>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/pickup">Пункты выдачи</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/news">Новости</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/privacy">Политика конфиденциальности</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/contacts">Контакты</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/details">Реквизиты</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/shipping">Условия оплаты и доставки</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/offer">Оферта</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__right">
+            <button class="header-burger js-header-burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+            <div class="header-lang__wrapper js-header-lang">
+              <div class="header-lang header__controller">
+                <button class="header-lang__button">
+                  <svg class="header-lang__flag">
+                    <use href="#flag-russia"></use>
+                  </svg>RU
+                  <svg class="header-lang__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <div class="header-lang__list"><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-russia"></use>
+                    </svg>RU</a><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-england"></use>
+                    </svg>EN</a><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-germany"></use>
+                    </svg>GE</a></div>
+              </div>
+            </div><a class="header__controller" href="#">
+              <svg>
+                <use href="#icon-user"></use>
+              </svg>Войти</a>
+          </div>
+        </div>
+      </header>
+      <section class="section section--dark biohack-hero">
+        <div class="container">
+          <div class="biohack-hero__content">
+            <h1 class="biohack-hero__title">Биохакинг с Agenyz</h1>
+            <p class="biohack-hero__subtitle">Современный подход к повышению личной эффективности и управлению долголетием!</p>
+          </div>
+          <div class="biohack-hero-block">
+            <div class="biohack-hero-block__column">
+              <p class="biohack-hero-block__text biohack-hero-block__text--big">С каждым годом все большее число людей обращают внимание на свое состояние, они хотят стать эффективнее, здоровее, жить дольше.</p>
+              <p class="biohack-hero-block__text">Компания Agenyz в числе первых внедрила концепцию биохакинга в России и всесторонне подошла к задаче, создавая продукты и инструменты для всех аспектов жизни.</p>
+              <p class="biohack-hero-block__text">Благодаря биохакингу человек может жить долгой и продуктивной жизнью: раскрыть внутренние ресурсы организма, управлять ими и перезапустить свой организм на работу с новыми силами. Различные сферы биохакинга помогают быть энергичнее, выносливее, умнее и спокойнее.</p>
+              <p class="biohack-hero-block__text biohack-hero-block__text--big">Это не просто набор из диеты и витаминов. <br> Это целый комплекс привычек и даже стиль жизни!</p>
+            </div>
+                  <picture>
+                    <source type="image/jpg" srcset="/assets/img/hero-biohack-img-01-mobile.jpg" media="(max-width: 1320px)"/><img class="biohack-hero-block__img" src="/assets/img/hero-biohack-img-01.jpg" alt="Изображение в первом блоке" loading="lazy"/>
+                  </picture>
+          </div>
+        </div>
+      </section>
+      <section class="section base-biohack">
+        <div class="container">
+          <div class="base-biohack__grid">
+            <h2 class="section__title base-biohack__title">Основные сферы биохакинга</h2>
+            <div class="base-biohack__swiper swiper js-base-biohack-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide base-biohack-card base-biohack-card--pink">
+                  <p class="base-biohack-card__title">Активизация мозговой деятельности</p>
+                  <p class="base-biohack-card__text">Упражнения и практики для повышения когнитивных способностей</p>
+                </div>
+                <div class="swiper-slide base-biohack-card base-biohack-card--green">
+                  <p class="base-biohack-card__title">Нормализация сна</p>
+                  <p class="base-biohack-card__text">Оптимизация режима сна для восстановления и поддержки здоровья, борьбы с быстрой утомляемостью</p>
+                </div>
+                <div class="swiper-slide base-biohack-card base-biohack-card--pink">
+                  <p class="base-biohack-card__title">Физическая активность</p>
+                  <p class="base-biohack-card__text">Поддержание регулярной физической активности для улучшения общего состояния тела, продуктивности и выносливости</p>
+                </div>
+                <div class="swiper-slide base-biohack-card base-biohack-card--green">
+                  <p class="base-biohack-card__title">Правильное питание</p>
+                  <p class="base-biohack-card__text">Индивидуально подобранное питание, учитывающее особенности организма</p>
+                </div>
+                <div class="swiper-slide base-biohack-card base-biohack-card--pink">
+                  <p class="base-biohack-card__title">Регулировка внутренних процессов с помощью БАД</p>
+                  <p class="base-biohack-card__text">Использование биологически активных добавок для поддержания здоровья и жизненных сил</p>
+                </div>
+                <div class="swiper-slide base-biohack-card base-biohack-card--green">
+                  <p class="base-biohack-card__title">Отслеживание показателей здоровья</p>
+                  <p class="base-biohack-card__text">Контроль основных и дополнительных маркеров состояния всех систем организма</p>
+                </div>
+              </div>
+              <div class="js-base-biohack-swiper-pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section result">
+        <div class="container">
+          <h2 class="section__title result__title">Результаты</h2>
+          <div class="result__grid">
+            <div class="result__swiper swiper js-result-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide result-card result-card--img"></div>
+                <div class="swiper-slide result-card result-card--green">
+                  <p class="result-card__title">Увеличение продолжительности жизни</p>
+                  <p class="result-card__text">Поддержание жизненных функций на уровне нормы и замедление процессов старения</p>
+                </div>
+                <div class="swiper-slide result-card result-card--pink">
+                  <p class="result-card__title">Личная эффективность</p>
+                  <p class="result-card__text">Повышение физической и умственной работоспособности</p>
+                </div>
+                <div class="swiper-slide result-card result-card--green">
+                  <p class="result-card__title">Персонализированный подход</p>
+                  <p class="result-card__text">Настройка образа жизни и питания под ваши потребности</p>
+                </div>
+                <div class="swiper-slide result-card result-card--pink">
+                  <p class="result-card__title">Контроль своего здоровья</p>
+                  <p class="result-card__text">Последовательное и осознанное наблюдение за своим здоровьем, личными потребностями и привычками</p>
+                </div>
+              </div>
+              <div class="js-result-swiper-pagination swiper-pagination"></div>
+            </div>
+          </div>
+                <picture><img class="result__img" src="/assets/img/result-img-01-mobile.jpg" alt="Изображение в первом блоке" loading="lazy"/>
+                </picture>
+        </div>
+      </section>
+      <section class="section biohack">
+        <div class="container">
+          <h2 class="section__title biohack__title">Биохакинг с Адженис</h2>
+          <p class="section__subtitle biohack__subtitle">Биохакинг - это эффективность, актуализация своих внутренних резервов.</p>
+          <p class="section__text biohack__text">Компания информирует своих клиентов о важности и возможности управления своим состоянием, комплексного подхода к здоровью, а также о том, как продукты Agenyz помогают достичь баланса и вывести ресурсы организма на максимум.</p>
+          <div class="biohack-person">
+            <div class="biohack-person-card">
+              <p class="biohack-person-card__title">Правильное питание и важные нутриенты</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-vegetables"></use>
+              </svg>
+            </div>
+            <div class="biohack-person-card">
+              <p class="biohack-person-card__title">Гармонизация энергетических центров</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-lamp"></use>
+              </svg>
+            </div>
+            <div class="biohack-person-card">
+              <p class="biohack-person-card__title">Активизация мозговой деятельности</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-gear-brain"></use>
+              </svg>
+            </div>
+            <div class="biohack-person-card">
+              <p class="biohack-person-card__title">Физическая активность и спорт</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-dumbbells"></use>
+              </svg>
+            </div>
+            <div class="biohack-person-card">
+              <p class="biohack-person-card__title">Нормализация сна и АнтиСтресс</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-sleep"></use>
+              </svg>
+            </div>
+                  <picture><img class="biohack-person__img" src="/assets/img/biohack-person-01.png" alt="Силуэт" loading="lazy"/>
+                  </picture>
+            <div class="biohack-person__circles"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--dark biohack-about">
+        <div class="container">
+          <h3 class="biohack-about__title">Биохакинг в Agenyz – не просто набор флаконови баночек для ежедневного приёма. Адженис сочетает высокоэффективные БАДы, изменение подхода к образу жизни и обучающие программы. Это помогает людям добиться максимального результата.</h3>
+          <div class="biohack-about__grid">
+            <div class="biohack-about-card biohack-about-card--img">
+              <p class="biohack-about-card__title">Высококачественные продукты для перезагрузки организма</p>
+              <p class="biohack-about-card__text">Линейки продуктов Agenyz способствуют улучшению работы мозга, нормализации сна, повышению энергии и оптимизации показателей здоровья</p>
+            </div>
+            <div class="biohack-about-card biohack-about-card--green">
+              <p class="biohack-about-card__title">Инновационные технологии в производстве</p>
+              <p class="biohack-about-card__text">Обеспечивают максимальную эффективность и биодоступность активных веществ</p>
+            </div>
+            <div class="biohack-about-card biohack-about-card--blue">
+              <p class="biohack-about-card__title">Поддержка и обучение</p>
+              <p class="biohack-about-card__text">Вебинары, курсы, и целые обучающие проекты, посвящённые биохакингу</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--dark biohack-products">
+        <div class="container">
+          <div class="biohack-products__block">
+            <h2 class="section__title biohack-products__title">Продукты Agenyz для биохакинга</h2>
+            <div class="biohack-products__row">
+              <div class="biohack-products__categories-placeholder">
+                <div class="biohack-products__categories">
+                  <button class="biohack-products__category" data-category-handler="category-1" aria-label="Категория Очищение организма" aria-expanded="true">Очищение организма</button>
+                  <button class="biohack-products__category" data-category-handler="category-2" aria-label="Категория Обмен веществ" aria-expanded="false">Обмен веществ</button>
+                  <button class="biohack-products__category" data-category-handler="category-3" aria-label="Категория Энергия и работоспособность" aria-expanded="false">Энергия и работоспособность</button>
+                  <button class="biohack-products__category" data-category-handler="category-4" aria-label="Категория Работа мозга и память" aria-expanded="false">Работа мозга и память</button>
+                  <button class="biohack-products__category" data-category-handler="category-5" aria-label="Категория Антистресс и нервная система" aria-expanded="false">Антистресс и нервная система</button>
+                </div><svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.09097 5.5C6.70607 4.83333 5.74382 4.83333 5.35892 5.5L2.47217 10.5C2.08727 11.1667 2.5684 12 3.3382 12L9.1117 12C9.8815 12 10.3626 11.1667 9.97773 10.5L7.09097 5.5Z" fill="#151516"/>
+</svg>
+              </div>
+              <div class="biohack-products__column" data-category="category-1" aria-hidden="false">
+                <p class="biohack-products__text">Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени</p>
+                <div class="biohack-products__grid">
+                  <div class="biohack-products__swiper swiper js-biohack-products-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                    <div class="js-biohack-products-swiper-pagination swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="biohack-products__column" data-category="category-2" aria-hidden="true">
+                <p class="biohack-products__text">2 Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени</p>
+                <div class="biohack-products__grid">
+                  <div class="biohack-products__swiper swiper js-biohack-products-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                    <div class="js-biohack-products-swiper-pagination swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="biohack-products__column" data-category="category-3" aria-hidden="true">
+                <p class="biohack-products__text">3 Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени</p>
+                <div class="biohack-products__grid">
+                  <div class="biohack-products__swiper swiper js-biohack-products-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                    <div class="js-biohack-products-swiper-pagination swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="biohack-products__column" data-category="category-4" aria-hidden="true">
+                <p class="biohack-products__text">4 Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени</p>
+                <div class="biohack-products__grid">
+                  <div class="biohack-products__swiper swiper js-biohack-products-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт 2</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                    <div class="js-biohack-products-swiper-pagination swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="biohack-products__column" data-category="category-5" aria-hidden="true">
+                <p class="biohack-products__text">5 Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени</p>
+                <div class="biohack-products__grid">
+                  <div class="biohack-products__swiper swiper js-biohack-products-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                      <div class="swiper-slide biohack-product">
+                              <picture><img class="biohack-product__img" src="/assets/img/biohack-product-img-01.jpg" alt="Препарат" loading="lazy"/>
+                              </picture>
+                        <p class="biohack-product__title">ГепаАрт</p><a class="biohack-product__link button button--blue" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                    <div class="js-biohack-products-swiper-pagination swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--dark knowledge">
+        <div class="container">
+          <h2 class="section__title section__title--center knowledge__title">Сила — в знании</h2>
+          <p class="section__subtitle section__subtitle--center knowledge__subtitle">Два ключевых обучающих курса Agenyz помогают наиболее эффективно использовать принципы и продукты биохакинга</p>
+          <div class="knowledge__row">
+            <div class="knowledge-card knowledge-card--pink">
+              <h3 class="knowledge-card__title">Альфа-фит</h3>
+              <p class="knowledge-card__subtitle">Фитнес онлайн для всех</p>
+              <p class="knowledge-card__text">Ориентирован на тех, кто хочет не просто привести себя в порядок, но и вывести свою физическую форму на новый уровень. В программе сочетаются передовые методики тренировок и принципы биохакинга, направленные на увеличение выносливости, улучшение мышечного тонуса и оптимизацию обмена веществ.</p>
+              <p class="knowledge-card__text">Изучив этот курс, вы узнаете, как правильно комбинировать физическую активность и продукты компании для достижения лучших результатов: стройной фигуры, повышения мобильности, ощущения лёгкости, красивого лица.</p>
+            </div>
+            <div class="knowledge-card knowledge-card--green">
+              <h3 class="knowledge-card__title">Нутрициология</h3>
+              <p class="knowledge-card__subtitle">Основы нутрициологии, рационального питания и практического применения БАД к пище</p>
+              <p class="knowledge-card__text">Обучает искусству правильного питания. При этом программа не даёт стандартные советы для всех. Она учит выбирать рацион с учётом индивидуальных особенностей организма.</p>
+              <p class="knowledge-card__text">Участники курса изучают, как сбалансировать рацион, не принося в жертву вкус и питательность продуктов, включить в него необходимые витамины и минералы, а также как эффективно использовать БАДы Agenyz для поддержания здоровья и долголетия.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--dark team team--biohacks">
+        <div class="container">
+          <h2 class="section__title">Интегрируйте биохакинг в свою <br> жизнь – присоединяйтесь к AGENYZ</h2>
+          <p class="team__subtitle section__subtitle">В Agenyz мы используем только лучшие природные ингредиенты и передовые технологии, чтобы предложить вам продукцию высочайшего качества.</p>
+          <p class="team__subtitle section__subtitle">Присоединяйтесь к компании Agenyz и станьте частью команды. Внедряйте биохакинг в вашу жизнь и жизнь ваших близких!</p>
+          <div class="team__column">
+            <div class="team-card">
+              <p class="team-card__title">Программа лояльности</p>
+              <p class="team-card__subtitle">Для Премиум клиентов Agenyz</p>
+              <p class="team-card__text">Для выгодных покупок продукции высочайшего качества — кэшбек и подарки при участии в программе Get Plus</p>
+              <div class="team-card__list">
+                <p class="team-card-list-item">
+                  <svg class="team-card-list-item__icon">
+                    <use href="#icon-check"></use>
+                  </svg>До 50% подарков к каждому заказу
+                </p>
+                <p class="team-card-list-item">
+                  <svg class="team-card-list-item__icon">
+                    <use href="#icon-check"></use>
+                  </svg>До 10% кэшбэк
+                </p>
+              </div><a class="button button--white team-card__link" href="/">Подробнее</a>
+            </div>
+            <div class="team-card team-card--dark">
+              <p class="team-card__title">Премиальная программа</p>
+              <p class="team-card__subtitle">Для промоутеров Agenyz</p>
+              <p class="team-card__text">Выгодная реферальная программа позволит вам получать не только до 20% вознаграждений с заказов по вашим личным рекомендациям, но и проценты с заказов, совершенных по рекомендации ваших Промоутеров.</p>
+              <div class="team-card__list">
+                <p class="team-card-list-item">
+                  <svg class="team-card-list-item__icon">
+                    <use href="#icon-check"></use>
+                  </svg>50 000 ₽ средний доход за месяц
+                </p>
+              </div><a class="button button--green team-card__link" href="/">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__column"><a class="logo footer__logo" href="/"><img src="/assets/img/logo.svg" alt="Agenyz"/></a>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">О компании</p><a class="footer-nav__link" href="/">О компании</a><a class="footer-nav__link" href="/">Биохакинг</a><a class="footer-nav__link" href="/">Производство</a><a class="footer-nav__link" href="/">О продукции</a>
+            </nav>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">Магазин</p><a class="footer-nav__link" href="/">Каталог</a><a class="footer-nav__link" href="/">Питание</a><a class="footer-nav__link" href="/">Здоровье</a><a class="footer-nav__link" href="/">Косметика</a><a class="footer-nav__link" href="/">Аксессуары</a>
+            </nav>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">Контактная информация</p><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-telegram"></use>
+                </svg>agenyz/t.me</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-vk"></use>
+                </svg>agenyz/vk.com</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-youtube"></use>
+                </svg>agenyz</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-ok"></use>
+                </svg>agenyz/ok.ru</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-looky"></use>
+                </svg>agenyz</a>
+            </nav>
+          </div>
+          <div class="footer__bottom"><a class="footer__text" href="/">Политика конфиденциальности</a><a class="footer__text" href="/">Оферта</a>
+            <p class="footer__text">117105, г. Москва, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ ДОНСКОЙ, Ш ВАРШАВСКОЕ, Д. 1А</p>
+            <p class="footer__text">ООО "АЛЬФАДЖЕНИС"</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal-container">
+      <div class="modal-container__wrapper">
+      </div>
+    </div>
+  </body><script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/scripts/inputmask.min.js"></script>
+  <script src="assets/scripts/script.js"></script><script>
+</script>
+</html>

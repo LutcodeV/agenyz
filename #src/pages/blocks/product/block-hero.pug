@@ -1,0 +1,31 @@
+include ../../_mixins
+
+section.section.section--dark.hero.hero--products
+	.container
+		.hero__column
+			h1.hero__title.hero__title--small Продукты, которые хочется рекомендовать!
+		+responsivePicture("/assets/img/hero-product-image-01", 'Картинка первого экрана', 'hero__img')
+		.hero__cards
+			.hero-swiper.swiper.js-hero-swiper
+				.swiper-wrapper
+					.swiper-slide.hero-slide.hero-slide--sky
+						.hero-slide__wrapper
+							p.hero-slide__title 8 000+
+							p.hero-slide__text человек прошли наши онлайн-курсы
+					.swiper-slide.hero-slide
+						.hero-slide__wrapper
+							p.hero-slide__title 10+
+							p.hero-slide__text инновационных технологий: липосомирование, микрокапсулирование, пептидные ультрализаты, CO2-экстракция, 3D-технологии и др
+					.swiper-slide.hero-slide
+						.hero-slide__wrapper
+							p.hero-slide__title 200 000+
+							p.hero-slide__text клиентов доверяют нашей продукции
+					.swiper-slide.hero-slide.hero-slide--green
+						.hero-slide__wrapper
+							p.hero-slide__title 14+
+							p.hero-slide__text клинических испытаний подтверждают эффективность наших продуктов
+					.swiper-slide.hero-slide.hero-slide--graph
+						.hero-slide__wrapper
+							p.hero-slide__title 100 000+
+							p.hero-slide__text продуктов продаётся каждый месяц
+				.swiper-pagination.js-hero-swiper-pagination

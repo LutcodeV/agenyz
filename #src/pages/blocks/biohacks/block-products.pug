@@ -1,0 +1,108 @@
+include ../../_mixins
+
+section.section.section--dark.biohack-products
+	.container
+		.biohack-products__block
+			h2.section__title.biohack-products__title Продукты Agenyz для биохакинга
+			.biohack-products__row
+				.biohack-products__categories-placeholder
+					.biohack-products__categories
+						button.biohack-products__category(data-category-handler="category-1" aria-label="Категория Очищение организма" aria-expanded="true") Очищение организма
+						button.biohack-products__category(data-category-handler="category-2" aria-label="Категория Обмен веществ" aria-expanded="false") Обмен веществ
+						button.biohack-products__category(data-category-handler="category-3" aria-label="Категория Энергия и работоспособность" aria-expanded="false") Энергия и работоспособность
+						button.biohack-products__category(data-category-handler="category-4" aria-label="Категория Работа мозга и память" aria-expanded="false") Работа мозга и память
+						button.biohack-products__category(data-category-handler="category-5" aria-label="Категория Антистресс и нервная система" aria-expanded="false") Антистресс и нервная система
+					<svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M7.09097 5.5C6.70607 4.83333 5.74382 4.83333 5.35892 5.5L2.47217 10.5C2.08727 11.1667 2.5684 12 3.3382 12L9.1117 12C9.8815 12 10.3626 11.1667 9.97773 10.5L7.09097 5.5Z" fill="#151516"/>
+					</svg>
+
+				.biohack-products__column(data-category="category-1" aria-hidden="false")
+					p.biohack-products__text Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени
+					.biohack-products__grid
+						.biohack-products__swiper.swiper.js-biohack-products-swiper
+							.swiper-wrapper
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+							.js-biohack-products-swiper-pagination.swiper-pagination
+				.biohack-products__column(data-category="category-2" aria-hidden="true")
+					p.biohack-products__text 2 Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени
+					.biohack-products__grid
+						.biohack-products__swiper.swiper.js-biohack-products-swiper
+							.swiper-wrapper
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+							.js-biohack-products-swiper-pagination.swiper-pagination
+				.biohack-products__column(data-category="category-3" aria-hidden="true")
+					p.biohack-products__text 3 Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени
+					.biohack-products__grid
+						.biohack-products__swiper.swiper.js-biohack-products-swiper
+							.swiper-wrapper
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+							.js-biohack-products-swiper-pagination.swiper-pagination
+				.biohack-products__column(data-category="category-4" aria-hidden="true")
+					p.biohack-products__text 4 Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени
+					.biohack-products__grid
+						.biohack-products__swiper.swiper.js-biohack-products-swiper
+							.swiper-wrapper
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт 2
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+							.js-biohack-products-swiper-pagination.swiper-pagination
+				.biohack-products__column(data-category="category-5" aria-hidden="true")
+					p.biohack-products__text 5 Высокоэффективные энтеросорбенты способствуют выводу токсинов и поддержанию работы системы детоксикации организма, улучшая состояние ЖКТ, почек, печени
+					.biohack-products__grid
+						.biohack-products__swiper.swiper.js-biohack-products-swiper
+							.swiper-wrapper
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+								.swiper-slide.biohack-product
+									+responsivePicture("/assets/img/biohack-product-img-01", 'Препарат', 'biohack-product__img')
+									p.biohack-product__title ГепаАрт
+									a(href="#").biohack-product__link.button.button--blue Подробнее
+							.js-biohack-products-swiper-pagination.swiper-pagination

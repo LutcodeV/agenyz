@@ -1,0 +1,379 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+    <title>Agenyz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+  </head>
+  <body>
+    <div id="svg-sprite"></div>
+    <div class="global-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__left"><a class="logo header__logo" href="/"><img src="/assets/img/logo.svg" alt="Agenyz"/></a>
+            <button class="button button--outline header__cart">
+              <svg>
+                <use href="#icon-cart"></use>
+              </svg>В магазин
+            </button>
+          </div>
+          <nav class="header-nav js-header-nav" aria-label="Главное меню">
+            <div class="container">
+              <div class="header-lang__wrapper header-lang__wrapper--mobile js-header-lang">
+                <div class="header-lang header__controller">
+                  <button class="header-lang__button">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-russia"></use>
+                    </svg>RU
+                    <svg class="header-lang__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <div class="header-lang__list"><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-russia"></use>
+                      </svg>RU</a><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-england"></use>
+                      </svg>EN</a><a class="header-lang__button" href="/">
+                      <svg class="header-lang__flag">
+                        <use href="#flag-germany"></use>
+                      </svg>GE</a></div>
+                </div>
+              </div>
+            </div>
+            <ul class="header-nav__list">
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--pc">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item js-nav-expandable-link header-nav__list-item--expandable header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/">Каталог</a>
+                  <button class="header-nav__list-item-button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-4" aria-label="Показать подменю «Каталог»">
+                    <svg>
+                      <use href="#icon-accordion"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <ul class="header-nav__list" id="submenu-4">
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a></div>
+                </li>
+              </ul>
+              <li class="header-nav__list-item js-nav-expandable-link header-nav__list-item--expandable header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a>
+                  <button class="header-nav__list-item-button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-5" aria-label="Показать подменю «О компании»">
+                    <svg>
+                      <use href="#icon-accordion"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <ul class="header-nav__list" id="submenu-5">
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/about">О компании</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/products">Продукция</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/production">Производство</a></div>
+                </li>
+                <li class="header-nav__list-item">
+                  <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/biohacking">Биохакинг</a></div>
+                </li>
+              </ul>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/pickup">Пункты выдачи</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/news">Новости</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/privacy">Политика конфиденциальности</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/contacts">Контакты</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/details">Реквизиты</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/shipping">Условия оплаты и доставки</a>
+                </div>
+              </li>
+              <li class="header-nav__list-item  header-nav__list-item--mobile">
+                <div class="header-nav__list-item-wrapper"><a class="header-nav__link" href="/offer">Оферта</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__right">
+            <button class="header-burger js-header-burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+            <div class="header-lang__wrapper js-header-lang">
+              <div class="header-lang header__controller">
+                <button class="header-lang__button">
+                  <svg class="header-lang__flag">
+                    <use href="#flag-russia"></use>
+                  </svg>RU
+                  <svg class="header-lang__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <div class="header-lang__list"><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-russia"></use>
+                    </svg>RU</a><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-england"></use>
+                    </svg>EN</a><a class="header-lang__button" href="/">
+                    <svg class="header-lang__flag">
+                      <use href="#flag-germany"></use>
+                    </svg>GE</a></div>
+              </div>
+            </div><a class="header__controller" href="#">
+              <svg>
+                <use href="#icon-user"></use>
+              </svg>Войти</a>
+          </div>
+        </div>
+      </header>
+      <section class="section section--dark hero hero--products">
+        <div class="container">
+          <div class="hero__column">
+            <h1 class="hero__title hero__title--small">Продукты, которые хочется рекомендовать!</h1>
+          </div>
+                <picture><img class="hero__img" src="/assets/img/hero-product-image-01.jpg" alt="Картинка первого экрана" loading="lazy"/>
+                </picture>
+          <div class="hero__cards">
+            <div class="hero-swiper swiper js-hero-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide hero-slide hero-slide--sky">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">8 000+</p>
+                    <p class="hero-slide__text">человек прошли наши онлайн-курсы</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">10+</p>
+                    <p class="hero-slide__text">инновационных технологий: липосомирование, микрокапсулирование, пептидные ультрализаты, CO2-экстракция, 3D-технологии и др</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">200 000+</p>
+                    <p class="hero-slide__text">клиентов доверяют нашей продукции</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide--green">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">14+</p>
+                    <p class="hero-slide__text">клинических испытаний подтверждают эффективность наших продуктов</p>
+                  </div>
+                </div>
+                <div class="swiper-slide hero-slide hero-slide--graph">
+                  <div class="hero-slide__wrapper">
+                    <p class="hero-slide__title">100 000+</p>
+                    <p class="hero-slide__text">продуктов продаётся каждый месяц</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination js-hero-swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--dark product-direction">
+        <div class="container">
+          <h2 class="product-direction__title section__title section__title--center">Направления продукции Agenyz</h2>
+          <p class="product-direction__subtitle section__subtitle section__subtitle--center">Agenyz – это технологии, инновации и ценные ингредиенты в каждой капсуле, каждом глотке и каждом продукте</p>
+          <div class="product-direction__column">
+            <div class="product-direction-card">
+                    <picture><img class="product-direction-card__img" src="/assets/img/product-direction-img-01.jpg" alt="Продукты для красоты и ухода за собой" loading="lazy"/>
+                    </picture>
+              <p class="product-direction-card__title">Продукты для красоты и ухода за собой</p>
+              <p class="product-direction-card__text">Уникальная, инновационная, гипоаллергенная косметика с максимумом натуральных компонентов и пептидами</p><a class="product-direction-card__link button button--outline" href="#">Подробнее</a>
+            </div>
+            <div class="product-direction-card">
+                    <picture><img class="product-direction-card__img" src="/assets/img/product-direction-img-02.jpg" alt="Эффективные продукты для здоровья " loading="lazy"/>
+                    </picture>
+              <p class="product-direction-card__title">Эффективные продукты для здоровья</p>
+              <p class="product-direction-card__text">Линейки продуктов Agenyz: БАДы, функциональное питание и фитонапитки способствуют улучшению работы мозга, нормализации сна, повышению энергии и оптимизации показателей здоровья.</p><a class="product-direction-card__link button button--outline" href="#">Подробнее</a>
+            </div>
+            <div class="product-direction-card">
+                    <picture><img class="product-direction-card__img" src="/assets/img/product-direction-img-03.jpg" alt="Инновационные товары " loading="lazy"/>
+                    </picture>
+              <p class="product-direction-card__title">Инновационные товары</p>
+              <p class="product-direction-card__text">Стильные полезные украшения, ЧаКарты, уникальные шейкеры, трекеры здоровья и био-частотные приборы – наши ноу-хау разработки для нормализации жизни и самочувствия</p><a class="product-direction-card__link button button--outline" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--dark benefits">
+        <div class="container">
+          <div class="benefits__column">
+            <h2 class="section__title">Преимущества наших продуктов</h2>
+            <p class="section__subtitle">В Agenyz мы используем только лучшие природные ингредиенты, передовые технологии и наработки экспертов, чтобы предложить вам продукцию высочайшего качества</p>
+                  <picture><img class="benefits__img" src="/assets/img/benefit-img-01.jpg" alt="Преимущества наших продуктов" loading="lazy"/>
+                  </picture>
+          </div>
+          <div class="benefits__grid">
+            <div class="benefits-swiper swiper js-benefits-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide benefit-card">
+                  <p class="benefit-card__title">Инновационные природные ингредиенты </p>
+                  <p class="benefit-card__text">Ингредиенты, входящие в состав, производятся из растений, произрастающих только в экологически чистых зонах. </p>
+                </div>
+                <div class="swiper-slide benefit-card">
+                  <p class="benefit-card__title">Научный подход и практика</p>
+                  <p class="benefit-card__text">Только проверенные методы и подтвержденные данные. Многолетняя практика, которая подтверждает эффективность</p>
+                </div>
+                <div class="swiper-slide benefit-card">
+                  <p class="benefit-card__title">Клинические испытания</p>
+                  <p class="benefit-card__text">Проводим добровольные клинические испытания нашей продукции</p>
+                </div>
+                <div class="swiper-slide benefit-card">
+                  <p class="benefit-card__title">Уверенность в эффективности на личном примере</p>
+                  <p class="benefit-card__text">Основатели Agenyz – активные потребители своей продукции. Их жизненное кредо – создавать и производить только такие продукты, которые захочешь использовать сам и дашь своим детям и родителям.</p>
+                </div>
+                <div class="swiper-slide benefit-card">
+                  <p class="benefit-card__title">Передовые технологии</p>
+                  <p class="benefit-card__text">Используем инновационные технологии: липосомирование, микрокапсулирование, пептидные ультрализаты, CO2-экстракция, 3D-технологии и др. для достижения максимальной эффективности</p>
+                </div>
+                <div class="swiper-slide benefit-card">
+                  <p class="benefit-card__title">Качество</p>
+                  <p class="benefit-card__text">Контролируем качество сырья и готовой продукции на всех этапах производства в соответствии со стандартами GMP и ISO 22 000</p>
+                </div>
+              </div>
+              <div class="js-benefits-swiper-pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section products">
+        <div class="container">
+          <div class="products__header">
+            <h2 class="section__title">Наши продукты</h2><a class="button button--blue products__link products__link--pc" href="#">Посмотреть каталог</a>
+          </div>
+          <div class="products__grid"><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-01.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">CELL ELIXIR</p>
+              <p class="product-card__subtitle">Современные технологии биохакинга</p>
+              <p class="product-card__text">Клеточные эликсиры - мультикомплексы для восполнения ресурсов организма</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-02.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">XBi-A®ctive</p>
+              <p class="product-card__subtitle">Повышение биопродуктивности</p>
+              <p class="product-card__text">Улучшает транспортные и детоксикационные свойства продуктов</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-03.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">TRUE AQUA</p>
+              <p class="product-card__subtitle">Правильная вода</p>
+              <p class="product-card__text">Натуральные растворимые напитки для быстрого усвоения активных ингредиентов</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-04.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">G-KETO</p>
+              <p class="product-card__subtitle">Питание для стройной фигуры</p>
+              <p class="product-card__text">Масло МТС, шоколад,  и другие кето - продукты придадут энергию мозгу и телу и уменьшат сантиметры на талии.</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-05.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">TRUE SHAKE</p>
+              <p class="product-card__subtitle">Правильные коктейли для молодости и красоты</p>
+              <p class="product-card__text">С коктейлями TRUE SHAKE легко быть современным, модным, здоровым, питаться правильно, экономить свое время и быть эффективным!</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-06.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">5,5 teArt</p>
+              <p class="product-card__subtitle">Чай как искусство</p>
+              <p class="product-card__text">Листовой отборный чай, с травами и фруктовыми добавками, снижающий усвоение глюкозы и выполняющий важные функции.</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-07.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">Косметика</p>
+              <p class="product-card__subtitle">Инновационная омолаживающая линия по уходу за кожей лица</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-08.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">Уход за телом</p>
+              <p class="product-card__subtitle">Современные средства для рук и тела, регенерирующая зубная паста, пептидный шампунь</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-09.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">Инновационные товары</p>
+              <p class="product-card__subtitle">Стильные полезные украшения, ЧаКарты,  шейкеры с ионами – наши разработки для повышения эффективности и отличного самочувствия</p></a></div><a class="products__link button button--blue" href="#">Посмотреть каталог</a>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__column"><a class="logo footer__logo" href="/"><img src="/assets/img/logo.svg" alt="Agenyz"/></a>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">О компании</p><a class="footer-nav__link" href="/">О компании</a><a class="footer-nav__link" href="/">Биохакинг</a><a class="footer-nav__link" href="/">Производство</a><a class="footer-nav__link" href="/">О продукции</a>
+            </nav>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">Магазин</p><a class="footer-nav__link" href="/">Каталог</a><a class="footer-nav__link" href="/">Питание</a><a class="footer-nav__link" href="/">Здоровье</a><a class="footer-nav__link" href="/">Косметика</a><a class="footer-nav__link" href="/">Аксессуары</a>
+            </nav>
+            <nav class="footer-nav">
+              <p class="footer-nav__title">Контактная информация</p><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-telegram"></use>
+                </svg>agenyz/t.me</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-vk"></use>
+                </svg>agenyz/vk.com</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-youtube"></use>
+                </svg>agenyz</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-ok"></use>
+                </svg>agenyz/ok.ru</a><a class="footer-nav__link" href="/">
+                <svg class="footer-nav__link-icon">
+                  <use href="#icon-social-looky"></use>
+                </svg>agenyz</a>
+            </nav>
+          </div>
+          <div class="footer__bottom"><a class="footer__text" href="/">Политика конфиденциальности</a><a class="footer__text" href="/">Оферта</a>
+            <p class="footer__text">117105, г. Москва, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ ДОНСКОЙ, Ш ВАРШАВСКОЕ, Д. 1А</p>
+            <p class="footer__text">ООО "АЛЬФАДЖЕНИС"</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal-container">
+      <div class="modal-container__wrapper">
+      </div>
+    </div>
+  </body><script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/scripts/inputmask.min.js"></script>
+  <script src="assets/scripts/script.js"></script><script>
+</script>
+</html>

@@ -1,0 +1,91 @@
+header.header
+	.container
+		.header__left
+			a(href="/").logo.header__logo
+				img(src="/assets/img/logo.svg", alt="Agenyz")
+			button.button.button--outline.header__cart
+				svg
+					use(href="#icon-cart")
+				| В магазин
+		nav.header-nav.js-header-nav(aria-label="Главное меню")
+			.container
+				.header-lang__wrapper.header-lang__wrapper--mobile.js-header-lang
+					.header-lang.header__controller
+						button.header-lang__button
+							svg.header-lang__flag
+								use(href="#flag-russia")
+							| RU
+							svg(width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg").header-lang__arrow
+								path(d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+
+						.header-lang__list
+							a(href="/").header-lang__button
+								svg.header-lang__flag
+									use(href="#flag-russia")
+								| RU
+							a(href="/").header-lang__button
+								svg.header-lang__flag
+									use(href="#flag-england")
+								| EN
+							a(href="/").header-lang__button
+								svg.header-lang__flag
+									use(href="#flag-germany")
+								| GE
+			ul.header-nav__list
+				each item, i in MENU
+					li.header-nav__list-item(class=`${item.submenu ? 'js-nav-expandable-link header-nav__list-item--expandable' : ''} ${item.hiddenOnMobile ? 'header-nav__list-item--pc' : 'header-nav__list-item--mobile'}`)
+						.header-nav__list-item-wrapper
+							a.header-nav__link(href=item.href)= item.title
+
+							if item.submenu
+								button.header-nav__list-item-button(
+									aria-haspopup="true",
+									aria-expanded="false",
+									aria-controls=`submenu-${i}`,
+									aria-label=`Показать подменю «${item.title}»`
+								)
+									svg
+										use(href="#icon-accordion")
+
+					if item.submenu
+						ul.header-nav__list(id=`submenu-${i}`)
+							each sub in item.submenu
+								li.header-nav__list-item
+									.header-nav__list-item-wrapper
+										a.header-nav__link(href=sub.href)= sub.title
+
+		.header__right
+			button.header-burger.js-header-burger(
+				aria-label="Открыть меню",
+				aria-expanded="false",
+				aria-controls="main-nav"
+			)
+				span
+				span
+				span
+			.header-lang__wrapper.js-header-lang
+				.header-lang.header__controller
+					button.header-lang__button
+						svg.header-lang__flag
+							use(href="#flag-russia")
+						| RU
+						svg(width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg").header-lang__arrow
+							path(d="M2.5 4.25L6 7.75L9.5 4.25" stroke="#151516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+
+					.header-lang__list
+						a(href="/").header-lang__button
+							svg.header-lang__flag
+								use(href="#flag-russia")
+							| RU
+						a(href="/").header-lang__button
+							svg.header-lang__flag
+								use(href="#flag-england")
+							| EN
+						a(href="/").header-lang__button
+							svg.header-lang__flag
+								use(href="#flag-germany")
+							| GE
+			a(href="#").header__controller
+				svg
+					use(href="#icon-user")
+				| Войти

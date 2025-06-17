@@ -1,0 +1,22 @@
+include ../../_mixins
+
+section.section.principles
+	.container
+		.principles__column.principles__column--pc
+			h2.section__title Принципы производства продуктов Agenyz
+			p.section__subtitle При производстве применяются сотни уникальных ингредиентов, компонентов и технологий: ультрализаты, CO2-экстракция, 3D-технологии
+			.principles__logos
+				+responsivePicture("/assets/img/principles-logo-01", 'Логотип ISO', 'principles__logo', ['png'])
+				+responsivePicture("/assets/img/principles-logo-02", 'Логотип GMP', 'principles__logo', ['png'])
+				+responsivePicture("/assets/img/principles-logo-03", 'Логотип 14', 'principles__logo', ['png'])
+		.principles__column
+			.principles-card
+				p.principles-card__title Контроль производства
+				p.principles-card__text Продукция Agenyz создаётся на современных производственных линиях, где применяются новейшие технологии и ведется строгий контроль качества по стандартам GMP и ISO 22000. Благодаря им организован контроль на всех этапах: от исследований и тестирования образцов до финального продукта.
+			.principles-card
+				p.principles-card__title Надёжность сырья
+				p.principles-card__text Используем природные компоненты, которые получены из растений экологически чистых зон, тщательно отобранные для создания биологически активных добавок высокой эффективности. Чтобы обеспечить такую безопасность и строгие требования, мы работаем только с надёжными поставщиками, которые на протяжении многих лет официально гарантируют стабильное качество сырья.
+			.principles-card
+				p.principles-card__title Подбор партнёров
+				p.principles-card__text Каждый наш потенциальный партнёр-производитель сначала проходит всестороннюю тщательную проверку: оцениваются десятки параметров, в том числе качество сырья, применяемое оборудование и технологии. И лишь при успешном прохождении проверки, претендент становится нашим полноценным партнёром в производстве.
+		+responsivePicture("/assets/img/principles-image-01", 'Изображение ученого', 'principles__img', [], [['jpg', '/assets/img/principles-image-01-mobile', '(max-width: 1320px)']])

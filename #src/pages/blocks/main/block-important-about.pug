@@ -1,0 +1,26 @@
+mixin importantAboutCard(theme, icon, title, text, href)
+	.important-about-card(class=`important-about-card--${theme}`)
+		.important-about-card__header
+			svg.important-about-card__icon
+				use(href=icon)
+			p.important-about-card__title= title
+		p.important-about-card__text= text
+		if href
+			a.important-about-card__link(href=href)
+				svg
+					use(href="#icon-arrow-top-right")
+
+
+section.section.important-about
+	.container
+		h2.section__title Важное об AGENYZ
+		.important-about__column
+			+importantAboutCard('green', '#icon-addUser', 'Объединение', 'Наша компания объединяет уже более 200 тысяч клиентов и 65 тысяч партнёров по всему земному шару')
+			+importantAboutCard('pink', '#icon-shield', 'Биохакинг', 'Мы стали одной из первых компаний, которая внедрила концепцию биохакинга в России и использует комплексный подход к улучшению качества жизни', '/')
+			+importantAboutCard('grey', '#icon-settings', 'Технологии', 'Используем более 100 природных ингредиентов, новейшие технологии липосомирования, микрокапсулирования и многие другие для достижения максимальной эффективности')
+			+importantAboutCard('grey', '#icon-heart', 'Социальные проекты', 'Благотворительность: помощь людям попавшим в трудную жизненную ситуацию. Защита экологии: высадка деревьев, очистка прибрежных территорий водоемов и рек, переработка упаковки.')
+			+importantAboutCard('green', '#icon-star', 'Стиль жизни', 'В Agenyz вы окунетесь в красивый мир ярких событий, торжественных мероприятий, признания и необыкновенных путешествий')
+			+importantAboutCard('pink', '#icon-box', 'Продукция', 'Основные направления продукции Agenyz: БАДы, функциональное питание, косметика, инновационные товары, обучающие курсы', '/')
+			+importantAboutCard('green', '#icon-coins', 'Доход', 'Разработали премиальную программу лояльности и поддержки, с которой наши партнёры могут вести успешный бизнес и улучшать качество жизни, помогая себе и другим', '/')
+			+importantAboutCard('grey', '#icon-fire', 'Качество', 'На каждом этапе производства осуществляется строгий контроль качества, продукция соответствует мировым стандартам GMP и ISO 22000', '/')
+			+importantAboutCard('pink', '#icon-folder', 'Возможности', 'Открываем доступ не только к передовым продуктам, но и к возможности получить дополнительный заработок, занимаясь интересным делом и принося людям пользу', '/')

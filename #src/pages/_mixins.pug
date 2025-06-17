@@ -1,0 +1,24 @@
+//- HELPERS
+mixin block(key, marker=false)
+	- global.my_blocks = global.my_blocks || {}
+	if marker
+		if global.my_blocks[key]
+			- let temp = {}
+			- temp[key] = global.my_blocks[key]
+			- global.my_blocks[key] = null
+			- temp[key]()
+		else
+			block
+	else
+		- global.my_blocks[key] = this.block
+//- HELPERS
+
+mixin responsivePicture(src, alt, className, formats = [], sizes = [])
+	picture
+		if formats.length > 1
+			each format in formats
+				source(type=`image/${format}`, srcset=`${src}.${format}`)
+		if sizes.length > 0
+			each size in sizes
+				source(type=`image/${size[0]}`, srcset=`${size[1]}.${size[0]}`, media=`${size[2]}`)
+		img(src=`${src}.${formats[0] || 'jpg'}`, alt=alt, loading="lazy", class=className)

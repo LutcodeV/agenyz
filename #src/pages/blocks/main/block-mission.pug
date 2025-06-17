@@ -1,0 +1,30 @@
+include ../../_mixins
+
+section.section.mission
+	.container
+		h2.section__title.mission-title
+			| Миссия Agenyz – улучшение качества жизни
+			<span>
+				+responsivePicture("/assets/img/mission-image-03", 'Фото девушки 3', 'mission-title__img')
+				+responsivePicture("/assets/img/mission-image-02", 'Фото девушки 2', 'mission-title__img')
+				+responsivePicture("/assets/img/mission-image-01", 'Фото девушки 1', 'mission-title__img')
+			</span>
+			| каждого человека
+		.mission__row
+			.mission__column
+				.mission-card
+					.mission-card__header
+						p.mission-card__number 01
+						p.mission-card__title Мы создаем
+					p.mission-card__text Экосистему для людей, разделяющих стратегию H2H, предоставляя качественные ресурсы для улучшения здоровья и финансового положения
+				.mission-card
+					.mission-card__header
+						p.mission-card__number 02
+						p.mission-card__title Наши ценности
+					p.mission-card__text Нашей главной ценностью является человек! Всё, что делается компанией, делается для того, чтобы он реализовал свои цели и мечты. 
+				.mission-card
+					.mission-card__header
+						p.mission-card__number 03
+						p.mission-card__title Наши цели
+					p.mission-card__text Стать одной из лучших компаний мира в своей индустрии. И достижение этой цели мы видим только через реализацию личных целей наших партнеров
+			+responsivePicture("/assets/img/mission-image-04", 'Фото людей', 'mission__img')

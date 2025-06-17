@@ -1,0 +1,23 @@
+include ../../_mixins
+
+section.section.result
+	.container
+		h2.section__title.result__title Результаты
+		.result__grid
+			.result__swiper.swiper.js-result-swiper
+				.swiper-wrapper
+					.swiper-slide.result-card.result-card--img
+					.swiper-slide.result-card.result-card--green
+						p.result-card__title Увеличение продолжительности жизни
+						p.result-card__text Поддержание жизненных функций на уровне нормы и замедление процессов старения
+					.swiper-slide.result-card.result-card--pink
+						p.result-card__title Личная эффективность
+						p.result-card__text Повышение физической и умственной работоспособности
+					.swiper-slide.result-card.result-card--green
+						p.result-card__title Персонализированный подход
+						p.result-card__text Настройка образа жизни и питания под ваши потребности
+					.swiper-slide.result-card.result-card--pink
+						p.result-card__title Контроль своего здоровья
+						p.result-card__text Последовательное и осознанное наблюдение за своим здоровьем, личными потребностями и привычками
+				.js-result-swiper-pagination.swiper-pagination
+		+responsivePicture("/assets/img/result-img-01-mobile", 'Изображение в первом блоке', 'result__img')
