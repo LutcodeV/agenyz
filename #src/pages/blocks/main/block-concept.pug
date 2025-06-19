@@ -13,17 +13,17 @@ section.section.section--dark.concept
 			+responsivePicture("/assets/img/concept-infograph-pc", 'Инфографика', 'concept-infograph__img concept-infograph__img--pc', ['png'])
 			.concept-infograph-step
 				p.concept-infograph-step__title Устойчивое <br> развитие
-			.concept-infograph-step
-				p.concept-infograph-step__title Социальная <br> ответственность
-				button.concept-infograph-step__button(aria-label="Открыть модальное окно 'Социальная ответственность'" aria-expanded="false" data-concept-modal="economy")
-					span
-			.concept-infograph-step
+			button.concept-infograph-step(aria-label="Открыть модальное окно 'Экономический рост'" aria-expanded="false" data-concept-modal="economy")
 				p.concept-infograph-step__title Экономический <br> рост
-				button.concept-infograph-step__button(aria-label="Открыть модальное окно 'Экономический рост'" aria-expanded="false" data-concept-modal="social")
+				.concept-infograph-step__button
 					span
-			.concept-infograph-step
+			button.concept-infograph-step(aria-label="Открыть модальное окно 'Социальная ответственность'" aria-expanded="false" data-concept-modal="social")
+				p.concept-infograph-step__title Социальная <br> ответственность
+				.concept-infograph-step__button
+					span
+			button.concept-infograph-step(aria-label="Открыть модальное окно 'Сохранение экологии'" aria-expanded="false" data-concept-modal="ecology")
 				p.concept-infograph-step__title Сохранение <br> экологии
-				button.concept-infograph-step__button(aria-label="Открыть модальное окно 'Сохранение экологии'" aria-expanded="false" data-concept-modal="ecology")
+				.concept-infograph-step__button
 					span
 			.concept-modals
 				.concept-modal(aria-hidden="true" data-concept="economy")

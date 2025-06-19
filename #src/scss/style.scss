@@ -186,6 +186,11 @@
 .scroll-lock {
 	overflow: hidden;
 }
+.swiper-pagination {
+	@include rmin(1320px) {
+		display: none;
+	}
+}
 
 // HEADER
 .header {
@@ -838,6 +843,14 @@
 			}
 		}
 	}
+	@include r(1319px) {
+		@for $i from 1 through 9 {
+			&:nth-child(#{$i}) {
+				order: #{$i};
+			}
+		}
+		&:nth-child(4) { order: 7 }
+	}
 	@include rmin(1320px) {
 		border-radius: 24px;
 		grid-area: x;
@@ -1191,17 +1204,6 @@
 					transform: translate(-50%, -50%) rotate(45deg);
 				}
 			}
-			&[aria-expanded="true"] {
-				background: #fff;
-				&::after {
-					background: #64DEAD;
-					transform: translate(-50%, -50%) rotate(135deg);
-				}
-				&::before {
-					background: #64DEAD;
-					transform: translate(-50%, -50%) rotate(45deg);
-				}
-			}
 		}
 		&:nth-child(3) {
 			left: 50%;
@@ -1231,10 +1233,36 @@
 				transition: .3s ease;
 				background: url('../img/concept-infograph-pc-hover-01.png') no-repeat;
 			}
-			&:has(.concept-infograph-step__button[aria-expanded="true"]) {
-				&::after {
+			&::before {
+				pointer-events: none;
+				content: '';
+				position: absolute;
+				width: 600px;
+				height: 600px;
+				top: -150px;
+				left: -24px;
+				pointer-events: none;
+				z-index: -1;
+				opacity: 0;
+				transition: .3s ease;
+				background: url('../img/concept-infograph-pc-hover.png') no-repeat;
+			}
+			&[aria-expanded="true"]::after   {
 					opacity: 1;
-				}
+			}
+			&:hover::before {
+				opacity: 0.5;
+			}
+		}
+		&[aria-expanded="true"] &__button {
+			background: #fff;
+			&::after {
+				background: #64DEAD;
+				transform: translate(-50%, -50%) rotate(135deg);
+			}
+			&::before {
+				background: #64DEAD;
+				transform: translate(-50%, -50%) rotate(45deg);
 			}
 		}
 		&:nth-child(4) {
@@ -1266,6 +1294,10 @@
 				left: -166px;
 				background: url('../img/concept-infograph-pc-hover-02.png') no-repeat;
 			}
+			&::before {
+				left: -316px;
+				transform: scaleX(-1);
+			}
 		}
 		&:nth-child(6) {
 			aspect-ratio: unset;
@@ -1288,6 +1320,11 @@
 				top: -228px;
         left: -196px;
 				background: url('../img/concept-infograph-pc-hover-03.png') no-repeat;
+			}
+			&::before {
+				transform: rotate(-120deg);
+        left: -250px;
+        top: -480px;
 			}
 		}
 	}
@@ -1959,15 +1996,13 @@
 	&__wrapper {
 		display: contents;
 	}
-	&__scroller {
-		display: contents;
-	}
 	&[aria-hidden="true"] {
 		display: none;
 	}
 	@include rmin(1320px) {
 		width: 100%;
 		min-width: 1182px;
+		scroll-snap-align: start;
 		padding-left: 16px;
 		&__text {
 			max-width: 532px;
@@ -1989,13 +2024,15 @@
 		&__wrapper {
 			display: flex;
 			overflow-y: hidden;
-			overflow-x: hidden;
+			overflow-x: auto;
 			padding-left: 16px;
 			padding-right: 16px;
-			min-width: 100vw;
-		}
-		&__scroller {
-			display: flex;
+			scroll-snap-type: x proximity;
+			min-width: 1182px;
+			&::-webkit-scrollbar {
+				width: 0;
+				height: 0;
+			}
 		}
 		&[aria-hidden="true"] {
 			display: flex !important;
@@ -2102,12 +2139,24 @@
 		}
 		&__img {
 			margin-top: 16px;
+			min-width: 300px;
 		}
 		&:last-child &__marker {
 			span {
 				display: none;
 			}
 		}
+		&:has(img) &{
+			&__marker {
+				height: 200px;
+				flex: 0 0 200px;
+			}
+		}
+		&--2019-3 .history-page-step__img {min-width: 273px; max-width: 273px;}
+		&--2022-3 .history-page-step__img {min-width: 238px; max-width: 238px;}
+		&--2023-1 .history-page-step__img {min-width: 218px; max-width: 218px;}
+		&--2023-3 .history-page-step__img {min-width: 271px; max-width: 271px;}
+		&--2023-4 .history-page-step__img {min-width: 149px; max-width: 149px;}
 	}
 }
 
@@ -2518,8 +2567,12 @@
 	}
 	@include rmin(1320px) {
 		border-radius: 24px;
+		&:nth-child(4) { order: 2 }
+		&:nth-child(5) { order: 3 }
+		&:nth-child(6) { order: 1 }
 		&__img {
 			aspect-ratio: 427/272;
+			opacity: 0.4;
 		}
 		&__title {
 			font-size: 16px;
@@ -3000,7 +3053,7 @@
 }
 .biohack-product {
 	padding: 0px 16px 16px;
-	max-width: 240px;
+	// max-width: 240px;
 	border-radius: 16px;
 	border: 1px solid #E2E3E6;
 	&__img {
@@ -3710,17 +3763,6 @@
 				width: 20px;
 				height: 3px;
 			}
-			&[aria-expanded="true"] {
-				background: #fff;
-				&::after {
-					background: #6EB8FF;
-					transform: translate(-50%, -50%) rotate(135deg);
-				}
-				&::before {
-					background: #6EB8FF;
-					transform: translate(-50%, -50%) rotate(45deg);
-				}
-			}
 		}
 		&::before {
 			content: '';
@@ -3732,11 +3774,39 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			background: url('../img/technologies-infograph-pc-hover.png') no-repeat;
+			background: url('../img/technologies-infograph-pc-active-cell.png') no-repeat;
 			transition: .3s ease;
 		}
-		&:has([aria-expanded="true"])::before {
+		&::after {
+			content: '';
+			display: block;
+			width: 264px;
+			opacity: 0;
+			height: 234px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: url('../img/technologies-infograph-pc-hover-cell.png') no-repeat;
+			transition: .3s ease;
+			z-index: -1;
+		}
+		&[aria-expanded="true"]::before {
 			opacity: 1;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+		&[aria-expanded="true"] &__button {
+			background: #fff;
+			&::after {
+				background: #6EB8FF;
+				transform: translate(-50%, -50%) rotate(135deg);
+			}
+			&::before {
+				background: #6EB8FF;
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
 		}
 		&:nth-child(1) {
 			top: 16px;

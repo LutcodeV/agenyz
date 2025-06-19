@@ -295,78 +295,40 @@ const historyBlock = document.querySelector('.history');
 const historyScrollerBlock = document.querySelector('.history-page__scroller');
 const historyWrapperBlock = document.querySelector('.history-page__wrapper');
 
-if(historyBlock && window.innerWidth >= 1320) {
-	gsap.registerPlugin(ScrollTrigger);
-	const historyPages = document.querySelectorAll('.history-page');
-
-	function checkHistoryYear() {
-		const wrapperRect = historyWrapperBlock.getBoundingClientRect();
-
-		historyPages.forEach((page, index) => {
-			const pageRect = page.getBoundingClientRect();
-			if (pageRect.x - wrapperRect.x < 300 && (historyPages[index + 1] ? historyPages[index + 1].getBoundingClientRect().x - wrapperRect.x > 0 : true)) {
-				const year = page.getAttribute('data-history-year');
-				historyPages.forEach((item) => {
-					item.setAttribute('aria-hidden', 'true');
-				})
-				historySwitchers.forEach((item) => {
-					item.setAttribute('aria-checked', 'false');
-				})
-				page.setAttribute('aria-hidden', 'false');
-				[...historySwitchers].find((item) => item.getAttribute('data-history-switcher') === year).setAttribute('aria-checked', 'true');
-			}
-		});
-	}
-
-	function scrollToHistoryElement(element, index) {
-		const blockRect = historyBlock.getBoundingClientRect();
-		const blockPinRect = historyBlock.parentNode.getBoundingClientRect();
-
-		const blockStart = blockPinRect.top + window.scrollY;
-		const blockEnd = blockPinRect.bottom + window.scrollY - blockRect.height;
-		const targetX = blockStart + (blockEnd - blockStart) / 5 * index;
-		// const targetX = blockStart + 1482 * index;
-		scrollTo({ top: targetX, behavior: 'smooth' });
-		// gsap.to(historyScrollerBlock, {
-		// 	x: targetX,
-		// 	duration: 1,
-		// 	ease: 'power2.out',
-		// });
-	}
-
-	historySwitchers.forEach((switcher, index) => {
-		switcher.addEventListener('click', () => {
-			const year = switcher.getAttribute('data-history-switcher');
+if (historyBlock && window.innerWidth >= 1320) {
+	historySwitchers.forEach((item) => {
+		item.addEventListener('click', () => {
+			const year = item.getAttribute('data-history-switcher');
 			const historyPage = document.querySelector(`[data-history-year="${year}"]`);
-			if (!historyPage) return;
-			scrollToHistoryElement(historyPage, index);
-		})
-	})
 
-	imagesLoaded(document.body, () => {
-		ScrollTrigger.config({
-			autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize"
-		});
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: historyBlock,
-				start: 'top top',
-				end: 'bottom+=600% bottom',
-				scrub: true,
-				pin: true,
-				pinSpacer: true,
-				ease: 'none',
-				// markers: true,
-				onUpdate: throttle(checkHistoryYear, 300),
-				onLeave: checkHistoryYear
+			if (historyPage && historyWrapperBlock) {
+				const wrapperLeft = historyWrapperBlock.getBoundingClientRect().left;
+				const pageLeft = historyPage.getBoundingClientRect().left;
+				const scrollOffset = pageLeft - wrapperLeft + historyWrapperBlock.scrollLeft;
+
+				historyWrapperBlock.scrollTo({
+					left: scrollOffset,
+					behavior: 'smooth'
+				});
 			}
-		})
-		tl.fromTo(historyScrollerBlock, {
-			x: 0,
-			ease: 'none'
-		}, {
-			x: '-83.63%',
-			ease: 'none'
-		})
-	})
+		});
+	});
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const year = entry.target.getAttribute('data-history-year');
+				historySwitchers.forEach((switcher) => {
+					const isMatch = switcher.getAttribute('data-history-switcher') === year;
+					switcher.setAttribute('aria-checked', isMatch ? 'true' : 'false');
+				});
+			}
+		});
+	}, {
+		root: historyWrapperBlock,
+		threshold: 0.6 // активируется, если хотя бы 60% блока в зоне видимости
+	});
+
+	document.querySelectorAll('[data-history-year]').forEach(el => observer.observe(el));
+
 }

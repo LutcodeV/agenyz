@@ -1,7 +1,7 @@
 include ../../_mixins
 
-mixin step(month, title, img)
-	.history-page-step
+mixin step(month, title, img, className)
+	.history-page-step(class=className)
 		.history-page-step__marker
 			span
 		.history-page-step__content
@@ -24,55 +24,54 @@ section.section.section--dark.history
 				button.history-ages__button(role="radio" aria-checked="false" aria-label="Посмотреть историю за 2024" data-history-switcher="2024") 2024
 
 			.history-page__wrapper
-				.history-page__scroller
-					.history-page(aria-hidden="false" data-history-year="2019")
-						p.history-page__text В течение года: Открыто 38 пунктов выдачи продукции, выпущено 18 новых продуктов
-						.history-page__legend
-							.history-page__line
-							.history-page__steps
-								+step('Август', 'Открыт AGENYZ центр <br> в Новосибирске', '/assets/img/history-img-01')
-								+step('Ноябрь', 'Благотворительная <br> помощь фонду <br> «Подарок Ангелу»')
-								+step('Декабрь', 'Открыт AGENYZ центр <br> в Москве', '/assets/img/history-img-02')
-								+step('Июль', 'Официальное <br> открытие компании')
-								+step('Декабрь', 'Благотворительная <br> помощь детям с ДЦП', '/assets/img/history-img-03')
-								+step('Октябрь', 'Путешествие <br> в Лас-Вегас')
-					.history-page(aria-hidden="true" data-history-year="2020")
-						p.history-page__text В течение года: Выпущено 15 новых продуктов
-						.history-page__legend
-							.history-page__line
-							.history-page__steps
-								+step('Март', 'Открыт AGENYZ центр в Хабаровске', '/assets/img/history-img-04')
-								+step('Август', 'Открыт AGENYZ центр в Краснодаре', '/assets/img/history-img-05')
-					.history-page(aria-hidden="true" data-history-year="2021")
-						p.history-page__text В течение года: Выпущено 16 новых продуктов
-						.history-page__legend
-							.history-page__line
-							.history-page__steps
-								+step('Сентябрь', 'Открыты AGENYZ центры в Иркутске и Уфе', '/assets/img/history-img-06')
-								+step('Октябрь', 'Путешествие команды партнёров в Доминикану', '/assets/img/history-img-07')
-					.history-page(aria-hidden="true" data-history-year="2022")
-						p.history-page__text В течение года: Выпущено 14 новых продуктов
-						.history-page__legend
-							.history-page__line
-							.history-page__steps
-								+step('Апрель', 'Открыт AGENYZ центр в Санкт-Петербурге', '/assets/img/history-img-08')
-								+step('Декабрь', 'Благотворительная акция «Благо» и помощь Темниковскому дому-интернату')
-								+step('Март', 'Открыт AGENYZ центр в Екатеринбурге', '/assets/img/history-img-09')
-								+step('Ноябрь', 'Путешествие команды партнёров в ОАЭ')
-					.history-page(aria-hidden="true" data-history-year="2023")
-						p.history-page__text В течение года: Выпущено 12 новых продуктов
-						.history-page__legend
-							.history-page__line
-							.history-page__steps
-								+step('Июль', 'Открыт AGENYZ-центр во Владивостоке', '/assets/img/history-img-10')
-								+step('Ноябрь', 'Благотворительная помощь детям-сиротам с фондом. Фонд «Большая перемена»')
-								+step('Май', 'Благотворительная помощь приходу Троицкой церкви', '/assets/img/history-img-11')
-								+step('Ноябрь', 'Путешествие команды партнёров в Египет', '/assets/img/history-img-12')
-					.history-page(aria-hidden="true" data-history-year="2024")
-						p.history-page__text В течение года: Выпуск 20 новых продуктов
-						.history-page__legend
-							.history-page__line
-							.history-page__steps
-								+step('Ноябрь', 'Green awards', '/assets/img/history-img-13')
-								+step('Август', '«MBM» 5-летие AGENYZ', '/assets/img/history-img-14')
-								+step('Сентябрь - октябрь', 'Участие в экологических акциях', '/assets/img/history-img-15')
+				.history-page(aria-hidden="false" data-history-year="2019")
+					p.history-page__text В течение года: Открыто 38 пунктов выдачи продукции, выпущено 18 новых продуктов
+					.history-page__legend
+						.history-page__line
+						.history-page__steps
+							+step('Август', 'Открыт AGENYZ центр <br> в Новосибирске', '/assets/img/history-img-01')
+							+step('Ноябрь', 'Благотворительная <br> помощь фонду <br> «Подарок Ангелу»')
+							+step('Декабрь', 'Открыт AGENYZ центр <br> в Москве', '/assets/img/history-img-02', 'history-page-step--2019-3')
+							+step('Июль', 'Официальное <br> открытие компании')
+							+step('Декабрь', 'Благотворительная <br> помощь детям с ДЦП', '/assets/img/history-img-03')
+							+step('Октябрь', 'Путешествие <br> в Лас-Вегас')
+				.history-page(aria-hidden="true" data-history-year="2020")
+					p.history-page__text В течение года: Выпущено 15 новых продуктов
+					.history-page__legend
+						.history-page__line
+						.history-page__steps
+							+step('Март', 'Открыт AGENYZ центр в Хабаровске', '/assets/img/history-img-04')
+							+step('Август', 'Открыт AGENYZ центр в Краснодаре', '/assets/img/history-img-05')
+				.history-page(aria-hidden="true" data-history-year="2021")
+					p.history-page__text В течение года: Выпущено 16 новых продуктов
+					.history-page__legend
+						.history-page__line
+						.history-page__steps
+							+step('Сентябрь', 'Открыты AGENYZ центры в Иркутске и Уфе', '/assets/img/history-img-06')
+							+step('Октябрь', 'Путешествие команды партнёров в Доминикану', '/assets/img/history-img-07')
+				.history-page(aria-hidden="true" data-history-year="2022")
+					p.history-page__text В течение года: Выпущено 14 новых продуктов
+					.history-page__legend
+						.history-page__line
+						.history-page__steps
+							+step('Апрель', 'Открыт AGENYZ центр в Санкт-Петербурге', '/assets/img/history-img-08')
+							+step('Декабрь', 'Благотворительная акция «Благо» и помощь Темниковскому дому-интернату')
+							+step('Март', 'Открыт AGENYZ центр в Екатеринбурге', '/assets/img/history-img-09', 'history-page-step--2022-3')
+							+step('Ноябрь', 'Путешествие команды партнёров в ОАЭ')
+				.history-page(aria-hidden="true" data-history-year="2023")
+					p.history-page__text В течение года: Выпущено 12 новых продуктов
+					.history-page__legend
+						.history-page__line
+						.history-page__steps
+							+step('Май', 'Открыт AGENYZ-центр во Владивостоке', '/assets/img/history-img-10', 'history-page-step--2023-1')
+							+step('Июль', 'Благотворительная помощь детям-сиротам с фондом. Фонд «Большая перемена»')
+							+step('Ноябрь', 'Благотворительная помощь приходу Троицкой церкви', '/assets/img/history-img-11', 'history-page-step--2023-3')
+							+step('Ноябрь', 'Путешествие команды партнёров в Египет', '/assets/img/history-img-12', 'history-page-step--2023-4')
+				.history-page(aria-hidden="true" data-history-year="2024")
+					p.history-page__text В течение года: Выпуск 20 новых продуктов
+					.history-page__legend
+						.history-page__line
+						.history-page__steps
+							+step('Ноябрь', 'Green awards', '/assets/img/history-img-13')
+							+step('Август', '«MBM» 5-летие AGENYZ', '/assets/img/history-img-14')
+							+step('Сентябрь - октябрь', 'Участие в экологических акциях', '/assets/img/history-img-15')
