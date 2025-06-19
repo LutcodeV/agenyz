@@ -170,6 +170,9 @@
 			font-weight: 600;
 			text-align: left;
 			line-height: 110%;
+			&+* {
+				margin-top: 40px;
+			}
 			&--center {
 				text-align: center;
 			}
@@ -597,6 +600,10 @@
 				grid-template-rows: 180px 40px 180px;
 			}
 		}
+		&--production {
+			.hero__texts .hero__text:nth-child(1) { max-width: 584px; }
+			.hero__texts .hero__text:nth-child(2) { max-width: 655px; }
+		}
 	}
 }
 .hero-swiper {
@@ -736,7 +743,9 @@
 	flex-direction: column;
 	box-shadow: 0px -24px 0px #64DEAD;
 	&__title {
-		@extend .text-small;
+		font-family: 'Montserrat';
+		font-size: 14px;
+		font-weight: 600;
 	}
 	&__text {
 		font-size: 12px;
@@ -747,13 +756,15 @@
 		background: #FFF9F7;
 	}
 	@include rmin(1320px) {
+		padding: 24px;
 		&__title {
+			font-family: 'Golos';
 			font-size: 16px;
 			line-height: 130%;
 			font-weight: 500;
 		}
 		&__text {
-			font-size: 14px;
+			font-size: 16px;
 			line-height: 140%;
 		}
 		&:nth-child(odd) {
@@ -992,10 +1003,12 @@
 			height: 36px;
 		}
 		&__text {
-			max-width: 420px;
 			font-size: 16px;
 			line-height: 130%;
 		}
+		&:nth-child(1) &__text {max-width: 492px;}
+		&:nth-child(2) &__text {max-width: 420px;}
+		&:nth-child(3) &__text {max-width: 471px;}
 	}
 }
 
@@ -1011,6 +1024,10 @@
 	}
 	&__texts-wrapper {
 		display: contents;
+	}
+	.section__title {
+		max-width: 264px;
+		margin: 0 auto 20px;
 	}
 	@include rmin(1320px) {
 		overflow: hidden;
@@ -1715,6 +1732,12 @@
 					display: block;
 				}
 			}
+			.team-card:nth-child(1) {
+				.team-card__text {max-width: 469px;}
+			}
+			.team-card:nth-child(2) {
+				.team-card__text {max-width: 482px;}
+			}
 		}
 	}
 }
@@ -2397,13 +2420,18 @@
 			flex-direction: row;
 			gap: 20px;
 		}
+		&__title {
+			max-width: 521px;
+		}
 		&__texts {
 			margin-top: 32px;
 			flex-direction: row;
 			display: flex;
+			gap: 20px;
 		}
 		&__texts-column {
 			flex: 1 1 0;
+			.production__text:nth-child(1) {max-width: 310px;}
 		}
 		&__text {
 			flex: 1 1 0;
@@ -3037,6 +3065,7 @@
 		&__text {
 			font-size: 24px;
 			line-height: 130%;
+			max-width: 722px;
 		}
 		&__swiper, .swiper-wrapper {
 			display: contents;
@@ -3146,6 +3175,24 @@
 			grid-row: 1/3;
 			background-size: cover;
 		}
+		&:nth-child(1) {
+			.biohack-about-card {
+				&__title {max-width: 416px;}
+				&__text {max-width: 429px;}
+			}
+		}
+		&:nth-child(2) {
+			.biohack-about-card {
+				&__title {max-width: 348px;}
+				&__text {max-width: 366px;}
+			}
+		}
+		&:nth-child(3) {
+			.biohack-about-card {
+				&__title {max-width: 276px;}
+				&__text {max-width: 398px;}
+			}
+		}
 	}
 }
 
@@ -3231,6 +3278,9 @@
 					max-width: 340px;
 					font-size: 24px;
 					line-height: 130%;
+				}
+				&__text {
+					max-width: 408px;
 				}
 			}
 		}
@@ -3567,6 +3617,9 @@
 		&__column {
 			max-width: calc(50% - 10px);
 			width: 100%;
+			.biohack-hero-block__text:nth-child(2) {
+				max-width: 503px;
+			}
 		}
 		picture {
 			max-width: calc(50% - 10px);

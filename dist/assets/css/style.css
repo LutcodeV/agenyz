@@ -107,7 +107,6 @@ b {
 .principles-card__text,
 .concept-modal-item__text,
 .concept__text,
-.direction-card__title,
 .hero-slide__text,
 .section__text {
   font-size: 12px;
@@ -741,6 +740,12 @@ b {
   box-shadow: 0px -24px 0px #64DEAD;
 }
 
+.direction-card__title {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .direction-card__text {
   font-size: 12px;
   line-height: 130%;
@@ -936,6 +941,11 @@ b {
 
 .concept__texts-wrapper {
   display: contents;
+}
+
+.concept .section__title {
+  max-width: 264px;
+  margin: 0 auto 20px;
 }
 
 .concept-infograph {
@@ -2972,7 +2982,6 @@ b {
   .principles-card__text,
   .concept-modal-item__text,
   .concept__text,
-  .direction-card__title,
   .hero-slide__text,
   .section__text {
     font-size: 14px;
@@ -3032,6 +3041,10 @@ b {
     font-weight: 600;
     text-align: left;
     line-height: 110%;
+  }
+
+  .section__title + * {
+    margin-top: 40px;
   }
 
   .section__title--center {
@@ -3270,6 +3283,14 @@ b {
     grid-template-rows: 180px 40px 180px;
   }
 
+  .hero--production .hero__texts .hero__text:nth-child(1) {
+    max-width: 584px;
+  }
+
+  .hero--production .hero__texts .hero__text:nth-child(2) {
+    max-width: 655px;
+  }
+
   .hero-slide {
     aspect-ratio: auto;
     max-width: 100%;
@@ -3333,14 +3354,19 @@ b {
     flex-direction: row;
   }
 
+  .direction-card {
+    padding: 24px;
+  }
+
   .direction-card__title {
+    font-family: "Golos";
     font-size: 16px;
     line-height: 130%;
     font-weight: 500;
   }
 
   .direction-card__text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 140%;
   }
 
@@ -3499,9 +3525,20 @@ b {
   }
 
   .mission-card__text {
-    max-width: 420px;
     font-size: 16px;
     line-height: 130%;
+  }
+
+  .mission-card:nth-child(1) .mission-card__text {
+    max-width: 492px;
+  }
+
+  .mission-card:nth-child(2) .mission-card__text {
+    max-width: 420px;
+  }
+
+  .mission-card:nth-child(3) .mission-card__text {
+    max-width: 471px;
   }
 
   .concept {
@@ -4088,6 +4125,14 @@ b {
     display: block;
   }
 
+  .team--biohacks .team-card:nth-child(1) .team-card__text {
+    max-width: 469px;
+  }
+
+  .team--biohacks .team-card:nth-child(2) .team-card__text {
+    max-width: 482px;
+  }
+
   .team-card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4544,6 +4589,10 @@ b {
     gap: 20px;
   }
 
+  .production__title {
+    max-width: 521px;
+  }
+
   .production__texts {
     margin-top: 32px;
     -webkit-box-orient: horizontal;
@@ -4553,12 +4602,17 @@ b {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 20px;
   }
 
   .production__texts-column {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 0px;
     flex: 1 1 0;
+  }
+
+  .production__texts-column .production__text:nth-child(1) {
+    max-width: 310px;
   }
 
   .production__text {
@@ -4975,6 +5029,7 @@ b {
   .biohack-products__text {
     font-size: 24px;
     line-height: 130%;
+    max-width: 722px;
   }
 
   .biohack-products__swiper,
@@ -5027,6 +5082,30 @@ b {
     padding: 24px 24px 340px;
     grid-row: 1/3;
     background-size: cover;
+  }
+
+  .biohack-about-card:nth-child(1) .biohack-about-card__title {
+    max-width: 416px;
+  }
+
+  .biohack-about-card:nth-child(1) .biohack-about-card__text {
+    max-width: 429px;
+  }
+
+  .biohack-about-card:nth-child(2) .biohack-about-card__title {
+    max-width: 348px;
+  }
+
+  .biohack-about-card:nth-child(2) .biohack-about-card__text {
+    max-width: 366px;
+  }
+
+  .biohack-about-card:nth-child(3) .biohack-about-card__title {
+    max-width: 276px;
+  }
+
+  .biohack-about-card:nth-child(3) .biohack-about-card__text {
+    max-width: 398px;
   }
 
   .result__grid {
@@ -5085,6 +5164,10 @@ b {
     max-width: 340px;
     font-size: 24px;
     line-height: 130%;
+  }
+
+  .result-card:nth-child(2) .result-card__text {
+    max-width: 408px;
   }
 
   .result-card:nth-child(3) {
@@ -5283,6 +5366,10 @@ b {
   .biohack-hero-block__column {
     max-width: calc(50% - 10px);
     width: 100%;
+  }
+
+  .biohack-hero-block__column .biohack-hero-block__text:nth-child(2) {
+    max-width: 503px;
   }
 
   .biohack-hero-block picture {
