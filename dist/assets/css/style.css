@@ -137,6 +137,11 @@ b {
   line-height: 130%;
 }
 
+.r-symbol {
+  font-size: 60%;
+  vertical-align: super;
+}
+
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
