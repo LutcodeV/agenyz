@@ -93,27 +93,27 @@
 	}
 }
 .section {
-	padding-top: 64px;
+	padding-top: 20px;
 	&--dark {
 		background: #f3f3f3;
 		& + & {
-			padding-top: 60px;
+			padding-top: 40px;
 		}
 	}
 	&--dark + .section:not(&--dark) {
-		padding-top: 40px;
+		padding-top: 20px;
 	}
 	&--dark:has(+ .section:not(&--dark)) {
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 	&:not(&--dark):has(+ &--dark) {
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 	&:not(&--dark) + &--dark {
-		padding-top: 40px;
+		padding-top: 20px;
 	}
 	&:has(+ .footer) {
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 
 	&__title {
@@ -150,23 +150,23 @@
 	@include rmin(1320px) {
 		&--dark {
 			& + & {
-				padding-top: 150px;
+				padding-top: 80px;
 			}
 		}
 		&--dark + .section:not(&--dark) {
-			padding-top: 85px;
+			padding-top: 40px;
 		}
 		&--dark:has(+ .section:not(&--dark)) {
-			padding-bottom: 150px;
+			padding-bottom: 40px;
 		}
 		&:not(&--dark):has(+ &--dark) {
-			padding-bottom: 85px;
+			padding-bottom: 40px;
 		}
 		&:not(&--dark) + &--dark {
-			padding-top: 85px;
+			padding-top: 40px;
 		}
 		&:has(+ .footer) {
-			padding-bottom: 100px;
+			padding-bottom: 40px;
 		}
 		&__title {
 			font-size: 42px;
@@ -660,6 +660,12 @@
 	}
 	&--graph {
 		background: url("../img/hero-image-02.jpg") center/cover no-repeat;
+		background-size: 144px 144px;
+		background-color: #fff;
+		background-position: right center;
+		.hero-slide__text {
+			max-width: 92px;
+		}
 	}
 	@include rmin(1320px) {
 		aspect-ratio: auto;
@@ -672,6 +678,13 @@
 		&__text {
 			font-size: 16px;
 			line-height: 130%;
+		}
+		&--graph {
+			background-size: auto;
+			background-position: center;
+			.hero-slide__text {
+				max-width: 100%;
+			}
 		}
 		&:nth-child(1) {
 			grid-column: 1/2;
@@ -1426,7 +1439,7 @@
 	&__title {
 		font-family: "Montserrat";
 		font-weight: 600;
-		font-size: 18px;
+		font-size: 20px;
 	}
 	&__list {
 		display: flex;
@@ -1478,9 +1491,11 @@
 	gap: 5px;
 	&__title {
 		@extend .text-medium;
+		font-size: 18px;
 	}
 	&__text {
 		@extend .text-small;
+		font-size: 16px;
 	}
 	@include rmin(1320px) {
 		align-items: center;
@@ -1639,7 +1654,7 @@
 			align-items: flex-start;
 			justify-content: flex-start;
 			flex: 1 1 0;
-			gap: 60px;
+			gap: 85px;
 		}
 		&__link {
 			margin-top: 0px;
@@ -1744,6 +1759,9 @@
 		flex-direction: column;
 		gap: 10px;
 	}
+	.section__subtitle br {
+		display: none;
+	}
 	&--biohacks {
 		.section__title {
 			font-size: 20px;
@@ -1753,6 +1771,9 @@
 		}
 	}
 	@include rmin(1320px) {
+		.section__subtitle br {
+			display: block;
+		}
 		.container {
 			display: grid;
 			gap: 40px 20px;
@@ -1883,6 +1904,10 @@
 // FOOTER
 .footer {
 	padding: 40px 0;
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
 	&__column {
 		display: flex;
 		flex-wrap: wrap;
@@ -1895,6 +1920,7 @@
 		font-weight: 500;
 		font-size: 10px;
 		opacity: 0.5;
+		order: 1;
 		margin-top: 24px;
 	}
 	&__column-left {
@@ -1999,7 +2025,7 @@
 		display: contents;
 	}
 	@include rmin(1320px) {
-		min-height: 100vh;
+		// min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -2121,8 +2147,8 @@
 			scroll-snap-type: x proximity;
 			min-width: 1182px;
 			&::-webkit-scrollbar {
-				width: 0;
-				height: 0;
+				// width: 0;
+				// height: 0;
 			}
 		}
 		&[aria-hidden="true"] {
@@ -2274,9 +2300,6 @@
 		gap: 10px;
 	}
 	@include rmin(1320px) {
-		&__title {
-			max-width: 640px;
-		}
 		&__column {
 			margin-top: 40px;
 			gap: 20px;
@@ -2588,7 +2611,7 @@
 			margin: 60px auto 0;
 		}
 		&__title {
-			max-width: 840px;
+			max-width: 1020px;
 			width: 100%;
 			text-align: center;
 			margin: 0 auto;
@@ -3278,7 +3301,7 @@
 		background: #6bb7ff;
 	}
 	&--img {
-		background: url("../img/about-biohacks-img-02.png");
+		background: url("../img/about-biohacks-img-02-mobile.png");
 		background-position: bottom;
 		background-size: auto 348px;
 		background-repeat: no-repeat;
@@ -3295,6 +3318,7 @@
 		}
 		&--img {
 			padding: 24px 24px 340px;
+			background: url("../img/about-biohacks-img-02.png");
 			grid-row: 1/3;
 			background-size: cover;
 		}
