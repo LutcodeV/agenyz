@@ -1497,6 +1497,7 @@ b {
 
 .footer__logo {
   width: 100%;
+  margin-bottom: 24px;
 }
 
 .footer__text {
@@ -4316,6 +4317,7 @@ b {
   .footer__logo {
     width: 100%;
     display: block;
+    margin-bottom: 0;
     max-width: 265px;
   }
 
@@ -4374,6 +4376,10 @@ b {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 
   .footer-nav__link {
@@ -5474,8 +5480,8 @@ b {
   }
 
   .biohack-hero__content {
-    padding: 40px 48px 60px;
-    margin-bottom: 56px;
+    padding: 40px 48px 0px;
+    margin-bottom: 20px;
   }
 
   .biohack-hero__title {
