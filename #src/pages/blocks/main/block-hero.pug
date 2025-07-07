@@ -6,7 +6,9 @@ section.section.section--dark.hero
 			h1.hero__title Созидай вместе с Agenyz<span class="r-symbol">®</span>!
 			p.hero__subtitle Agenyz — премиальный бренд, путь к здоровью и благополучию. Мы строим будущее, в котором каждый может добиться успеха и раскрыть свой потенциал.
 			button.button.hero__button Присоединиться
-		+responsivePicture("/assets/img/hero-image-01", 'Фото выступления', 'hero__img')
+		.hero__img
+			video(src="/assets/video/hero-main-video.mp4" autoplay muted playsinline)
+		//- +responsivePicture("/assets/img/hero-image-01", 'Фото выступления', 'hero__img')
 		.hero__cards
 			.hero-swiper.swiper.js-hero-swiper
 				.swiper-wrapper

@@ -522,8 +522,18 @@
 		max-width: 100%;
 		width: 100%;
 		min-height: 190px;
+		max-height: 190px;
 		object-fit: cover;
+		height: 100%;
 		object-position: center;
+		position: relative;
+		overflow: hidden;
+		video {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
 	}
 	&__bg-img {
 		position: absolute;
@@ -597,6 +607,9 @@
 			.swiper-wrapper {
 				display: contents;
 			}
+		}
+		&__img {
+			max-height: 600px;
 		}
 		&--products {
 			.hero__cards {
