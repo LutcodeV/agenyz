@@ -3440,7 +3440,6 @@ b {
 
   .direction__title {
     text-align: center;
-    max-width: 464px;
     margin: 0 auto;
   }
 
@@ -4781,6 +4780,10 @@ b {
     height: auto;
   }
 
+  .partners {
+    padding-top: 100px;
+  }
+
   .partners__swiper {
     display: contents;
   }
@@ -4820,7 +4823,7 @@ b {
   .partners__subtitle {
     max-width: 720px;
     width: 100%;
-    margin: 60px auto 0;
+    margin: 40px auto 0;
   }
 
   .partners__title {
@@ -5411,8 +5414,16 @@ b {
     line-height: 140%;
   }
 
+  .biohack {
+    padding-top: 60px;
+  }
+
   .biohack__title {
     text-align: center;
+  }
+
+  .biohack__subtitle {
+    margin-top: 16px;
   }
 
   .biohack-person {

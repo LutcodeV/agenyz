@@ -16,15 +16,15 @@ section.section.section--dark.history
 		h2.section__title#history-title История компании
 		.history__row
 			.history-ages(role="radiogroup" aria-labelledby="history-title")
-				button.history-ages__button(role="radio" aria-checked="true" aria-label="Посмотреть историю за 2019" data-history-switcher="2019") 2019
+				button.history-ages__button(role="radio" aria-checked="false" aria-label="Посмотреть историю за 2019" data-history-switcher="2019") 2019
 				button.history-ages__button(role="radio" aria-checked="false" aria-label="Посмотреть историю за 2020" data-history-switcher="2020") 2020
 				button.history-ages__button(role="radio" aria-checked="false" aria-label="Посмотреть историю за 2021" data-history-switcher="2021") 2021
 				button.history-ages__button(role="radio" aria-checked="false" aria-label="Посмотреть историю за 2022" data-history-switcher="2022") 2022
 				button.history-ages__button(role="radio" aria-checked="false" aria-label="Посмотреть историю за 2023" data-history-switcher="2023") 2023
-				button.history-ages__button(role="radio" aria-checked="false" aria-label="Посмотреть историю за 2024" data-history-switcher="2024") 2024
+				button.history-ages__button(role="radio" aria-checked="true" aria-label="Посмотреть историю за 2024" data-history-switcher="2024") 2024
 
 			.history-page__wrapper
-				.history-page(aria-hidden="false" data-history-year="2019")
+				.history-page(aria-hidden="true" data-history-year="2019")
 					p.history-page__text В течение года: Открыто 38 пунктов выдачи продукции, выпущено 18 новых продуктов
 					.history-page__legend
 						.history-page__line
@@ -67,7 +67,7 @@ section.section.section--dark.history
 							+step('Июль', 'Открыт AGENYZ-центр во Владивостоке')
 							+step('Ноябрь', 'Путешествие команды партнёров в Египет', '/assets/img/history-img-11', 'history-page-step--2023-3')
 							+step('Ноябрь', 'Благотворительная помощь детям-сиротам с фондом. Фонд «Большая перемена»', '/assets/img/history-img-12', 'history-page-step--2023-4')
-				.history-page(aria-hidden="true" data-history-year="2024")
+				.history-page(aria-hidden="false" data-history-year="2024")
 					p.history-page__text В течение года: Выпуск 20 новых продуктов
 					.history-page__legend
 						.history-page__line
