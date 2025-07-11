@@ -33,7 +33,7 @@ header.header
 								| GE
 			ul.header-nav__list
 				each item, i in MENU
-					li.header-nav__list-item(class=`${item.submenu ? 'js-nav-expandable-link header-nav__list-item--expandable' : ''} ${item.hiddenOnMobile ? 'header-nav__list-item--pc' : 'header-nav__list-item--mobile'}`)
+					li.header-nav__list-item(class=`${item.submenu ? 'js-nav-expandable-link header-nav__list-item--expandable' : ''}`)
 						.header-nav__list-item-wrapper
 							a.header-nav__link(href=item.href)= item.title
 
