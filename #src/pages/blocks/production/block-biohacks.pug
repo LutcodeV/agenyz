@@ -1,0 +1,74 @@
+include ../../_mixins
+
+section.section.biohack
+	.container
+		h2.section__title.biohack__title Основные сферы биохакинга
+		.biohack-person
+			button.biohack-person-card(data-card-modal="pcm-01" aria-label="Открыть описание 'Правильное питание'")
+				p.biohack-person-card__title Правильное питание и важные нутриенты
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-vegetables")
+			button.biohack-person-card(data-card-modal="pcm-02" aria-label="Открыть описание 'Гармонизация энергетических центров'")
+				p.biohack-person-card__title Гармонизация энергетических центров
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-lamp")
+			button.biohack-person-card(data-card-modal="pcm-03" aria-label="Открыть описание 'Активизация мозговой деятельности'")
+				p.biohack-person-card__title Активизация мозговой деятельности
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-gear-brain")
+			button.biohack-person-card(data-card-modal="pcm-04" aria-label="Открыть описание 'Физическая активность и спорт'")
+				p.biohack-person-card__title Физическая активность и спорт
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-dumbbells")
+			button.biohack-person-card(data-card-modal="pcm-05" aria-label="Открыть описание 'Нормализация сна и АнтиСтресс'")
+				p.biohack-person-card__title Нормализация сна и АнтиСтресс
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-sleep")
+			button.biohack-person-card(data-card-modal="pcm-06" aria-label="Открыть описание 'Регулировка внутренних процессов'")
+				p.biohack-person-card__title Регулировка внутренних процессов
+				svg.biohack-person-card__icon
+					use(href="#biohack-icon-scales")
+			+responsivePicture("/assets/img/biohack-person-01", 'Силуэт', 'biohack-person__img', ['png'])
+			.biohack-person__circles
+			.biohack-person-card-modal(aria-hidden="true" data-card-modal="pcm-01")
+				.biohack-person-card-modal__img-wrapper
+					+responsivePicture("/assets/img/biohack-infograph-bg", 'Инфографика', 'biohack-person-card-modal__img', ['png'])
+				.biohack-person-card-modal__header
+					p.biohack-person-card-modal__title Правильное питание
+					button.biohack-person-card-modal__button(aria-expanded="false" aria-label="Закрыть описание 'Правильное питание'")
+				p.biohack-person-card-modal__text Индивидуально подобранное питание, учитывающее особенности организма
+			.biohack-person-card-modal(aria-hidden="true" data-card-modal="pcm-02")
+				.biohack-person-card-modal__img-wrapper
+					+responsivePicture("/assets/img/biohack-infograph-bg", 'Инфографика', 'biohack-person-card-modal__img', ['png'])
+				.biohack-person-card-modal__header
+					p.biohack-person-card-modal__title Гармонизация энергетических центров
+					button.biohack-person-card-modal__button(aria-expanded="false" aria-label="Закрыть описание 'Гармонизация энергетических центров'")
+				p.biohack-person-card-modal__text Использование биологически активных добавок для поддержания здоровья и жизненных сил
+			.biohack-person-card-modal(aria-hidden="true" data-card-modal="pcm-03")
+				.biohack-person-card-modal__img-wrapper
+					+responsivePicture("/assets/img/biohack-infograph-bg", 'Инфографика', 'biohack-person-card-modal__img', ['png'])
+				.biohack-person-card-modal__header
+					p.biohack-person-card-modal__title Активизация мозговой деятельности
+					button.biohack-person-card-modal__button(aria-expanded="false" aria-label="Закрыть описание 'Активизация мозговой деятельности'")
+				p.biohack-person-card-modal__text Упражнения и практики для повышения когнитивных способностей
+			.biohack-person-card-modal(aria-hidden="true" data-card-modal="pcm-04")
+				.biohack-person-card-modal__img-wrapper
+					+responsivePicture("/assets/img/biohack-infograph-bg", 'Инфографика', 'biohack-person-card-modal__img', ['png'])
+				.biohack-person-card-modal__header
+					p.biohack-person-card-modal__title Физическая активность и спорт
+					button.biohack-person-card-modal__button(aria-expanded="false" aria-label="Закрыть описание 'Физическая активность и спорт'")
+				p.biohack-person-card-modal__text Поддержание регулярной физической активности для улучшения общего состояния тела, продуктивности и выносливости
+			.biohack-person-card-modal(aria-hidden="true" data-card-modal="pcm-05")
+				.biohack-person-card-modal__img-wrapper
+					+responsivePicture("/assets/img/biohack-infograph-bg", 'Инфографика', 'biohack-person-card-modal__img', ['png'])
+				.biohack-person-card-modal__header
+					p.biohack-person-card-modal__title Нормализация сна и АнтиСтресс
+					button.biohack-person-card-modal__button(aria-expanded="false" aria-label="Закрыть описание 'Нормализация сна и АнтиСтресс'")
+				p.biohack-person-card-modal__text Оптимизация режима сна для восстановления и поддержки здоровья, борьбы с быстрой утомляемостью
+			.biohack-person-card-modal(aria-hidden="true" data-card-modal="pcm-06")
+				.biohack-person-card-modal__img-wrapper
+					+responsivePicture("/assets/img/biohack-infograph-bg", 'Инфографика', 'biohack-person-card-modal__img', ['png'])
+				.biohack-person-card-modal__header
+					p.biohack-person-card-modal__title Регулировка внутренних процессов
+					button.biohack-person-card-modal__button(aria-expanded="false" aria-label="Закрыть описание 'Регулировка внутренних процессов'")
+				p.biohack-person-card-modal__text Использование биологически активных добавок для поддержания здоровья и жизненных сил

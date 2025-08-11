@@ -114,31 +114,6 @@
       <section class="section section--dark unique">
         <div class="container">
           <h2 class="section__title unique__title">Благодаря опыту ученых, нам удалось объединить</h2>
-          <div class="unique__column">
-            <div class="unique-card unique-card--blue">
-              <p class="unique-card__title">Современные <br> технологии</p>
-            </div>
-            <div class="unique-card unique-card--green">
-              <p class="unique-card__title">Природные <br> ингредиенты</p>
-            </div>
-            <div class="unique-card unique-card--pink">
-              <p class="unique-card__title">Стандарты <br> качества</p>
-            </div>
-          </div>
-          <div class="unique-product">
-            <div class="unique-product__column">
-              <p class="unique-product__title">Уникальные линейки продуктов Agenyz:</p>
-              <ul class="unique-product__list">
-                <li class="unique-product__list-item">линии биологически активных добавок</li>
-                <li class="unique-product__list-item">функциональное питание</li>
-                <li class="unique-product__list-item">коктейли и напитки</li>
-                <li class="unique-product__list-item">косметические средства</li>
-                <li class="unique-product__list-item">инновационные продукты</li>
-              </ul>
-            </div>
-                  <picture><img class="unique-product__img" src="/assets/img/unique-product-01.png" alt="Таблетки" loading="lazy"/>
-                  </picture>
-          </div>
           <div class="unique-rewards">
             <div class="unique-rewards__column">
               <p class="unique-rewards__title">Лучшие производственные практики GMP и ISO 22000</p>
@@ -168,6 +143,17 @@
               </div>
             </div>
           </div>
+          <div class="unique__column">
+            <div class="unique-card unique-card--blue">
+              <p class="unique-card__title">Современные <br> технологии</p>
+            </div>
+            <div class="unique-card unique-card--green">
+              <p class="unique-card__title">Природные <br> ингредиенты</p>
+            </div>
+            <div class="unique-card unique-card--pink">
+              <p class="unique-card__title">Стандарты <br> качества</p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section production-technologies">
@@ -175,9 +161,13 @@
           <h2 class="section__title">Технологии здоровья и красоты</h2>
           <p class="section__subtitle section__subtitle--center">Сотни ценных ингредиентов в составе продуктов</p>
           <div class="production-technologies-infograph">
+            <button class="production-technologies-infograph-step" aria-label="Открыть модальное окно 'Липосомированные формы'" aria-expanded="false" data-production-technologies-modal="pt4">
+              <div class="production-technologies-infograph-step__button"><span></span></div>
+              <p class="production-technologies-infograph-step__title">Липосомированные <br> формы</p>
+            </button>
             <button class="production-technologies-infograph-step" aria-label="Открыть модальное окно 'Микрокапсули-рование'" aria-expanded="false" data-production-technologies-modal="pt1">
               <div class="production-technologies-infograph-step__button"><span></span></div>
-              <p class="production-technologies-infograph-step__title">Микрокапсули-рование</p>
+              <p class="production-technologies-infograph-step__title">Микро-<br>капсулирование</p>
             </button>
             <button class="production-technologies-infograph-step" aria-label="Открыть модальное окно 'Пептидные ультрализаты'" aria-expanded="false" data-production-technologies-modal="pt2">
               <div class="production-technologies-infograph-step__button"><span></span></div>
@@ -186,10 +176,6 @@
             <button class="production-technologies-infograph-step" aria-label="Открыть модальное окно 'Адъюванты'" aria-expanded="false" data-production-technologies-modal="pt3">
               <div class="production-technologies-infograph-step__button"><span></span></div>
               <p class="production-technologies-infograph-step__title">Адъюванты</p>
-            </button>
-            <button class="production-technologies-infograph-step" aria-label="Открыть модальное окно 'Липосомированные формы'" aria-expanded="false" data-production-technologies-modal="pt4">
-              <div class="production-technologies-infograph-step__button"><span></span></div>
-              <p class="production-technologies-infograph-step__title">Липосомированные <br> формы</p>
             </button>
             <button class="production-technologies-infograph-step" aria-label="Открыть модальное окно 'Синергетический подход'" aria-expanded="false" data-production-technologies-modal="pt5">
               <div class="production-technologies-infograph-step__button"><span></span></div>
@@ -300,10 +286,11 @@
             <div class="partners__swiper swiper js-partners-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide partner-principles partner-principles--green">
-                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-01.jpg" alt="Прицнип 1" loading="lazy"/>
-                        </picture>
                   <div class="partner-principles__info">
                     <div class="partner-principles__header">
+                      <svg class="partner-principles__icon">
+                        <use href="#partners-with-01"></use>
+                      </svg>
                       <p class="partner-principles__title">Качество и надёжность</p>
                       <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Качество и надёжность'"></button>
                     </div>
@@ -315,10 +302,11 @@
                   </div>
                 </div>
                 <div class="swiper-slide partner-principles partner-principles--pink">
-                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-02.jpg" alt="Прицнип 2" loading="lazy"/>
-                        </picture>
                   <div class="partner-principles__info">
                     <div class="partner-principles__header">
+                      <svg class="partner-principles__icon">
+                        <use href="#partners-with-02"></use>
+                      </svg>
                       <p class="partner-principles__title">Инновационные технологии</p>
                       <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Научные исследования и разработки'"></button>
                     </div>
@@ -330,11 +318,12 @@
                   </div>
                 </div>
                 <div class="swiper-slide partner-principles partner-principles--blue">
-                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-03.jpg" alt="Прицнип 3" loading="lazy"/>
-                        </picture>
                   <div class="partner-principles__info">
                     <div class="partner-principles__header">
-                      <p class="partner-principles__title">Научные исследования <br> и разработки</p>
+                      <svg class="partner-principles__icon">
+                        <use href="#partners-with-03"></use>
+                      </svg>
+                      <p class="partner-principles__title">Научные исследования и разработки</p>
                       <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Компетентность и опыт'"></button>
                     </div>
                     <div class="partner-principles__wrapper-content" aria-hidden="true">
@@ -345,10 +334,11 @@
                   </div>
                 </div>
                 <div class="swiper-slide partner-principles partner-principles--green">
-                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-04.jpg" alt="Прицнип 4" loading="lazy"/>
-                        </picture>
                   <div class="partner-principles__info">
                     <div class="partner-principles__header">
+                      <svg class="partner-principles__icon">
+                        <use href="#partners-with-04"></use>
+                      </svg>
                       <p class="partner-principles__title">Экологическая ответственность</p>
                       <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Инновационные технологии'"></button>
                     </div>
@@ -360,10 +350,11 @@
                   </div>
                 </div>
                 <div class="swiper-slide partner-principles partner-principles--pink">
-                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-05.jpg" alt="Прицнип 5" loading="lazy"/>
-                        </picture>
                   <div class="partner-principles__info">
                     <div class="partner-principles__header">
+                      <svg class="partner-principles__icon">
+                        <use href="#partners-with-05"></use>
+                      </svg>
                       <p class="partner-principles__title">Компетентность и опыт</p>
                       <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Экологическая ответственность'"></button>
                     </div>
@@ -375,10 +366,11 @@
                   </div>
                 </div>
                 <div class="swiper-slide partner-principles partner-principles--blue">
-                        <picture><img class="partner-principles__img" src="/assets/img/partner-principles-06.jpg" alt="Прицнип 6" loading="lazy"/>
-                        </picture>
                   <div class="partner-principles__info">
                     <div class="partner-principles__header">
+                      <svg class="partner-principles__icon">
+                        <use href="#partners-with-06"></use>
+                      </svg>
                       <p class="partner-principles__title">Прозрачность и честность</p>
                       <button class="partner-principles__button" aria-expanded="false" aria-label="Открыть описание 'Прозрачность и честность'"></button>
                     </div>
@@ -393,7 +385,235 @@
               <div class="swiper-pagination js-partners-swiper-pagination"></div>
             </div>
           </div>
-          <div class="partners__buttons"><a class="partners__button button" href="/">В магазин</a><a class="partners__button button button--outline" href="/">Подробнее о продукции</a></div>
+        </div>
+      </section>
+      <section class="section section--dark about-biohack">
+        <div class="container">
+          <h2 class="section__title about-biohack__title">Биохакинг c Agenyz</h2>
+          <div class="about-biohack__block">
+            <p class="about-biohack__text">
+              Биохакинг - это современный подход к повышению личной эффективности, актуализации своих внутренних резервов и управлению долголетием!<br><br>Компания Agenyz в числе первых внедрила концепцию биохакинга в России. Мы создаём продукты и инструменты для всех сфер жизни, помогая клиентам осознать важность и возможность управления своим состоянием и комплексного подхода к здоровью.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section biohack">
+        <div class="container">
+          <h2 class="section__title biohack__title">Основные сферы биохакинга</h2>
+          <div class="biohack-person">
+            <button class="biohack-person-card" data-card-modal="pcm-01" aria-label="Открыть описание 'Правильное питание'">
+              <p class="biohack-person-card__title">Правильное питание и важные нутриенты</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-vegetables"></use>
+              </svg>
+            </button>
+            <button class="biohack-person-card" data-card-modal="pcm-02" aria-label="Открыть описание 'Гармонизация энергетических центров'">
+              <p class="biohack-person-card__title">Гармонизация энергетических центров</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-lamp"></use>
+              </svg>
+            </button>
+            <button class="biohack-person-card" data-card-modal="pcm-03" aria-label="Открыть описание 'Активизация мозговой деятельности'">
+              <p class="biohack-person-card__title">Активизация мозговой деятельности</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-gear-brain"></use>
+              </svg>
+            </button>
+            <button class="biohack-person-card" data-card-modal="pcm-04" aria-label="Открыть описание 'Физическая активность и спорт'">
+              <p class="biohack-person-card__title">Физическая активность и спорт</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-dumbbells"></use>
+              </svg>
+            </button>
+            <button class="biohack-person-card" data-card-modal="pcm-05" aria-label="Открыть описание 'Нормализация сна и АнтиСтресс'">
+              <p class="biohack-person-card__title">Нормализация сна и АнтиСтресс</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-sleep"></use>
+              </svg>
+            </button>
+            <button class="biohack-person-card" data-card-modal="pcm-06" aria-label="Открыть описание 'Регулировка внутренних процессов'">
+              <p class="biohack-person-card__title">Регулировка внутренних процессов</p>
+              <svg class="biohack-person-card__icon">
+                <use href="#biohack-icon-scales"></use>
+              </svg>
+            </button>
+                  <picture><img class="biohack-person__img" src="/assets/img/biohack-person-01.png" alt="Силуэт" loading="lazy"/>
+                  </picture>
+            <div class="biohack-person__circles"></div>
+            <div class="biohack-person-card-modal" aria-hidden="true" data-card-modal="pcm-01">
+              <div class="biohack-person-card-modal__img-wrapper">
+                      <picture><img class="biohack-person-card-modal__img" src="/assets/img/biohack-infograph-bg.png" alt="Инфографика" loading="lazy"/>
+                      </picture>
+              </div>
+              <div class="biohack-person-card-modal__header">
+                <p class="biohack-person-card-modal__title">Правильное питание</p>
+                <button class="biohack-person-card-modal__button" aria-expanded="false" aria-label="Закрыть описание 'Правильное питание'"></button>
+              </div>
+              <p class="biohack-person-card-modal__text">Индивидуально подобранное питание, учитывающее особенности организма</p>
+            </div>
+            <div class="biohack-person-card-modal" aria-hidden="true" data-card-modal="pcm-02">
+              <div class="biohack-person-card-modal__img-wrapper">
+                      <picture><img class="biohack-person-card-modal__img" src="/assets/img/biohack-infograph-bg.png" alt="Инфографика" loading="lazy"/>
+                      </picture>
+              </div>
+              <div class="biohack-person-card-modal__header">
+                <p class="biohack-person-card-modal__title">Гармонизация энергетических центров</p>
+                <button class="biohack-person-card-modal__button" aria-expanded="false" aria-label="Закрыть описание 'Гармонизация энергетических центров'"></button>
+              </div>
+              <p class="biohack-person-card-modal__text">Использование биологически активных добавок для поддержания здоровья и жизненных сил</p>
+            </div>
+            <div class="biohack-person-card-modal" aria-hidden="true" data-card-modal="pcm-03">
+              <div class="biohack-person-card-modal__img-wrapper">
+                      <picture><img class="biohack-person-card-modal__img" src="/assets/img/biohack-infograph-bg.png" alt="Инфографика" loading="lazy"/>
+                      </picture>
+              </div>
+              <div class="biohack-person-card-modal__header">
+                <p class="biohack-person-card-modal__title">Активизация мозговой деятельности</p>
+                <button class="biohack-person-card-modal__button" aria-expanded="false" aria-label="Закрыть описание 'Активизация мозговой деятельности'"></button>
+              </div>
+              <p class="biohack-person-card-modal__text">Упражнения и практики для повышения когнитивных способностей</p>
+            </div>
+            <div class="biohack-person-card-modal" aria-hidden="true" data-card-modal="pcm-04">
+              <div class="biohack-person-card-modal__img-wrapper">
+                      <picture><img class="biohack-person-card-modal__img" src="/assets/img/biohack-infograph-bg.png" alt="Инфографика" loading="lazy"/>
+                      </picture>
+              </div>
+              <div class="biohack-person-card-modal__header">
+                <p class="biohack-person-card-modal__title">Физическая активность и спорт</p>
+                <button class="biohack-person-card-modal__button" aria-expanded="false" aria-label="Закрыть описание 'Физическая активность и спорт'"></button>
+              </div>
+              <p class="biohack-person-card-modal__text">Поддержание регулярной физической активности для улучшения общего состояния тела, продуктивности и выносливости</p>
+            </div>
+            <div class="biohack-person-card-modal" aria-hidden="true" data-card-modal="pcm-05">
+              <div class="biohack-person-card-modal__img-wrapper">
+                      <picture><img class="biohack-person-card-modal__img" src="/assets/img/biohack-infograph-bg.png" alt="Инфографика" loading="lazy"/>
+                      </picture>
+              </div>
+              <div class="biohack-person-card-modal__header">
+                <p class="biohack-person-card-modal__title">Нормализация сна и АнтиСтресс</p>
+                <button class="biohack-person-card-modal__button" aria-expanded="false" aria-label="Закрыть описание 'Нормализация сна и АнтиСтресс'"></button>
+              </div>
+              <p class="biohack-person-card-modal__text">Оптимизация режима сна для восстановления и поддержки здоровья, борьбы с быстрой утомляемостью</p>
+            </div>
+            <div class="biohack-person-card-modal" aria-hidden="true" data-card-modal="pcm-06">
+              <div class="biohack-person-card-modal__img-wrapper">
+                      <picture><img class="biohack-person-card-modal__img" src="/assets/img/biohack-infograph-bg.png" alt="Инфографика" loading="lazy"/>
+                      </picture>
+              </div>
+              <div class="biohack-person-card-modal__header">
+                <p class="biohack-person-card-modal__title">Регулировка внутренних процессов</p>
+                <button class="biohack-person-card-modal__button" aria-expanded="false" aria-label="Закрыть описание 'Регулировка внутренних процессов'"></button>
+              </div>
+              <p class="biohack-person-card-modal__text">Использование биологически активных добавок для поддержания здоровья и жизненных сил</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section result">
+        <div class="container">
+          <h2 class="section__title result__title">Результаты</h2>
+          <div class="result__grid">
+            <div class="result__swiper swiper js-result-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide result-card result-card--img"></div>
+                <div class="swiper-slide result-card result-card--green">
+                  <p class="result-card__title">Увеличение продолжительности жизни</p>
+                  <p class="result-card__text">Поддержание жизненных функций на уровне нормы и замедление процессов старения</p>
+                </div>
+                <div class="swiper-slide result-card result-card--pink">
+                  <p class="result-card__title">Личная эффективность</p>
+                  <p class="result-card__text">Повышение физической и умственной работоспособности</p>
+                </div>
+                <div class="swiper-slide result-card result-card--green">
+                  <p class="result-card__title">Персонализированный подход</p>
+                  <p class="result-card__text">Настройка образа жизни и питания под ваши потребности</p>
+                </div>
+                <div class="swiper-slide result-card result-card--pink">
+                  <p class="result-card__title">Контроль своего здоровья</p>
+                  <p class="result-card__text">Последовательное и осознанное наблюдение за своим здоровьем, личными потребностями и привычками</p>
+                </div>
+              </div>
+              <div class="js-result-swiper-pagination swiper-pagination"></div>
+            </div>
+          </div>
+                <picture><img class="result__img" src="/assets/img/result-img-01-mobile.jpg" alt="Изображение в первом блоке" loading="lazy"/>
+                </picture>
+          <p class="result__description">Биохакинг в Agenyz – не просто набор продуктов для ежедневного использования. Agenyz сочетает высокоэффективные БАДы, изменение подхода к образу жизни и обучающие программы. Это целый комплекс привычек и даже стиль жизни!</p>
+        </div>
+      </section>
+      <section class="section section--dark product-direction">
+        <div class="container">
+          <h2 class="product-direction__title section__title section__title--center">Направления продукции Agenyz</h2>
+          <p class="product-direction__subtitle section__subtitle section__subtitle--center">Agenyz – это технологии, инновации и ценные ингредиенты в каждой капсуле, каждом глотке и каждом продукте</p>
+          <div class="product-direction__column">
+            <div class="product-direction-card">
+                    <picture><img class="product-direction-card__img" src="/assets/img/product-direction-img-01.jpg" alt="Продукты для красоты и ухода за собой" loading="lazy"/>
+                    </picture>
+              <p class="product-direction-card__title">Продукты для красоты и ухода за собой</p>
+              <p class="product-direction-card__text">Уникальная, инновационная, гипоаллергенная косметика с максимумом натуральных компонентов и пептидами</p><a class="product-direction-card__link button button--outline" href="#">Подробнее</a>
+            </div>
+            <div class="product-direction-card">
+                    <picture><img class="product-direction-card__img" src="/assets/img/product-direction-img-02.jpg" alt="Эффективные продукты для здоровья " loading="lazy"/>
+                    </picture>
+              <p class="product-direction-card__title">Эффективные продукты для здоровья</p>
+              <p class="product-direction-card__text">Линейки продуктов Agenyz: БАДы, функциональное питание и фитонапитки способствуют улучшению работы мозга, нормализации сна, повышению энергии и оптимизации показателей здоровья.</p><a class="product-direction-card__link button button--outline" href="#">Подробнее</a>
+            </div>
+            <div class="product-direction-card">
+                    <picture><img class="product-direction-card__img" src="/assets/img/product-direction-img-03.jpg" alt="Инновационные товары " loading="lazy"/>
+                    </picture>
+              <p class="product-direction-card__title">Инновационные товары</p>
+              <p class="product-direction-card__text">Стильные полезные украшения, ЧаКарты, уникальные шейкеры, трекеры здоровья и био-частотные приборы – наши ноу-хау разработки для нормализации жизни и самочувствия</p><a class="product-direction-card__link button button--outline" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section products">
+        <div class="container">
+          <div class="products__header">
+            <h2 class="section__title">Наши продукты</h2><a class="button button--blue products__link products__link--pc" href="#">В магазин</a>
+          </div>
+          <div class="products__grid"><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-01.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">CELL ELIXIR</p>
+              <p class="product-card__subtitle">Современные технологии биохакинга</p>
+              <p class="product-card__text">Клеточные эликсиры - мультикомплексы для восполнения ресурсов организма</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-02.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">XBi-A®ctive</p>
+              <p class="product-card__subtitle">Повышение биопродуктивности</p>
+              <p class="product-card__text">Улучшает транспортные и детоксикационные свойства продуктов</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-03.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">TRUE AQUA</p>
+              <p class="product-card__subtitle">Правильная вода</p>
+              <p class="product-card__text">Натуральные растворимые напитки для быстрого усвоения активных ингредиентов</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-04.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">G-KETO</p>
+              <p class="product-card__subtitle">Питание для стройной фигуры</p>
+              <p class="product-card__text">Масло МТС, шоколад,  и другие кето - продукты придадут энергию мозгу и телу и уменьшат сантиметры на талии.</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-05.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">TRUE SHAKE</p>
+              <p class="product-card__subtitle">Правильные коктейли для молодости и красоты</p>
+              <p class="product-card__text">С коктейлями TRUE SHAKE легко быть современным, модным, здоровым, питаться правильно, экономить свое время и быть эффективным!</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-06.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">5,5 teArt</p>
+              <p class="product-card__subtitle">Чай как искусство</p>
+              <p class="product-card__text">Листовой отборный чай, с травами и фруктовыми добавками, снижающий усвоение глюкозы и выполняющий важные функции.</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-07.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">Косметика</p>
+              <p class="product-card__subtitle">Инновационная омолаживающая линия по уходу за кожей лица</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-08.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">Уход за телом</p>
+              <p class="product-card__subtitle">Современные средства для рук и тела, регенерирующая зубная паста, пептидный шампунь</p></a><a class="product-card" href="/">
+                    <picture><img class="product-card__img" src="/assets/img/product-img-09.jpg" alt="Продукт" loading="lazy"/>
+                    </picture>
+              <p class="product-card__title">Инновационные товары</p>
+              <p class="product-card__subtitle">Стильные полезные украшения, ЧаКарты,  шейкеры с ионами – наши разработки для повышения эффективности и отличного самочувствия</p></a></div><a class="products__link button button--blue" href="#">В магазин</a>
         </div>
       </section>
       <footer class="footer">

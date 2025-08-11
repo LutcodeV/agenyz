@@ -365,3 +365,28 @@ if (historyBlock && window.innerWidth >= 1320) {
 		.querySelectorAll("[data-history-year]")
 		.forEach((el) => observer.observe(el));
 }
+
+// BIOHACK-MODALS
+const biohackModalButton = document.querySelectorAll(
+	".biohack-person-card[data-card-modal]"
+);
+
+if (biohackModalButton.length) {
+	biohackModalButton.forEach((button) => {
+		const modalData = button.dataset.cardModal;
+		const modal = document.querySelector(
+			`.biohack-person-card-modal[data-card-modal="${modalData}"]`
+		);
+		const modalClose = modal.querySelector(
+			".biohack-person-card-modal__button"
+		);
+
+		modalClose.addEventListener("click", () => {
+			modal.setAttribute("aria-hidden", "true");
+		});
+
+		button.addEventListener("click", () => {
+			modal.setAttribute("aria-hidden", "false");
+		});
+	});
+}

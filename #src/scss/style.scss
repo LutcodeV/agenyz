@@ -2316,7 +2316,7 @@
 	}
 	@include rmin(1320px) {
 		&__column {
-			margin-top: 40px;
+			margin-top: 20px;
 			gap: 20px;
 			flex-direction: row;
 		}
@@ -2324,10 +2324,15 @@
 }
 .unique-card {
 	padding: 16px;
-	min-height: 120px;
+	min-height: 100px;
 	border-radius: 16px;
 	&__title {
-		@extend .text-medium;
+		@extend .text-big;
+		font-family: "Montserrat";
+		font-weight: 500;
+		br {
+			display: none;
+		}
 	}
 	&--blue {
 		background: url("../img/unique-product-card-bg-01.png") no-repeat;
@@ -2353,7 +2358,11 @@
 		border-radius: 24px;
 		flex: 1 1 0;
 		&__title {
-			font-size: 20px;
+			font-weight: 600;
+			font-size: 24px;
+			br {
+				display: block;
+			}
 		}
 	}
 }
@@ -2432,6 +2441,7 @@
 	&__logos {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 16px;
 		width: 100%;
 		margin-top: 16px;
@@ -2453,16 +2463,21 @@
 		gap: 52px;
 		&__title {
 			font-size: 24px;
+			font-family: "Montserrat";
+			font-weight: 600;
 			line-height: 130%;
 			text-align: left;
 			max-width: 426px;
 		}
 		&__logos {
 			justify-content: flex-start;
-			margin-top: 64px;
+			margin-top: 40px;
 			img {
-				max-width: 120px;
+				max-width: 164px;
 			}
+		}
+		&__column {
+			padding: 0px 32px;
 		}
 		&__info {
 			margin-top: 0;
@@ -2492,7 +2507,7 @@
 			line-height: 110%;
 		}
 		&__text {
-			font-size: 16px;
+			font-size: 20px;
 			line-height: 140%;
 		}
 		br {
@@ -2638,25 +2653,41 @@
 	position: relative;
 	overflow: hidden;
 	border-radius: 16px;
-	&__img {
-		width: 100%;
-		object-fit: cover;
-		object-position: top;
-		aspect-ratio: 288/258;
-	}
+	min-height: 230px;
+	max-height: 230px;
 	&__info {
-		position: absolute;
-		bottom: 0;
-		left: 0;
 		width: 100%;
+		height: inherit;
 		padding: 16px;
 		background: #64dead;
+		min-height: inherit;
 		border-radius: 16px;
+	}
+	&__icon {
+		height: 40px;
+		width: auto;
 	}
 	&__header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: absolute;
+		display: flex;
+		width: 100%;
+		gap: 20px;
+		flex-direction: column;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		&:has([aria-expanded="true"]) {
+			position: static;
+			transform: none;
+			flex-direction: row;
+			justify-content: space-between;
+			.partner-principles__icon {
+				display: none;
+			}
+		}
 	}
 	&__button {
 		width: 30px;
@@ -2691,6 +2722,7 @@
 	&__title {
 		font-size: 12px;
 		line-height: 130%;
+		text-align: center;
 		font-weight: 500;
 	}
 	&__text {
@@ -2728,6 +2760,7 @@
 	}
 	@include rmin(1320px) {
 		border-radius: 24px;
+		max-height: 272px;
 		&:nth-child(4) {
 			order: 2;
 		}
@@ -3383,6 +3416,13 @@
 		border-radius: 16px;
 		aspect-ratio: 1/1;
 	}
+	&__description {
+		margin-top: 20px;
+		font-family: "Montserrat";
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 130%;
+	}
 	@include rmin(1320px) {
 		&__grid {
 			display: grid;
@@ -3403,6 +3443,14 @@
 		}
 		&__img {
 			display: none;
+		}
+		&__description {
+			font-family: "Montserrat";
+			font-weight: 500;
+			font-style: Medium;
+			font-size: 24px;
+			line-height: 130%;
+			letter-spacing: 0%;
 		}
 	}
 }
@@ -3664,6 +3712,17 @@
 				display: none;
 			}
 		}
+		& > *:not(:is(.biohack-person-card-modal, picture)),
+		.biohack-person__img {
+			transition: 0.3s ease;
+		}
+		&:has(.biohack-person-card-modal[aria-hidden="false"]) {
+			& > *:not(:is(.biohack-person-card-modal, picture)),
+			.biohack-person__img {
+				pointer-events: none;
+				filter: blur(8px);
+			}
+		}
 	}
 }
 .biohack-person-card {
@@ -3674,17 +3733,26 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	cursor: pointer;
 	justify-content: center;
 	&__title {
 		font-size: 12px;
 		text-align: center;
 	}
 	&__icon {
+		transition: 0.3s ease;
 		width: 30px;
 		height: 30px;
 		background: #64dead;
 		border: 1px solid #fff;
 		border-radius: 50%;
+	}
+	@include hover {
+		.biohack-person-card {
+			&__icon {
+				background: #6bb7ff;
+			}
+		}
 	}
 	&:nth-child(1) {
 		max-width: 110px;
@@ -3698,7 +3766,7 @@
 	}
 	&:nth-child(3) {
 		max-width: 96px;
-		left: 50%;
+		left: 38%;
 		transform: translateX(-50%);
 		top: 82px;
 	}
@@ -3712,43 +3780,210 @@
 		right: -7px;
 		top: 205px;
 	}
+	&:nth-child(6) {
+		max-width: 96px;
+		left: 68%;
+		transform: translateX(-50%);
+		top: 82px;
+	}
 	@include rmin(1320px) {
 		gap: 16px;
 		&__title {
-			font-size: 16px;
+			font-size: 24px;
 		}
 		&__icon {
-			width: 50px;
-			height: 50px;
+			width: 60px;
+			height: 60px;
 			border-width: 2px;
 		}
 		&:nth-child(1) {
 			top: 456px;
-			max-width: 168px;
-			left: 140px;
+			max-width: 231px;
+			left: 109px;
 		}
 		&:nth-child(2) {
 			top: 140px;
 			max-width: 200px;
 			left: auto;
-			right: 238px;
+			right: 198px;
 		}
 		&:nth-child(3) {
 			top: 88px;
 			max-width: 198px;
 			right: auto;
-			left: 387px;
+			left: 347px;
 		}
 		&:nth-child(4) {
-			top: 463px;
+			top: 513px;
 			left: auto;
-			max-width: 168px;
-			right: 270px;
+			max-width: 193px;
+			right: 143px;
 		}
 		&:nth-child(5) {
-			top: 266px;
-			max-width: 158px;
-			left: 323px;
+			top: 296px;
+			max-width: 214px;
+			left: 270px;
+		}
+		&:nth-child(6) {
+			top: 330px;
+			max-width: 200px;
+			left: auto;
+			transform: none;
+			right: 258px;
+		}
+	}
+}
+.biohack-person-card-modal {
+	transition: 0.3s ease;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 10;
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	gap: 16px;
+	background: #ffffff;
+	&__img-wrapper {
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		left: 0;
+		top: 0;
+		height: 100%;
+	}
+	&__img {
+		width: 100%;
+	}
+	&__header {
+		display: flex;
+		// align-items: center;
+		gap: 16px;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 130%;
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 140%;
+	}
+	&__button {
+		position: relative;
+		width: 16px;
+		height: 16px;
+		margin-left: auto;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+			height: 2px;
+			background: #000;
+		}
+		&::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+	&[aria-hidden="false"] {
+		opacity: 1;
+		pointer-events: all;
+	}
+	@include rmin(1320px) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -40%);
+		max-width: 427px;
+		height: auto;
+		padding: 24px;
+		border-radius: 24px;
+		min-height: 272px;
+		background: #64dead;
+		&__header {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+		&__img-wrapper {
+			display: none;
+		}
+		&__button {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: #fff;
+			&::before,
+			&::after {
+				width: 12px;
+				height: 2px;
+			}
+		}
+		&__title {
+			font-size: 16px;
+		}
+
+		&[aria-hidden="false"] {
+			opacity: 1;
+			pointer-events: all;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+// ABOUT-BIOHACK
+.about-biohack {
+	&__title {
+		text-align: center;
+		font-family: "Montserrat";
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 100%;
+		letter-spacing: 0%;
+	}
+	&__block {
+		margin-top: 20px;
+	}
+	&__text {
+		font-family: "Montserrat";
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 130%;
+		text-align: center;
+	}
+	@include rmin(1320px) {
+		&__title {
+			padding: 0px 24px;
+			font-weight: 600;
+			font-size: 64px;
+		}
+		&__text {
+			font-family: "Golos";
+			font-weight: 400;
+			text-align: left;
+			font-size: 24px;
+		}
+		&__block {
+			margin-top: 20px;
+			padding: 18px 24px;
+			border-radius: 24px;
+			background: #fff;
 		}
 	}
 }
@@ -3999,7 +4234,7 @@
 		transform: none !important;
 		z-index: 3;
 		&__title {
-			font-size: 16px;
+			font-size: 20px;
 			z-index: 1;
 			position: relative;
 		}

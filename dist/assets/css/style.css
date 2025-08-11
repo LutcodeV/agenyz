@@ -116,7 +116,6 @@ b {
 .text-medium,
 .production-technologies-modal-item__title,
 .product-direction-card__title,
-.unique-card__title,
 .footer-nav__title,
 .team-card__subtitle,
 .principles-card__title,
@@ -131,6 +130,7 @@ b {
 }
 
 .text-big,
+.unique-card__title,
 .history-page__text,
 .technologies-slide__text {
   font-size: 16px;
@@ -1732,8 +1732,17 @@ b {
 
 .unique-card {
   padding: 16px;
-  min-height: 120px;
+  min-height: 100px;
   border-radius: 16px;
+}
+
+.unique-card__title {
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+.unique-card__title br {
+  display: none;
 }
 
 .unique-card--blue {
@@ -1824,11 +1833,12 @@ b {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 16px;
   width: 100%;
   margin-top: 16px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -1951,25 +1961,22 @@ b {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-}
-
-.partner-principles__img {
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: top;
-  object-position: top;
-  aspect-ratio: 288/258;
+  min-height: 230px;
+  max-height: 230px;
 }
 
 .partner-principles__info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  height: inherit;
   padding: 16px;
   background: #64dead;
+  min-height: inherit;
   border-radius: 16px;
+}
+
+.partner-principles__icon {
+  height: 40px;
+  width: auto;
 }
 
 .partner-principles__header {
@@ -1982,6 +1989,37 @@ b {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.partner-principles__header:has([aria-expanded=true]) {
+  position: static;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.partner-principles__header:has([aria-expanded=true]) .partner-principles__icon {
+  display: none;
 }
 
 .partner-principles__button {
@@ -2029,6 +2067,7 @@ b {
 .partner-principles__title {
   font-size: 12px;
   line-height: 130%;
+  text-align: center;
   font-weight: 500;
 }
 
@@ -2486,6 +2525,14 @@ b {
   aspect-ratio: 1/1;
 }
 
+.result__description {
+  margin-top: 20px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
 .result-card {
   padding: 16px;
   gap: 10px;
@@ -2663,6 +2710,7 @@ b {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2674,6 +2722,8 @@ b {
 }
 
 .biohack-person-card__icon {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   width: 30px;
   height: 30px;
   background: #64dead;
@@ -2695,7 +2745,7 @@ b {
 
 .biohack-person-card:nth-child(3) {
   max-width: 96px;
-  left: 50%;
+  left: 38%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -2712,6 +2762,138 @@ b {
   max-width: 108px;
   right: -7px;
   top: 205px;
+}
+
+.biohack-person-card:nth-child(6) {
+  max-width: 96px;
+  left: 68%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 82px;
+}
+
+.biohack-person-card-modal {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  gap: 16px;
+  background: #ffffff;
+}
+
+.biohack-person-card-modal__img-wrapper {
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.biohack-person-card-modal__img {
+  width: 100%;
+}
+
+.biohack-person-card-modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.biohack-person-card-modal__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.biohack-person-card-modal__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.biohack-person-card-modal__button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+}
+
+.biohack-person-card-modal__button::before,
+.biohack-person-card-modal__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 2px;
+  background: #000;
+}
+
+.biohack-person-card-modal__button::before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.biohack-person-card-modal__button::after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.biohack-person-card-modal[aria-hidden=false] {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.about-biohack__title {
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.about-biohack__block {
+  margin-top: 20px;
+}
+
+.about-biohack__text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
 }
 
 .biohack-hero__content {
@@ -3076,7 +3258,6 @@ b {
   .text-medium,
   .production-technologies-modal-item__title,
   .product-direction-card__title,
-  .unique-card__title,
   .footer-nav__title,
   .team-card__subtitle,
   .principles-card__title,
@@ -3088,6 +3269,7 @@ b {
   }
 
   .text-big,
+  .unique-card__title,
   .history-page__text,
   .technologies-slide__text {
     font-size: 24px;
@@ -4601,7 +4783,7 @@ b {
   }
 
   .unique__column {
-    margin-top: 40px;
+    margin-top: 20px;
     gap: 20px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -4619,7 +4801,12 @@ b {
   }
 
   .unique-card__title {
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .unique-card__title br {
+    display: block;
   }
 
   .unique-product {
@@ -4673,6 +4860,8 @@ b {
 
   .unique-rewards__title {
     font-size: 24px;
+    font-family: "Montserrat";
+    font-weight: 600;
     line-height: 130%;
     text-align: left;
     max-width: 426px;
@@ -4682,11 +4871,15 @@ b {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin-top: 64px;
+    margin-top: 40px;
   }
 
   .unique-rewards__logos img {
-    max-width: 120px;
+    max-width: 164px;
+  }
+
+  .unique-rewards__column {
+    padding: 0px 32px;
   }
 
   .unique-rewards__info {
@@ -4703,7 +4896,7 @@ b {
   }
 
   .unique-rewards-item__text {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 140%;
   }
 
@@ -4835,6 +5028,7 @@ b {
 
   .partner-principles {
     border-radius: 24px;
+    max-height: 272px;
   }
 
   .partner-principles:nth-child(4) {
@@ -5290,6 +5484,15 @@ b {
     display: none;
   }
 
+  .result__description {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0%;
+  }
+
   .result-card {
     padding: 24px;
     border-radius: 24px;
@@ -5459,51 +5662,151 @@ b {
     display: none;
   }
 
+  .biohack-person > *:not(:is(.biohack-person-card-modal, picture)),
+  .biohack-person .biohack-person__img {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .biohack-person:has(.biohack-person-card-modal[aria-hidden=false]) > *:not(:is(.biohack-person-card-modal, picture)),
+  .biohack-person:has(.biohack-person-card-modal[aria-hidden=false]) .biohack-person__img {
+    pointer-events: none;
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+  }
+
   .biohack-person-card {
     gap: 16px;
   }
 
   .biohack-person-card__title {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .biohack-person-card__icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-width: 2px;
   }
 
   .biohack-person-card:nth-child(1) {
     top: 456px;
-    max-width: 168px;
-    left: 140px;
+    max-width: 231px;
+    left: 109px;
   }
 
   .biohack-person-card:nth-child(2) {
     top: 140px;
     max-width: 200px;
     left: auto;
-    right: 238px;
+    right: 198px;
   }
 
   .biohack-person-card:nth-child(3) {
     top: 88px;
     max-width: 198px;
     right: auto;
-    left: 387px;
+    left: 347px;
   }
 
   .biohack-person-card:nth-child(4) {
-    top: 463px;
+    top: 513px;
     left: auto;
-    max-width: 168px;
-    right: 270px;
+    max-width: 193px;
+    right: 143px;
   }
 
   .biohack-person-card:nth-child(5) {
-    top: 266px;
-    max-width: 158px;
-    left: 323px;
+    top: 296px;
+    max-width: 214px;
+    left: 270px;
+  }
+
+  .biohack-person-card:nth-child(6) {
+    top: 330px;
+    max-width: 200px;
+    left: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    right: 258px;
+  }
+
+  .biohack-person-card-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+    max-width: 427px;
+    height: auto;
+    padding: 24px;
+    border-radius: 24px;
+    min-height: 272px;
+    background: #64dead;
+  }
+
+  .biohack-person-card-modal__header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .biohack-person-card-modal__img-wrapper {
+    display: none;
+  }
+
+  .biohack-person-card-modal__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  .biohack-person-card-modal__button::before,
+  .biohack-person-card-modal__button::after {
+    width: 12px;
+    height: 2px;
+  }
+
+  .biohack-person-card-modal__title {
+    font-size: 16px;
+  }
+
+  .biohack-person-card-modal[aria-hidden=false] {
+    opacity: 1;
+    pointer-events: all;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .about-biohack__title {
+    padding: 0px 24px;
+    font-weight: 600;
+    font-size: 64px;
+  }
+
+  .about-biohack__text {
+    font-family: "Golos";
+    font-weight: 400;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .about-biohack__block {
+    margin-top: 20px;
+    padding: 18px 24px;
+    border-radius: 24px;
+    background: #fff;
   }
 
   .biohack-hero__content {
@@ -5616,7 +5919,7 @@ b {
   }
 
   .production-technologies-infograph-step__title {
-    font-size: 16px;
+    font-size: 20px;
     z-index: 1;
     position: relative;
   }
@@ -5908,5 +6211,9 @@ b {
 @media (hover: hover) {
   .header-nav__list-item:hover {
     background: #80e2ec;
+  }
+
+  .biohack-person-card:hover .biohack-person-card__icon {
+    background: #6bb7ff;
   }
 }
