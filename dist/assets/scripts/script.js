@@ -87,7 +87,7 @@ const technologiesSwiper = new Swiper(".js-technologies-swiper", {
 	},
 });
 const partnersSwiper = new Swiper(".js-partners-swiper", {
-	slidesPerView: 1,
+	slidesPerView: "auto",
 	spaceBetween: 10,
 	pagination: {
 		el: ".js-partners-swiper-pagination",

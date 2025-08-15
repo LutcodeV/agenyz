@@ -467,6 +467,7 @@
 		&__link {
 			padding: 8px 12px;
 			margin: -8px 0;
+			white-space: nowrap;
 			font-size: 14px;
 			font-weight: 500;
 		}
@@ -489,7 +490,7 @@
 
 // HERO
 .hero {
-	padding: 48px 0px 40px;
+	padding: 20px 0px 40px;
 	overflow: hidden;
 	position: relative;
 	.container {
@@ -1351,11 +1352,13 @@
 				transform: scaleX(-1) translate(-30px, -30px);
 			}
 			&::after {
-				left: -166px;
+				left: auto;
+				right: -180px;
 				background: url("../img/concept-infograph-pc-hover-02.png") no-repeat;
 			}
 			&::before {
-				left: -316px;
+				left: auto;
+				right: -25px;
 				transform: scaleX(-1);
 			}
 		}
@@ -1377,14 +1380,16 @@
 				transform: rotate(-120deg) translate(-30px, -30px);
 			}
 			&::after {
-				top: -228px;
-				left: -196px;
+				top: auto;
+				bottom: -246px;
+				left: -144px;
 				background: url("../img/concept-infograph-pc-hover-03.png") no-repeat;
 			}
 			&::before {
 				transform: rotate(-120deg);
-				left: -250px;
-				top: -480px;
+				left: -198px;
+				top: auto;
+				bottom: 7px;
 			}
 		}
 	}
@@ -1915,7 +1920,8 @@
 
 // FOOTER
 .footer {
-	padding: 40px 0;
+	padding: 10px 0 40px;
+	background: #fbfbfb;
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -1948,6 +1954,7 @@
 		font-weight: 500;
 	}
 	@include rmin(1320px) {
+		padding: 60px 0px;
 		&__column {
 			flex-direction: row;
 			display: grid;
@@ -2309,10 +2316,12 @@
 
 // UNIQUE
 .unique {
+	padding-top: 0 !important;
 	&__column {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
+		margin-top: 20px;
 	}
 	@include rmin(1320px) {
 		&__column {
@@ -2610,6 +2619,19 @@
 	&__swiper-wrapper {
 		margin-top: 30px;
 	}
+	@include r(1319.98px) {
+		&__swiper-wrapper {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100dvw;
+			overflow: hidden;
+		}
+		&__swiper {
+			max-width: 288px;
+			overflow: visible;
+		}
+	}
 	@include rmin(1320px) {
 		padding-top: 100px;
 		&__swiper {
@@ -2655,6 +2677,7 @@
 	border-radius: 16px;
 	min-height: 230px;
 	max-height: 230px;
+	max-width: 288px;
 	&__info {
 		width: 100%;
 		height: inherit;
@@ -2722,7 +2745,6 @@
 	&__title {
 		font-size: 12px;
 		line-height: 130%;
-		text-align: center;
 		font-weight: 500;
 	}
 	&__text {
@@ -2761,6 +2783,7 @@
 	@include rmin(1320px) {
 		border-radius: 24px;
 		max-height: 272px;
+		max-width: 100%;
 		&:nth-child(4) {
 			order: 2;
 		}
@@ -2804,13 +2827,14 @@
 	}
 	@include rmin(1320px) {
 		&__title {
-			max-width: 544px;
+			max-width: 100%;
 			width: 100%;
 			margin: 0 auto;
 		}
 		&__subtitle {
 			max-width: 722px;
 			width: 100%;
+			margin-top: 20px;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -3422,6 +3446,19 @@
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 130%;
+	}
+	@include r(1319.98px) {
+		&__grid {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100dvw;
+			overflow: hidden;
+		}
+		&__swiper {
+			max-width: 288px;
+			overflow: visible;
+		}
 	}
 	@include rmin(1320px) {
 		&__grid {
@@ -4084,6 +4121,10 @@
 
 // PRODUCTION-TECHNOLOGIES
 .production-technologies {
+	.section__title {
+		max-width: 274px;
+		margin: 0 auto;
+	}
 	&__texts {
 		display: flex;
 		flex-direction: column;
@@ -4102,13 +4143,13 @@
 			flex-direction: column;
 		}
 		.section__title {
-			max-width: 483px;
+			max-width: 100%;
 			width: 100%;
 			margin: 0 auto;
 			text-align: center;
 		}
 		.section__subtitle {
-			margin: 40px auto 0;
+			margin: 20px auto 0;
 			max-width: 354px;
 			text-align: center;
 		}
@@ -4395,11 +4436,12 @@
 	&__title {
 		font-family: "Montserrat";
 		font-weight: 600;
-		font-size: 18px;
+		font-size: 20px;
 	}
 	&__text {
 		margin-top: 16px;
-		font-size: 12px;
+		font-size: 16px;
+		font-weight: 400;
 		line-height: 130%;
 	}
 	&__img-wrapper {

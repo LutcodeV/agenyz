@@ -553,7 +553,7 @@ b {
 }
 
 .hero {
-  padding: 48px 0px 40px;
+  padding: 20px 0px 40px;
   overflow: hidden;
   position: relative;
 }
@@ -1463,7 +1463,8 @@ b {
 }
 
 .footer {
-  padding: 40px 0;
+  padding: 10px 0 40px;
+  background: #fbfbfb;
 }
 
 .footer .container {
@@ -1719,6 +1720,10 @@ b {
   top: 0px;
 }
 
+.unique {
+  padding-top: 0 !important;
+}
+
 .unique__column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1728,6 +1733,7 @@ b {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .unique-card {
@@ -1963,6 +1969,7 @@ b {
   border-radius: 16px;
   min-height: 230px;
   max-height: 230px;
+  max-width: 288px;
 }
 
 .partner-principles__info {
@@ -2067,7 +2074,6 @@ b {
 .partner-principles__title {
   font-size: 12px;
   line-height: 130%;
-  text-align: center;
   font-weight: 500;
 }
 
@@ -2973,6 +2979,11 @@ b {
   font-size: 16px;
 }
 
+.production-technologies .section__title {
+  max-width: 274px;
+  margin: 0 auto;
+}
+
 .production-technologies__texts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3187,12 +3198,13 @@ b {
 .production-technologies-modal__title {
   font-family: "Montserrat";
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .production-technologies-modal__text {
   margin-top: 16px;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 130%;
 }
 
@@ -3448,6 +3460,7 @@ b {
   .header-nav__link {
     padding: 8px 12px;
     margin: -8px 0;
+    white-space: nowrap;
     font-size: 14px;
     font-weight: 500;
   }
@@ -4083,12 +4096,14 @@ b {
   }
 
   .concept-infograph-step:nth-child(5)::after {
-    left: -166px;
+    left: auto;
+    right: -180px;
     background: url("../img/concept-infograph-pc-hover-02.png") no-repeat;
   }
 
   .concept-infograph-step:nth-child(5)::before {
-    left: -316px;
+    left: auto;
+    right: -25px;
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -4125,8 +4140,9 @@ b {
   }
 
   .concept-infograph-step:nth-child(6)::after {
-    top: -228px;
-    left: -196px;
+    top: auto;
+    bottom: -246px;
+    left: -144px;
     background: url("../img/concept-infograph-pc-hover-03.png") no-repeat;
   }
 
@@ -4134,8 +4150,9 @@ b {
     -webkit-transform: rotate(-120deg);
     -ms-transform: rotate(-120deg);
     transform: rotate(-120deg);
-    left: -250px;
-    top: -480px;
+    left: -198px;
+    top: auto;
+    bottom: 7px;
   }
 
   .concept-modals {
@@ -4484,6 +4501,10 @@ b {
 
   .team-card-list-item br {
     display: none;
+  }
+
+  .footer {
+    padding: 60px 0px;
   }
 
   .footer__column {
@@ -5029,6 +5050,7 @@ b {
   .partner-principles {
     border-radius: 24px;
     max-height: 272px;
+    max-width: 100%;
   }
 
   .partner-principles:nth-child(4) {
@@ -5078,7 +5100,7 @@ b {
   }
 
   .product-direction__title {
-    max-width: 544px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
   }
@@ -5086,6 +5108,7 @@ b {
   .product-direction__subtitle {
     max-width: 722px;
     width: 100%;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -5878,14 +5901,14 @@ b {
   }
 
   .production-technologies .section__title {
-    max-width: 483px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     text-align: center;
   }
 
   .production-technologies .section__subtitle {
-    margin: 40px auto 0;
+    margin: 20px auto 0;
     max-width: 354px;
     text-align: center;
   }
@@ -6205,6 +6228,38 @@ b {
     -webkit-box-ordinal-group: 8;
     -ms-flex-order: 7;
     order: 7;
+  }
+}
+
+@media screen and (max-width: 1319.98px) {
+  .partners__swiper-wrapper {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100dvw;
+    overflow: hidden;
+  }
+
+  .partners__swiper {
+    max-width: 288px;
+    overflow: visible;
+  }
+
+  .result__grid {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100dvw;
+    overflow: hidden;
+  }
+
+  .result__swiper {
+    max-width: 288px;
+    overflow: visible;
   }
 }
 
